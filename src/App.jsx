@@ -1,6 +1,6 @@
 import './App.scss';
 
-const = App => () {
+const App = () => {
   return (
     <div className="App">
 
