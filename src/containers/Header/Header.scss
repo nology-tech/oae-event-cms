@@ -1,0 +1,18 @@
+@use "../../assets/styles/variables" as *;
+
+.header {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  font-style: normal;
+  font-size: 0.78rem;
+  gap: 7rem;
+  color: $title-color;
+  margin: 1rem 2rem;
+  position: fixed;
+  
+  &__logo {
+    width: 3rem;
+  }
+}
+

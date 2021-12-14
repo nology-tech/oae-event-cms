@@ -1,3 +1,6 @@
+@use "./assets/styles/_typography.scss" as *;
+@use "./assets/styles/_variables.scss" as *;
+
 .App {
   text-align: center;
 }
