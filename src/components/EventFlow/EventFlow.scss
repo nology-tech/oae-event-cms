@@ -1,0 +1,46 @@
+@use "../../assets/styles/_variables" as *;
+@use "../../assets/styles/_typography" as *;
+
+
+
+.event-flow_container {
+    display: grid;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr,1fr;
+}
+
+.event-flow_text {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.event-flow_text1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.event-flow_text2 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.event-flow_text3 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.event-flow_text4 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+event-flow_title
+
+event-flow__icon
+
+@media screen and (min-width: 720px) {
+    .event-flow_container {
+        display:flex;
+        }
+}
+    
