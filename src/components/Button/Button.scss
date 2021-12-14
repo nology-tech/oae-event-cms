@@ -11,16 +11,16 @@
 
 .primary {
   background-color: $primary-color;
-  color: #FFFFFF;
+  color: $primaryBtn-text-color;
 }
 
 .secondary, .tertiary {
-  background-color: #F2F2F2;
+  background-color: $greyBtn-background-color;
   color: $text-color;
 }
 
 .tertiary {
-  border: 2px dashed #B8B3B3;
+  border: 2px dashed $dashedBtn-border-color;
   font-weight: 500;
 }
 
