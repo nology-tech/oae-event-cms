@@ -1,0 +1,28 @@
+@use "../../assets/styles/typography"as *;
+@use "../../assets/styles/variables"as *;
+
+* {
+   padding: 1 rem;
+}
+
+.tip {
+   width: 20vw;
+   // padding: 1rem;
+
+   &__flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      &-title {
+         font-size: 1rem;
+      }
+
+
+      &-icon {
+         width: 1rem;
+         height: 1rem;
+      }
+   }
+
+}
