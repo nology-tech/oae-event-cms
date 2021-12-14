@@ -1,1 +1,26 @@
 @use "../../assets/styles/variables" as *;
+
+.button {
+  width: 7.5rem;
+  height: 3rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 3rem;
+  border: none;
+}
+
+.primary {
+  background-color: $primary-color;
+  color: #FFFFFF;
+}
+
+.secondary, .tertiary {
+  background-color: #F2F2F2;
+  color: $text-color;
+}
+
+.tertiary {
+  border: 2px dashed #B8B3B3;
+  font-weight: 500;
+}
+
