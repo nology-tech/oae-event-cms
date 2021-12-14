@@ -34,8 +34,8 @@ return (
         <ThemeIcon className="event-flow__icon3"/>
 
 
-        <h3 className="event-flow_text4">Review</h3>
-        <p className="event-flow_text4">Colors, Fonts etc</p>
+        <h3 className="event-flow__text4">Review</h3>
+        <p className="event-flow__text4">Colors, Fonts etc</p>
         <TickIcon className="event-flow__icon4"/>
         
     </div>
