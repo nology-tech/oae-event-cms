@@ -1,0 +1,15 @@
+@use "../typography" as *;
+@use "../variables" as *;
+//Base grid setup for form. 
+.form__small {
+    margin: 10vw;
+    width: 45vw; 
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+.form-section{ 
+    display: flex;
+    flex-direction: column;
+}
