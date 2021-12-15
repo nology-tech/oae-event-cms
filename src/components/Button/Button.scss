@@ -1,0 +1,26 @@
+@use "../../assets/styles/variables" as *;
+
+.button {
+  width: 7.5rem;
+  height: 3rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: $universal-border-radius;
+  border: none;
+}
+
+.primary {
+  background-color: $primary-color;
+  color: $primaryBtn-text-color;
+}
+
+.secondary, .tertiary {
+  background-color: $greyBtn-background-color;
+  color: $text-color;
+}
+
+.tertiary {
+  border: 2px dashed $dashedBtn-border-color;
+  font-weight: 500;
+}
+
