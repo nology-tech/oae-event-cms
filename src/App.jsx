@@ -1,6 +1,4 @@
 import "./App.scss";
-import Tooltip from "./components/Tooltip/Tooltip";
-
 
 const App = () => {
 
