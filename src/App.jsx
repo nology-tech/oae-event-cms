@@ -11,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<CreateEvent />} />
         <Route path="/events" element={<EventsList />} />
-        <Route path="/orchestra"/>
+        <Route path="/orchestra" />
       </Routes>
     </Router>
   </div>;
