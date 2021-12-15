@@ -1,12 +1,12 @@
 import React from "react";
 import "./CreateEvent.scss";
+import EventFlow from "../../components/EventFlow/EventFlow";
 
 const CreateEvent = () => {
     return (
         <div>
-            <h1>Create Event</h1>
+           <EventFlow/>
         </div>
     )
 }
-
 export default CreateEvent;
