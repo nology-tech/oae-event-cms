@@ -9,7 +9,3 @@ const EventsList = () => {
 }
 
 export default EventsList;
-
-
-
-//_rafce
