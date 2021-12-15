@@ -6,9 +6,7 @@ const CreateEvent = () => {
     return (
         <div>
            <EventFlow/>
-        
         </div>
     )
 }
-
 export default CreateEvent;
