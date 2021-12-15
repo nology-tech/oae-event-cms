@@ -1,5 +1,4 @@
 import "./App.scss";
-import Header from "./containers/Header/Header";
 
 const App = () => {
   return (
