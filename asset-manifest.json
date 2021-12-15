@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.d06f535d.chunk.css",
-    "main.js": "/static/js/main.b967eb77.chunk.js",
-    "main.js.map": "/static/js/main.b967eb77.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f9f72188.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f9f72188.js.map",
-    "static/js/2.62481951.chunk.js": "/static/js/2.62481951.chunk.js",
-    "static/js/2.62481951.chunk.js.map": "/static/js/2.62481951.chunk.js.map",
-    "static/js/3.c865c286.chunk.js": "/static/js/3.c865c286.chunk.js",
-    "static/js/3.c865c286.chunk.js.map": "/static/js/3.c865c286.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.d06f535d.chunk.css.map": "/static/css/main.d06f535d.chunk.css.map",
-    "static/js/2.62481951.chunk.js.LICENSE.txt": "/static/js/2.62481951.chunk.js.LICENSE.txt"
+    "main.css": "/oae-event-cms/static/css/main.bbe7bcfb.chunk.css",
+    "main.js": "/oae-event-cms/static/js/main.ce2b8067.chunk.js",
+    "main.js.map": "/oae-event-cms/static/js/main.ce2b8067.chunk.js.map",
+    "runtime-main.js": "/oae-event-cms/static/js/runtime-main.7b01bd65.js",
+    "runtime-main.js.map": "/oae-event-cms/static/js/runtime-main.7b01bd65.js.map",
+    "static/js/2.0d345fff.chunk.js": "/oae-event-cms/static/js/2.0d345fff.chunk.js",
+    "static/js/2.0d345fff.chunk.js.map": "/oae-event-cms/static/js/2.0d345fff.chunk.js.map",
+    "static/js/3.6352db3e.chunk.js": "/oae-event-cms/static/js/3.6352db3e.chunk.js",
+    "static/js/3.6352db3e.chunk.js.map": "/oae-event-cms/static/js/3.6352db3e.chunk.js.map",
+    "index.html": "/oae-event-cms/index.html",
+    "static/css/main.bbe7bcfb.chunk.css.map": "/oae-event-cms/static/css/main.bbe7bcfb.chunk.css.map",
+    "static/js/2.0d345fff.chunk.js.LICENSE.txt": "/oae-event-cms/static/js/2.0d345fff.chunk.js.LICENSE.txt",
+    "static/media/calendar-icon.429863eb.svg": "/oae-event-cms/static/media/calendar-icon.429863eb.svg",
+    "static/media/carbon-home.5faea1f5.svg": "/oae-event-cms/static/media/carbon-home.5faea1f5.svg",
+    "static/media/music-note-icon.42765502.svg": "/oae-event-cms/static/media/music-note-icon.42765502.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f9f72188.js",
-    "static/js/2.62481951.chunk.js",
-    "static/css/main.d06f535d.chunk.css",
-    "static/js/main.b967eb77.chunk.js"
+    "static/js/runtime-main.7b01bd65.js",
+    "static/js/2.0d345fff.chunk.js",
+    "static/css/main.bbe7bcfb.chunk.css",
+    "static/js/main.ce2b8067.chunk.js"
   ]
 }
