@@ -6,7 +6,7 @@ import ScheduleForm from "../../components/EventFlow/ScheduleForm/ScheduleForm";
 
 const CreateEvent = () => {
     return (
-        <div>
+        <div className="create-event__container">
            <EventFlow/>
            <ScheduleForm/>
         </div>
