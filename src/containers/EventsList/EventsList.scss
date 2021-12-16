@@ -1,0 +1,21 @@
+.event-list {
+   display: flex;
+   flex-direction: column;
+
+   &__searchbox {
+      display: flex;
+      flex-direction: row;
+   }
+
+   &__searchIcon {
+      width: 1rem;
+      height: 1rem;
+   }
+
+   &__headings {
+      display: flex;
+      flex-direction: row;
+      // align-items: left;
+      justify-content: space-between;
+   }
+}

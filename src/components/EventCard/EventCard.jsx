@@ -1,13 +1,14 @@
 import React from 'react';
 import editIcon from "../../assets/images/edit-icon.svg";
 import binIcon from "../../assets/images/bin-icon.svg";
+import "./EventCard.scss";
 
 const EventCard = (props) => {
    const { eventName, series, date, time, location, URL } = props;
 
    return (
       <div className="eventCard">
-         <h2>{eventName}</h2>
+         <h3>{eventName}</h3>
          <p>{series}</p>
          <p>{date}</p>
          <p>{time}</p>
