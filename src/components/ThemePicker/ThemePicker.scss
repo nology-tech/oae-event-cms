@@ -1,4 +1,5 @@
 @use "../../assets/styles/layout/forms" as *;
+@use "../../assets/styles/_variables" as *;
 
 .form {
   height: 25rem;
@@ -35,9 +36,15 @@
     &-color {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+      border: 1px solid $form-label-color;
+      width: 4rem;
+      border-radius: 8px;
+      padding: 0.2rem;
     }
     &-img {
-      width: 1rem;
+      width: 0.6rem;
+      padding-right: 0.5rem;
     }
   }
 
@@ -45,4 +52,8 @@
     height: 3rem;
     padding: 0 1rem;
   }
+}
+
+input[type=color] {
+border: none;
 }
