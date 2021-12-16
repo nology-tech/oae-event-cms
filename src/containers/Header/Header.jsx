@@ -6,7 +6,7 @@ const Header = (props) => {
   return (
     <div className="header">
       <a href="https://oae.co.uk/" target="_blank" rel= "noreferrer"><img className="header__logo" src={logo} alt="logo"/></a>
-      <h1 className="header__title">OAE Digital Programme Editor</h1>
+      <h2 className="header__title">OAE Digital Programme Editor</h2>
     </div>
   );
 };
