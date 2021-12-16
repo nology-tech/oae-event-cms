@@ -10,7 +10,7 @@
     grid-template-columns: 2fr, 1fr;
     grid-template-rows: repeat(13, 1fr);
     column-gap: 0.1vw;
-}
+
 h1 {
     text-align: center;
     justify-content: center;
@@ -100,8 +100,9 @@ h3 {
         padding: 2rem;
     }
     
-@media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1024px) {
     .event-flow_container {
         display: flex;
+        }
     }
 }
