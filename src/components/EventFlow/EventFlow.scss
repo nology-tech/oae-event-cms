@@ -8,95 +8,98 @@
     padding: 2rem;
     justify-content: space-between;
     grid-template-columns: 2fr, 1fr;
-    grid-template-rows: repeat(13, 1fr);
+    grid-template-rows: repeat(12, 1fr);
     column-gap: 0.1vw;
+    height: 90vh;
 
 h1 {
-    text-align: center;
     justify-content: center;
-    grid-column: 1/4;
-    grid-row: 1/2;
+    text-align: right;
+    align-self: center;
     margin-bottom: -4rem;
+    font-size: calc($base-font * 1.25);
 }
 p {
     margin-top: -1vh;
     text-align: right;
     color: $text-color;
 }
-h3 {
+h4 {
     text-align: right;
     color: $title-color;
 }
 #icon {
     border-radius: 50%;
     border: 3px;
+    height: 3em;
+    width: 3em;
 }
 #icon-clicked {
     background-color: $primary-color;
 }
     .event-flow__header1 {
         grid-column: 1/2;
-        grid-row: 4/5;
+        grid-row: 3/4;
     }
     .event-flow__text1 {
         grid-column: 1/2;
-        grid-row: 5/6;
+        grid-row: 4/5;
     }
     .event-flow__icon1 {
         grid-column: 3/4;
-        grid-row: 4/6;
+        grid-row: 3/5;
         padding: 2rem;
     }
     .event-flow__header2 {
         grid-column: 1/2;
-        grid-row: 6/7;
+        grid-row: 5/6;
     }
     .event-flow__text2 {
         grid-column: 1/2;
-        grid-row: 7/8;
+        grid-row: 6/7;
     }
     .event-flow__icon2 {
         grid-column: 3/4;
-        grid-row: 6/8;
+        grid-row: 5/7;
         padding: 2rem;
     }
     .event-flow__header3 {
         grid-column: 1/2;
-        grid-row: 8/9;
+        grid-row: 7/8;
     }
     .event-flow__text3 {
         grid-column: 1/2;
-        grid-row: 9/10;
+        grid-row: 8/9;
     }
     .event-flow__icon3 {
         grid-column: 3/4;
-        grid-row: 8/10;
+        grid-row: 7/9;
         padding: 2rem;
     }
     .event-flow__header4 {
         grid-column: 1/2;
-        grid-row: 10/11;
+        grid-row: 9/10;
     }
     .event-flow__text4 {
         grid-column: 1/2;
-        grid-row: 11/12;
+        grid-row: 10/11;
     }
     .event-flow__icon4 {
         grid-column: 3/4;
-        grid-row: 10/12;
+        grid-row: 9/11;
         padding: 2rem;
     }
     .event-flow__header5 {
         grid-column: 1/2;
-        grid-row: 12/13;
+        grid-row: 11/12;
     }
     .event-flow__text5 {
         grid-column: 1/2;
-        grid-row: 13/14;
+        grid-row: 12/13;
     }
     .event-flow__icon5 {
         grid-column: 3/4;
-        grid-row: 12/14;
+        grid-row: 11/13;
         padding: 2rem;
     }
     
