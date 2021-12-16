@@ -17,7 +17,7 @@ h1 {
     text-align: right;
     align-self: center;
     margin-bottom: -4rem;
-    font-size: 1.25rem;
+    font-size: calc($base-font * 1.25);
 }
 p {
     margin-top: -1vh;
