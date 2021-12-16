@@ -1,10 +1,54 @@
+@use "../../assets/styles/variables"as *;
+
 .event-list {
    display: flex;
    flex-direction: column;
+   margin-left: 8vw;
+   padding: 10vw 4vw 0 8vw;
+   width: 92vw;
+
+   &__headings {
+      background-color: $back-color;
+      border-radius: 0.4rem 0.4rem 0 0;
+      display: flex;
+      align-items: center;
+      color: $text-color;
+
+      input {
+         width: 2vw;
+      }
+
+      &-series {
+         width: 16vw;
+      }
+
+      &-title {
+         width: 12vw;
+      }
+
+      &-time {
+         width: 6vw;
+      }
+
+      &-URL {
+         width: 26vw;
+      }
+   }
+
+   &__UI {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4vh;
+   }
 
    &__searchbox {
       display: flex;
       flex-direction: row;
+      align-items: center;
+      max-width: 30vw;
+
    }
 
    &__searchIcon {
@@ -15,7 +59,7 @@
    &__headings {
       display: flex;
       flex-direction: row;
-      // align-items: left;
+      align-items: left;
       justify-content: space-between;
    }
 }

@@ -1,7 +1,35 @@
+@use "../../assets/styles/variables"as *;
+
 .eventCard {
    display: flex;
    flex-direction: row;
-   align-items: left;
+   align-items: center;
    justify-content: space-between;
+   color: $text-color;
 
+   input {
+      width: 2vw;
+   }
+
+   &-series {
+      width: 16vw;
+   }
+
+   &-title {
+      width: 12vw;
+   }
+
+   &-time {
+      width: 6vw;
+   }
+
+   &-URL {
+      width: 20vw;
+      overflow-wrap: break-word;
+   }
+
+   &-icon {
+      width: 2vw;
+      padding: 0.5vw;
+   }
 }

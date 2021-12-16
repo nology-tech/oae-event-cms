@@ -126,3 +126,5 @@ export let events = [
       },
    },
 ];
+
+export default events;
