@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/oae-event-cms/static/css/main.d2b0f8f8.chunk.css",
-    "main.js": "/oae-event-cms/static/js/main.29fd8832.chunk.js",
-    "main.js.map": "/oae-event-cms/static/js/main.29fd8832.chunk.js.map",
-    "runtime-main.js": "/oae-event-cms/static/js/runtime-main.61bce0f2.js",
-    "runtime-main.js.map": "/oae-event-cms/static/js/runtime-main.61bce0f2.js.map",
+    "main.css": "/oae-event-cms/static/css/main.c7bf7c37.chunk.css",
+    "main.js": "/oae-event-cms/static/js/main.712cd025.chunk.js",
+    "main.js.map": "/oae-event-cms/static/js/main.712cd025.chunk.js.map",
+    "runtime-main.js": "/oae-event-cms/static/js/runtime-main.5f12a56d.js",
+    "runtime-main.js.map": "/oae-event-cms/static/js/runtime-main.5f12a56d.js.map",
     "static/js/2.2d0df70f.chunk.js": "/oae-event-cms/static/js/2.2d0df70f.chunk.js",
     "static/js/2.2d0df70f.chunk.js.map": "/oae-event-cms/static/js/2.2d0df70f.chunk.js.map",
-    "static/js/3.32ebd276.chunk.js": "/oae-event-cms/static/js/3.32ebd276.chunk.js",
-    "static/js/3.32ebd276.chunk.js.map": "/oae-event-cms/static/js/3.32ebd276.chunk.js.map",
+    "static/js/3.cba64c8b.chunk.js": "/oae-event-cms/static/js/3.cba64c8b.chunk.js",
+    "static/js/3.cba64c8b.chunk.js.map": "/oae-event-cms/static/js/3.cba64c8b.chunk.js.map",
     "index.html": "/oae-event-cms/index.html",
-    "static/css/main.d2b0f8f8.chunk.css.map": "/oae-event-cms/static/css/main.d2b0f8f8.chunk.css.map",
+    "static/css/main.c7bf7c37.chunk.css.map": "/oae-event-cms/static/css/main.c7bf7c37.chunk.css.map",
     "static/js/2.2d0df70f.chunk.js.LICENSE.txt": "/oae-event-cms/static/js/2.2d0df70f.chunk.js.LICENSE.txt",
     "static/media/calendar-icon.429863eb.svg": "/oae-event-cms/static/media/calendar-icon.429863eb.svg",
     "static/media/carbon-home.5faea1f5.svg": "/oae-event-cms/static/media/carbon-home.5faea1f5.svg",
     "static/media/info-icon.ee56963b.svg": "/oae-event-cms/static/media/info-icon.ee56963b.svg",
     "static/media/music-list-circle.c6e14c56.svg": "/oae-event-cms/static/media/music-list-circle.c6e14c56.svg",
     "static/media/music-note-icon.42765502.svg": "/oae-event-cms/static/media/music-note-icon.42765502.svg",
+    "static/media/oae-logo.3d614d5f.svg": "/oae-event-cms/static/media/oae-logo.3d614d5f.svg",
     "static/media/paintbrush-circle.d3062484.svg": "/oae-event-cms/static/media/paintbrush-circle.d3062484.svg",
     "static/media/single-note-circle.fed5bdbb.svg": "/oae-event-cms/static/media/single-note-circle.fed5bdbb.svg",
     "static/media/tick-circle.f6ae7c22.svg": "/oae-event-cms/static/media/tick-circle.f6ae7c22.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.61bce0f2.js",
+    "static/js/runtime-main.5f12a56d.js",
     "static/js/2.2d0df70f.chunk.js",
-    "static/css/main.d2b0f8f8.chunk.css",
-    "static/js/main.29fd8832.chunk.js"
+    "static/css/main.c7bf7c37.chunk.css",
+    "static/js/main.712cd025.chunk.js"
   ]
 }
