@@ -1,55 +1,54 @@
 @use "../base/typography" as *;
 @use "../variables" as *;
-//Base grid setup for form. 
+//Base grid setup for form.
 
-.form{
-    width: 25.3vw; 
-    height: 66.3vh;
+.form {
+  width: 25.3vw;
+  height: 66.3vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $form-background-color;
+  padding-right: 3.3vw;
+  padding-top: 4.2vh;
+  padding-left: 2.8vw;
+  padding-bottom: 4.12vh;
+  justify-content: space-between;
+
+  &__title {
+    &__step {
+      text-align: left;
+      color: $primary-color;
+      font-weight: 500;
+      margin: 0;
+    }
+    &__main {
+      text-align: left;
+      color: $text-color;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  &__section {
     display: flex;
     flex-direction: column;
-    background-color: $form-background-color;
-    padding-right: 3.3vw;
-    padding-top: 4.2vh;
-    padding-left: 2.8vw;
-    padding-bottom: 4.12vh;
+  }
+
+  &__input {
+    background-color: $form-input-color;
+    border: $form-input-border-color 2px solid;
+    border-radius: 7px;
+    height: 4.8vh;
+  }
+
+  &__label {
+    //Should this be global styles?
+    font-size: 12px;
+    color: $form-label-color;
+  }
+
+  &__buttons {
+    display: flex;
     justify-content: space-between;
-
-    &__title {
-
-        &__step{
-            text-align: left;
-            color: $primary-color;
-            font-weight: 500;
-            margin: 0;
-        }
-        &__main{
-            text-align: left;
-            color:$text-color;
-            font-weight: 500;
-            margin:0;
-        }
-    }
-
-    &__section{ 
-        display: flex;
-        flex-direction: column;
-    }
-    
-    &__input{
-        background-color:$form-input-color;
-        border: $form-label-color 2px solid;
-        border-radius: 7px;
-        height: 4.8vh;
-    }
-
-    &__label{
-        //Should this be global styles? 
-        font-size:12px;
-        color: $form-label-color;
-    }
-
-    &__buttons{
-        display: flex;
-        justify-content: space-between;
-    }
+  }
 }
