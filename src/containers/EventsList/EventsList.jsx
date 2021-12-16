@@ -9,8 +9,7 @@ import events from "../../assets/data/events";
 
 const EventsList = (props) => {
     const [searchTerm, setSearchTerm] = useState("")
-    const { eventName, series, date, time, location, URL } = props;
-    const [eventsArr, setEventsArr] = useState([]);
+    const [eventsArr] = useState([]);
 
 
 
