@@ -2,19 +2,20 @@ import React from "react";
 import Button from "../../Button/Button";
 import "./ScheduleForm.scss"
 import "../../../assets/styles/layout/_forms.scss"
+import TextareaAutosize from 'react-textarea-autosize';
 
 const ScheduleForm = () => {
   return (
     <>
     <form className ="schedule-form form">
      <div className="form__title">
-          <h3 className="form__title__step">Step 02</h3>
-          <h2 className="form__title__main">Add schedule</h2>
+          <h3 className="form__title-step">Step 02</h3>
+          <h2 className="form__title-main">Add schedule</h2>
       </div>
 
       <div className="schedule-form__name form__section">  
         <label for="name" className="form__label">Name</label>
-        <input type="text" id="name" name="name" className="form__input"></input>
+        <input type="text" id="name" name="name" className="form__input" required></input>
       </div>
       <div className="schedule-form__title form__section">
         <label for="title" className="form__label">Title (optional)</label>
@@ -26,13 +27,14 @@ const ScheduleForm = () => {
       </div>
       <div className="schedule-form__description form__section">
         <label for="description" className="form__label">Description</label>
-        <input type="text" id="description" name="description" className="form__input"></input>
+        <TextareaAutosize name="description" id="description" className="form__input" required />
       </div>  
       <div className = "schedule-form__alternate-description form__section">
         <label for="alternate-description" className="form__label">
             Alternate Description (optional)
         </label>
-        <input type="text" id="alternate-description" name="alternate-description" className="form__input" placeholder="E.g.Lyric Translations"></input>
+        <TextareaAutosize name="alternate-description" id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
+        />
       </div>
       <div className="schedule-form__buttons form__buttons"> 
         <Button buttonType="tertiary" buttonText="Add" className="form__button-add"/>
