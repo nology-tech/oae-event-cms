@@ -1,0 +1,56 @@
+@use "../variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  line-height: 120%;
+}
+
+h1 {
+  font-size: calc($base-font * 2);
+}
+
+h2 {
+  font-size: calc($base-font * 1.5);
+}
+
+h3 {
+  font-size: calc($base-font * 1.25);
+}
+
+h4 {
+  font-size: $base-font;
+}
+
+h5 {
+  font-size: calc($base-font * 0.75);
+}
+
+h6 {
+  font-size: calc($base-font * 0.5);
+}
+
+p, input {
+  line-height: 150%;
+}
+
+p {
+  font-size: calc($base-font * 0.75);
+}
+
+label {
+  font-size: calc($base-font * 0.75);
+}
+
+input {
+  font-size: calc($base-font * 0.75);
+}
+
+button {
+  font-size: calc($base-font * 0.75);
+  font-weight: 700;
+}
