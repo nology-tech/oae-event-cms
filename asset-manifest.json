@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/oae-event-cms/static/css/main.2659694c.chunk.css",
-    "main.js": "/oae-event-cms/static/js/main.8e36720e.chunk.js",
-    "main.js.map": "/oae-event-cms/static/js/main.8e36720e.chunk.js.map",
-    "runtime-main.js": "/oae-event-cms/static/js/runtime-main.db6445c9.js",
-    "runtime-main.js.map": "/oae-event-cms/static/js/runtime-main.db6445c9.js.map",
-    "static/js/2.4a28d266.chunk.js": "/oae-event-cms/static/js/2.4a28d266.chunk.js",
-    "static/js/2.4a28d266.chunk.js.map": "/oae-event-cms/static/js/2.4a28d266.chunk.js.map",
-    "static/js/3.f924c2a7.chunk.js": "/oae-event-cms/static/js/3.f924c2a7.chunk.js",
-    "static/js/3.f924c2a7.chunk.js.map": "/oae-event-cms/static/js/3.f924c2a7.chunk.js.map",
+    "main.css": "/oae-event-cms/static/css/main.d2b0f8f8.chunk.css",
+    "main.js": "/oae-event-cms/static/js/main.29fd8832.chunk.js",
+    "main.js.map": "/oae-event-cms/static/js/main.29fd8832.chunk.js.map",
+    "runtime-main.js": "/oae-event-cms/static/js/runtime-main.61bce0f2.js",
+    "runtime-main.js.map": "/oae-event-cms/static/js/runtime-main.61bce0f2.js.map",
+    "static/js/2.2d0df70f.chunk.js": "/oae-event-cms/static/js/2.2d0df70f.chunk.js",
+    "static/js/2.2d0df70f.chunk.js.map": "/oae-event-cms/static/js/2.2d0df70f.chunk.js.map",
+    "static/js/3.32ebd276.chunk.js": "/oae-event-cms/static/js/3.32ebd276.chunk.js",
+    "static/js/3.32ebd276.chunk.js.map": "/oae-event-cms/static/js/3.32ebd276.chunk.js.map",
     "index.html": "/oae-event-cms/index.html",
-    "static/css/main.2659694c.chunk.css.map": "/oae-event-cms/static/css/main.2659694c.chunk.css.map",
-    "static/js/2.4a28d266.chunk.js.LICENSE.txt": "/oae-event-cms/static/js/2.4a28d266.chunk.js.LICENSE.txt",
+    "static/css/main.d2b0f8f8.chunk.css.map": "/oae-event-cms/static/css/main.d2b0f8f8.chunk.css.map",
+    "static/js/2.2d0df70f.chunk.js.LICENSE.txt": "/oae-event-cms/static/js/2.2d0df70f.chunk.js.LICENSE.txt",
     "static/media/calendar-icon.429863eb.svg": "/oae-event-cms/static/media/calendar-icon.429863eb.svg",
     "static/media/carbon-home.5faea1f5.svg": "/oae-event-cms/static/media/carbon-home.5faea1f5.svg",
     "static/media/info-icon.ee56963b.svg": "/oae-event-cms/static/media/info-icon.ee56963b.svg",
@@ -22,9 +22,9 @@
     "static/media/tick-circle.f6ae7c22.svg": "/oae-event-cms/static/media/tick-circle.f6ae7c22.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.db6445c9.js",
-    "static/js/2.4a28d266.chunk.js",
-    "static/css/main.2659694c.chunk.css",
-    "static/js/main.8e36720e.chunk.js"
+    "static/js/runtime-main.61bce0f2.js",
+    "static/js/2.2d0df70f.chunk.js",
+    "static/css/main.d2b0f8f8.chunk.css",
+    "static/js/main.29fd8832.chunk.js"
   ]
 }
