@@ -1,0 +1,9 @@
+@use "../../assets/styles/base/typography"as *;
+@use "../../assets/styles/_variables"as *;
+
+.create-event__container {
+  background-color: $back-color;
+  margin-top: 6rem;
+  margin-left: 5.6rem;
+  position: fixed;
+}

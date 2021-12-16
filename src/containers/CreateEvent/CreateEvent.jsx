@@ -4,7 +4,7 @@ import EventFlow from "../../components/EventFlow/EventFlow";
 
 const CreateEvent = () => {
     return (
-        <div>
+        <div className="create-event__container">
            <EventFlow/>
         </div>
     )
