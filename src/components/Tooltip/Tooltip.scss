@@ -1,0 +1,27 @@
+@use "../../assets/styles/typography"as *;
+@use "../../assets/styles/variables"as *;
+
+
+.tip {
+   width: 25vw;
+   padding: 1rem;
+   border-radius: 0.5rem;
+   box-shadow: 0 1.5rem 2.5rem rgba(48, 57, 74, 0.07);
+
+   &__flex {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &__icon-info,
+   &__icon-cross {
+      width: 1rem;
+      height: 1rem;
+   }
+
+   &__icon-cross {
+      padding-left: 2rem;
+   }
+
+}
