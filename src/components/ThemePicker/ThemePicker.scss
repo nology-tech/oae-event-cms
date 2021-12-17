@@ -2,16 +2,17 @@
 @use "../../assets/styles/_variables" as *;
 
 .form {
-  height: 25rem;
-  width: 26rem;
+  height: 28rem;
+  width: 29rem;
   position: fixed;
-  gap: 2rem;
+  background-color: chartreuse;
 
   &__title {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   &__label {
@@ -60,4 +61,11 @@ input[type="color"] {
   height: 2rem;
   width: 2rem;
   background-color: $form-input-color;
+}
+
+.test {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50px;
+  overflow: hidden;
 }
