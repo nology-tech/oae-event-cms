@@ -34,11 +34,7 @@ const ThemePicker = () => {
             Theme Color
           </label>
           <div className="themepicker__accent form__section-color">
-            <input
-              className="themepicker__input"
-              for="theme"
-              type="color"
-            />
+            <input className="themepicker__input" for="theme" type="color" />
             <img
               className="themepicker__accent form__section-img"
               src={arrowDown}
@@ -52,11 +48,7 @@ const ThemePicker = () => {
             Accent Color
           </label>
           <div className="themepicker__accent form__section-color">
-            <input
-              className="themepicker__input"
-              for="accent"
-              type="color"
-            />
+            <input className="themepicker__input" for="accent" type="color" />
             <img
               className="themepicker__accent form__section-img"
               src={arrowDown}

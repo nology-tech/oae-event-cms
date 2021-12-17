@@ -5,7 +5,6 @@
   height: 28rem;
   width: 29rem;
   position: fixed;
-  background-color: chartreuse;
 
   &__title {
     display: flex;
@@ -61,11 +60,4 @@ input[type="color"] {
   height: 2rem;
   width: 2rem;
   background-color: $form-input-color;
-}
-
-.test {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50px;
-  overflow: hidden;
 }
