@@ -1,0 +1,8 @@
+.search-box__input {
+   border-style: hidden;
+   padding: 0.5rem;
+
+   &:focus {
+      outline: none;
+   }
+}
