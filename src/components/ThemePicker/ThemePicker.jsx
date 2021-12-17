@@ -7,8 +7,8 @@ const ThemePicker = () => {
   return (
     <form className="themepicker form">
       <div className="themepicker form__title">
-        <p className="themepicker form__title__step">Step 04</p>
-        <h2 className="themepicker form__title__main">Choose Theme</h2>
+        <p className="themepicker form__title-step">Step 04</p>
+        <h2 className="themepicker form__title-main">Choose Theme</h2>
       </div>
 
       <div className="themepicker__dropdown form__section">
@@ -35,7 +35,7 @@ const ThemePicker = () => {
           </label>
           <div className="themepicker__accent form__section-color">
             <input
-              className="themepicker__accent form__input"
+              className="themepicker__input"
               for="theme"
               type="color"
             />
@@ -53,7 +53,7 @@ const ThemePicker = () => {
           </label>
           <div className="themepicker__accent form__section-color">
             <input
-              className="themepicker__accent form__input"
+              className="themepicker__input"
               for="accent"
               type="color"
             />

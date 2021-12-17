@@ -21,11 +21,7 @@
   &__buttons {
     justify-content: flex-end;
     gap: 2rem;
-  }
-
-  &__input {
-    height: 2rem;
-    width: 2rem;
+    align-items: baseline;
   }
 
   &__section:not(:last-child) {
@@ -51,9 +47,17 @@
   &__selectBox {
     height: 3rem;
     padding: 0 1rem;
+    border: 1px solid $form-label-color;
+    border-radius: 8px;
   }
 }
 
-input[type=color] {
-border: none;
+input[type="color"] {
+  border: none;
+}
+
+.themepicker__input {
+  height: 2rem;
+  width: 2rem;
+  background-color: $form-input-color;
 }
