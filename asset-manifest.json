@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/oae-event-cms/static/css/main.eed82d9e.chunk.css",
+    "main.css": "/oae-event-cms/static/css/main.91070569.chunk.css",
     "main.js": "/oae-event-cms/static/js/main.1b9d9c5c.chunk.js",
     "main.js.map": "/oae-event-cms/static/js/main.1b9d9c5c.chunk.js.map",
     "runtime-main.js": "/oae-event-cms/static/js/runtime-main.f84c7c1b.js",
@@ -10,7 +10,7 @@
     "static/js/3.09db7deb.chunk.js": "/oae-event-cms/static/js/3.09db7deb.chunk.js",
     "static/js/3.09db7deb.chunk.js.map": "/oae-event-cms/static/js/3.09db7deb.chunk.js.map",
     "index.html": "/oae-event-cms/index.html",
-    "static/css/main.eed82d9e.chunk.css.map": "/oae-event-cms/static/css/main.eed82d9e.chunk.css.map",
+    "static/css/main.91070569.chunk.css.map": "/oae-event-cms/static/css/main.91070569.chunk.css.map",
     "static/js/2.2d0df70f.chunk.js.LICENSE.txt": "/oae-event-cms/static/js/2.2d0df70f.chunk.js.LICENSE.txt",
     "static/media/bin-icon.bf1348d7.svg": "/oae-event-cms/static/media/bin-icon.bf1348d7.svg",
     "static/media/calendar-icon.429863eb.svg": "/oae-event-cms/static/media/calendar-icon.429863eb.svg",
@@ -27,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.f84c7c1b.js",
     "static/js/2.2d0df70f.chunk.js",
-    "static/css/main.eed82d9e.chunk.css",
+    "static/css/main.91070569.chunk.css",
     "static/js/main.1b9d9c5c.chunk.js"
   ]
 }
