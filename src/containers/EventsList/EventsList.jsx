@@ -33,7 +33,7 @@ const EventsList = (props) => {
 
   const checkAll = (event) => {
     const checkbox = document.getElementsByTagName("input");
-    if (event.target.checked == true) {
+    if (event.target.checked === true) {
       for (let i = 0; i < checkbox.length; i++) {
         if (checkbox[i].type === "checkbox") {
           checkbox[i].checked = true;
