@@ -39,43 +39,26 @@
     #info-form {
         grid-column: 1/2;
         grid-row: 1/11;
-    }
+    
     #description {
         display: grid;
         grid-column: 2/3;
         grid-row: 1/13;
-     .form__input__description {
-          height: 20vh;
-        }
-        
-    .picture-section__border-box {
-        display: grid;
-        grid-row: fixed 2/11;
-        border: 5px, solid, black;
-        border-radius: 5%;
-        padding: 5rem;
-    }
-    .picture-section__dropzone{
+    .form__input--description{
         justify-content: center;
         align-items: center;
         grid-row: 3/11;
         padding: 5rem;
+        border: black solid, 3px;
 
     }
-    #remove{
-        grid-row: 11/12;
-        align-content: right;
-        text-decoration: $primary-color;
-        }
-    .primary{
-        background-color: $primary-color;
-  color: $primaryBtn-text-color;
     }
+}
       }
     }
   }
  
 
 @media screen and (max-width: 1024px) {}
-}
+
 
