@@ -1,33 +1,26 @@
 {
   "files": {
-    "main.css": "/oae-event-cms/static/css/main.91070569.chunk.css",
-    "main.js": "/oae-event-cms/static/js/main.1b9d9c5c.chunk.js",
-    "main.js.map": "/oae-event-cms/static/js/main.1b9d9c5c.chunk.js.map",
-    "runtime-main.js": "/oae-event-cms/static/js/runtime-main.f84c7c1b.js",
-    "runtime-main.js.map": "/oae-event-cms/static/js/runtime-main.f84c7c1b.js.map",
-    "static/js/2.2d0df70f.chunk.js": "/oae-event-cms/static/js/2.2d0df70f.chunk.js",
-    "static/js/2.2d0df70f.chunk.js.map": "/oae-event-cms/static/js/2.2d0df70f.chunk.js.map",
-    "static/js/3.09db7deb.chunk.js": "/oae-event-cms/static/js/3.09db7deb.chunk.js",
-    "static/js/3.09db7deb.chunk.js.map": "/oae-event-cms/static/js/3.09db7deb.chunk.js.map",
+    "main.css": "/oae-event-cms/static/css/main.ebec1653.css",
+    "main.js": "/oae-event-cms/static/js/main.eda23482.js",
+    "static/js/787.52b9a05b.chunk.js": "/oae-event-cms/static/js/787.52b9a05b.chunk.js",
+    "static/media/oae-logo.svg": "/oae-event-cms/static/media/oae-logo.3d614d5f94e1c88fe2c29ffaa0dff234.svg",
+    "static/media/calendar-icon.svg": "/oae-event-cms/static/media/calendar-icon.429863eb12ef9883c061dcef697002f5.svg",
+    "static/media/bin-icon.svg": "/oae-event-cms/static/media/bin-icon.bf1348d7fbab634af4f05fa7efc60398.svg",
+    "static/media/music-list-circle.svg": "/oae-event-cms/static/media/music-list-circle.c6e14c561c003b9f90725995a467797a.svg",
+    "static/media/music-note-icon.svg": "/oae-event-cms/static/media/music-note-icon.42765502694e000b5ee1bfa27e0bc73f.svg",
+    "static/media/paintbrush-circle.svg": "/oae-event-cms/static/media/paintbrush-circle.d3062484d9f39c659ee491f500beac97.svg",
+    "static/media/edit-icon.svg": "/oae-event-cms/static/media/edit-icon.3343540a0d3d530f7dfb96f632cbafdd.svg",
+    "static/media/carbon-home.svg": "/oae-event-cms/static/media/carbon-home.5faea1f595f220d62ad9ea4041bd1d1e.svg",
+    "static/media/single-note-circle.svg": "/oae-event-cms/static/media/single-note-circle.fed5bdbb8d4026f55ac141a3c76decf4.svg",
     "index.html": "/oae-event-cms/index.html",
-    "static/css/main.91070569.chunk.css.map": "/oae-event-cms/static/css/main.91070569.chunk.css.map",
-    "static/js/2.2d0df70f.chunk.js.LICENSE.txt": "/oae-event-cms/static/js/2.2d0df70f.chunk.js.LICENSE.txt",
-    "static/media/bin-icon.bf1348d7.svg": "/oae-event-cms/static/media/bin-icon.bf1348d7.svg",
-    "static/media/calendar-icon.429863eb.svg": "/oae-event-cms/static/media/calendar-icon.429863eb.svg",
-    "static/media/carbon-home.5faea1f5.svg": "/oae-event-cms/static/media/carbon-home.5faea1f5.svg",
-    "static/media/edit-icon.3343540a.svg": "/oae-event-cms/static/media/edit-icon.3343540a.svg",
-    "static/media/info-icon.ee56963b.svg": "/oae-event-cms/static/media/info-icon.ee56963b.svg",
-    "static/media/music-list-circle.c6e14c56.svg": "/oae-event-cms/static/media/music-list-circle.c6e14c56.svg",
-    "static/media/music-note-icon.42765502.svg": "/oae-event-cms/static/media/music-note-icon.42765502.svg",
-    "static/media/oae-logo.3d614d5f.svg": "/oae-event-cms/static/media/oae-logo.3d614d5f.svg",
-    "static/media/paintbrush-circle.d3062484.svg": "/oae-event-cms/static/media/paintbrush-circle.d3062484.svg",
-    "static/media/single-note-circle.fed5bdbb.svg": "/oae-event-cms/static/media/single-note-circle.fed5bdbb.svg",
-    "static/media/tick-circle.f6ae7c22.svg": "/oae-event-cms/static/media/tick-circle.f6ae7c22.svg"
+    "static/media/info-icon.svg": "/oae-event-cms/static/media/info-icon.ee56963b5d2614df357fffada331495e.svg",
+    "static/media/tick-circle.svg": "/oae-event-cms/static/media/tick-circle.f6ae7c22e37f26db401ca3501df317cc.svg",
+    "main.ebec1653.css.map": "/oae-event-cms/static/css/main.ebec1653.css.map",
+    "main.eda23482.js.map": "/oae-event-cms/static/js/main.eda23482.js.map",
+    "787.52b9a05b.chunk.js.map": "/oae-event-cms/static/js/787.52b9a05b.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.f84c7c1b.js",
-    "static/js/2.2d0df70f.chunk.js",
-    "static/css/main.91070569.chunk.css",
-    "static/js/main.1b9d9c5c.chunk.js"
+    "static/css/main.ebec1653.css",
+    "static/js/main.eda23482.js"
   ]
 }
