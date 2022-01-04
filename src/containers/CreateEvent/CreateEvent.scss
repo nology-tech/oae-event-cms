@@ -1,8 +1,13 @@
-@use "../../assets/styles/base/typography"as *;
-@use "../../assets/styles/_variables"as *;
+@use "../../assets/styles/base/typography" as *;
+@use "../../assets/styles/_variables" as *;
 
 .create-event__container {
   background-color: $back-color;
   margin-top: 6rem;
   margin-left: 5.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  column-gap: 2rem;
 }

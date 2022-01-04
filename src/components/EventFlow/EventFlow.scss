@@ -5,7 +5,7 @@
 .event-flow__container {
     display: grid;
     align-content: left;
-    padding: 2rem;
+    padding-left: 2rem;
     justify-content: space-between;
     grid-template-columns: 2fr, 1fr;
     grid-template-rows: repeat(12, 1fr);

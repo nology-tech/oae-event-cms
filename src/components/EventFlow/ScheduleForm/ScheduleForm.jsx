@@ -10,7 +10,7 @@ const ScheduleForm = () => {
     <form className ="schedule-form form">
      <div className="form__title">
           <h3 className="form__title-step">Step 02</h3>
-          <h2 className="form__title-main">Add schedule</h2>
+          <h2 className="form__title-main">Add Schedule</h2>
       </div>
 
       <div className="schedule-form__name form__section">  
