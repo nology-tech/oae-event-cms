@@ -1,9 +1,8 @@
 import "./App.scss";
 import Header from "./containers/Header/Header";
 import Nav from "./containers/Nav/Nav";
-import EventsList from "./containers/EventsList/EventsList";
-import CreateEvent from "./containers/CreateEvent/CreateEvent";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Routing from "./containers/Routing/Routing";
+import { BrowserRouter as Router } from "react-router-dom";
 
 const App = () => {
   return (
@@ -11,11 +10,7 @@ const App = () => {
       <Router>
         <Header />
         <Nav />
-        <Routes>
-          <Route path="/" element={<CreateEvent />} />
-          <Route path="/events" element={<EventsList />} />
-          <Route path="/orchestra" />
-        </Routes>
+        <Routing />
       </Router>
     </div>
   );

@@ -13,4 +13,11 @@
         margin: 1rem 2rem;
         cursor: pointer;
     }
+
+}
+
+.nav__icon--active {
+    background-color: orange;
+    border: 1px solid black;
+    padding: 10px;
 }
