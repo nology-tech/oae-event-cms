@@ -9,21 +9,20 @@ import events from "../../assets/data/events";
 
 const EventsList = (props) => {
     const [searchTerm, setSearchTerm] = useState("")
-    const [eventsArr] = useState([]);
-
-
 
     const handleInput = event => {
         setSearchTerm(event.target.value.toLowerCase());
         event.preventDefault();
     }
 
-    console.log(events)
-    const filterEvents = eventsArr.filter((event) => {
-        const lowerEvent = event.toLowerCase();
-        return lowerEvent.includes(searchTerm)
-    })
-    console.log(filterEvents)
+    const filterEvents = events.filter((event) => {
+        const lowerEvent = event.name.toLowerCase();
+        return lowerEvent.includes(searchTerm);
+    });
+
+    const eventsList = filterEvents.map((event) => (
+        <EventCard eventName={event.name} series={event.series} date={event.date} time={event.time} location={event.location} URL={event.uniqueURL} />
+    ))
 
     return (
         <div className="event-list">
@@ -45,8 +44,7 @@ const EventsList = (props) => {
                     <h5 className="event-list__headings-title">Location</h5>
                     <h5 className="event-list__headings-URL">Digital Programme URL</h5>
                 </div>
-                <EventCard eventName="Infant Musicality" series="Bach, The Universe &amp; Everything" date="12-12-21" time="11.30" location="King's Place, London" URL="https://oaedigital.co.uk/events/6bb8ffe8-6e5e-4abc-be7f-b05b749849cf
-                " />
+                {eventsList}
             </div>
 
         </div>
