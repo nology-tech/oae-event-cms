@@ -17,6 +17,7 @@ const App = () => {
           <Route path="/orchestra" />
         </Routes>
       </Router>
+      <Forms />
     </div>
   );
 };
