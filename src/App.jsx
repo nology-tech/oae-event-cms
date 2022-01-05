@@ -2,7 +2,6 @@ import "./App.scss";
 import Header from "./containers/Header/Header";
 import EventsList from "./containers/EventsList/EventsList";
 import CreateEvent from "./containers/CreateEvent/CreateEvent";
-import PageOne from "./components/EventInfoForm/PageOne/PageOne";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -16,7 +15,7 @@ const App = () => {
           <Route path="/orchestra" />
         </Routes>
       </Router>
-      <PageOne/>
+      
       </div>
   );
 };
