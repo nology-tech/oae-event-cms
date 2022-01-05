@@ -22,7 +22,7 @@ const PageOne = () => {
     );
   }
   return (
-    <form className="eventinfo potato">
+    <form className="eventinfo">
       <div className="form__main">
         <section className="form" id="info-form">
           {/* Page Titles */}
