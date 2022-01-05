@@ -9,13 +9,13 @@ import ThemePicker from "../../components/ThemePicker/ThemePicker";
 const CreateEvent = () => {
     return (
         <div className="create-event__container">
-           <EventFlow/>
-              <Routes>
-                  <Route path="/" element={<ThemePicker/>} />
-                  <Route path="/event-info-2"/>
-                  <Route path="/event-schedule" element={<ScheduleForm/>} />
-                  <Route path="/event-theme" element={<ThemePicker/>}/>
-              </Routes>  
+            <EventFlow/>
+            <Routes>
+                <Route path="/" element={<ScheduleForm/>} />
+                <Route path="/event-info-2"/>
+                <Route path="/event-schedule" element={<ScheduleForm/>} />
+                <Route path="/event-theme" element={<ThemePicker/>}/>
+            </Routes>  
         </div>
     )
 }
