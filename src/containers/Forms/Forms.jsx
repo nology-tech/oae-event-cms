@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { useForm } from "react-hook-form";
 
-const EventForm = () => {
+const EventForms = () => {
   const {
     register,
     handleSubmit,
@@ -29,7 +29,7 @@ const EventForm = () => {
     </form>
   );
 };
-export default EventForm();
+export default EventForms();
 
 // const rootElement = document.getElementById("root");
 // ReactDOM.render(<App />, rootElement);
