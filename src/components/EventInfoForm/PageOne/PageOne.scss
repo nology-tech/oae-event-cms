@@ -1,0 +1,60 @@
+@use "../../../assets/styles/_variables.scss"as *;
+@use "../../../assets/styles/base/typography.scss"as *;
+@use "../../../assets/styles/layout/forms" as *;
+
+
+
+.form {
+    background-color: rgba(21, 255, 0, 0.24);
+    height: 45rem;
+    width: 26rem;
+
+    &__main
+     {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    &__label {
+      margin-bottom: 0.5rem;
+    }
+  
+    &__section:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    &__input{
+        padding-left: 2rem;
+    }
+
+  }
+
+  #picture-form {
+    background-color: rgba(255, 0, 0, 0.308);
+    margin-top: 6rem;
+    height: 39rem;
+}
+
+.eventinfo {
+    background-color: rgba(255, 0, 242, 0.178);
+
+    // &-btn {
+    //     position: relative;
+    //     bottom: 20px;
+    //     right: 40rem;
+    // }
+}
+
+.ButtonTest {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
