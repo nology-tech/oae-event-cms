@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        {/* <Header /> */}
+        <Header />
         <Routes>
           <Route path="/" element={<CreateEvent />} />
           <Route path="/events" element={<EventsList />} />

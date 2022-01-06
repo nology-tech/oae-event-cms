@@ -2,36 +2,15 @@ import React, { useCallback } from "react";
 import Button from "../../Button/Button";
 import "./PageOne.scss";
 
-
 const PageOne = () => {
-  function MyDropzone() {
-    const onDrop = useCallback((acceptedFiles) => {
-      
-    }, []);
-    const { getRootProps, getInputProps, isDragActive } = { onDrop };
-
-    return (
-      <div {...getRootProps}>
-        <input {...getInputProps} />
-        {isDragActive ? (
-          <p>Drop the files here ...</p>
-        ) : (
-          <p>Drag 'n' drop some files here, or click to select files</p>
-        )}
-      </div>
-    );
-  }
   return (
     <form className="eventinfo">
       <div className="eventInfo__pageOne-form__main">
         <section className="eventInfo__pageOne-form form" id="info-form">
-          {/* Page Titles */}
           <div className="form__title">
             <h3 className="form__title-step">Step 01</h3>
             <h2 className="form__title-main">Event Information (1/2)</h2>
           </div>
-
-          {/* Form Titles */}
           <div className="form__section">
             <label className="form__label"> Title </label>
             <input
@@ -40,8 +19,6 @@ const PageOne = () => {
               placeholder="Can You Hear The Shape Of A Drum?"
             />
           </div>
-
-          {/* Form Series */}
           <div className="form__section">
             <label className="form__label"> Series </label>
             <input
@@ -50,20 +27,20 @@ const PageOne = () => {
               placeholder="Bach, The Universe And Everything"
             />
           </div>
-
-          {/* Form Date */}
           <div className="form__section">
             <label className="form__label"> Date </label>
-            <input type="date" className="eventInfo__pageOne-form__input form__input" />
+            <input
+              type="date"
+              className="eventInfo__pageOne-form__input form__input"
+            />
           </div>
-
-          {/* Form Time */}
           <div className="form__section">
             <label className="form__label"> Time </label>
-            <input className="eventInfo__pageOne-form__input form__input" type="time" />
+            <input
+              className="eventInfo__pageOne-form__input form__input"
+              type="time"
+            />
           </div>
-
-          {/* Form Location */}
           <div className="form__section">
             <label className="form__label"> Location </label>
             <input
@@ -73,22 +50,17 @@ const PageOne = () => {
             />
           </div>
         </section>
-
-        {/* Form Image */}
         <section className="picture-section form" id="picture-form">
           <label className="form__label"> Upload Image </label>
 
-          <div className="form__border-box">
-            <MyDropzone className="form__dropzone">
-              {({ getRootProps, getInputProps }) => (
-                <div {...getRootProps()}>
-                  <div className="imageDropPlaceholder">image drop placeholder box</div>
-                  <p>Drag 'n' drop some files here, or click to select files</p>
-                </div>
-              )}
-            </MyDropzone>
+          <div className="form__borderbox">
+            <div>
+              <div className="form__borderbox-placeholder">
+                image drop placeholder box
+              </div>
+              <p>Drag 'n' drop some files here, or click to select files</p>
+            </div>
           </div>
-
           <h4 className="picture-section__remove" id="remove">
             Remove
           </h4>
