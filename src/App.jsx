@@ -5,6 +5,7 @@ import EventsList from "./containers/EventsList/EventsList";
 import CreateEvent from "./containers/CreateEvent/CreateEvent";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Forms from "./containers/Forms/Forms";
+import FormValidationTest from "./containers/Forms/FormValidationTest";
 
 const App = () => {
   return (
@@ -18,7 +19,7 @@ const App = () => {
           <Route path="/orchestra" />
         </Routes>
       </Router>
-      <Forms />
+      <FormValidationTest />
     </div>
   );
 };
