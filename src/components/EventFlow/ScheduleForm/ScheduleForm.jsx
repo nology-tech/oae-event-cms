@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../../Button/Button";
-import "./ScheduleForm.scss"
-import "../../../assets/styles/layout/_forms.scss"
+import "./ScheduleForm.scss";
 import TextareaAutosize from 'react-textarea-autosize';
 
 const ScheduleForm = () => {
