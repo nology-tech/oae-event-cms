@@ -9,7 +9,9 @@ const PageOne = () => {
                 <h4 className="form__title">Email Address</h4>
                 <input type="text" className="form__input" placeholder="team@oae.co.uk"/>
         <Button buttonText="Submit" buttonType="primary"/>
+
     </div>
+   
 }
 
 export default PageOne;
