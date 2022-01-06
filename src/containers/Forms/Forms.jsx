@@ -6,7 +6,7 @@ const EventForms = () => {
   const {
     register,
     handleSubmit,
-    
+    watch,
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {

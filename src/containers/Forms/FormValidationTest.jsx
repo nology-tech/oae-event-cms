@@ -1,17 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import "./FormValidationTest.scss";
 import { useForm } from "react-hook-form";
 
 const EventFormValidationTest = () => {
-  const {
-    register,
-    handleSubmit,
+  const { register, handleSubmit, errors } = useForm();
 
-    formState: { errors },
-  } = useForm();
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
     console.log(data);
   };
 
@@ -23,7 +17,7 @@ const EventFormValidationTest = () => {
         </div>
 
         <div className="schedule-form__name form__section">
-          <label for="title" className="form__label">
+          <label htmlFor="title" className="form__label">
             Title
           </label>
           <input
@@ -31,20 +25,13 @@ const EventFormValidationTest = () => {
             id="title"
             name="title"
             className="form__input"
-            {...register("title", {
+            ref={register({
               required: true,
-              minLength: 3,
-              maxLength: 20,
-              pattern: /^[A-Za-z]+$/i,
+              minLength: { value: 3, message: "too short" },
+              maxLength: { value: 20, message: "too long" },
             })}
           ></input>
-          {errors?.title?.type === "required" && <p>This field is required</p>}
-          {errors?.title?.type === "maxLength" && (
-            <p>Title cannot exceed 20 characters</p>
-          )}
-          {errors?.title?.type === "pattern" && (
-            <p>Alphabetical characters only</p>
-          )}
+          {errors.title && <p>{errors.title.message}</p>}
         </div>
 
         <div className="schedule-form__title form__section">
@@ -94,7 +81,7 @@ const EventFormValidationTest = () => {
             className="form__input"
           ></input>
         </div>
-        <button>Submit</button>
+        <input type="submit" />
       </form>
     </>
   );
