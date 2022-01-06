@@ -1,4 +1,3 @@
-import React, { useCallback } from "react";
 import Button from "../../Button/Button";
 import "./PageOne.scss";
 
