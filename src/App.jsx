@@ -13,7 +13,7 @@ const App = () => {
         <Header />
         <Nav />
         <Routes>
-        <Route path="/" element={<WelcomePage/>} />
+          <Route path="/" element={<WelcomePage/>} />
           <Route path="/create" element={<CreateEvent />} />
           <Route path="/events" element={<EventsList />} />
           <Route path="/orchestra" />

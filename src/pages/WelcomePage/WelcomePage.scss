@@ -1,15 +1,63 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/layout/forms" as *;
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .welcome {
     margin-left: 10rem;
     margin-top: 5rem;
+    width: 30vw;
+
+    &__header {
+        font-weight: 700;
+        font-size: 36px;
+        color: $title-color;
+
+        &-highlight {
+            color: $primary-color
+        }
+    }
+
+    &__subtitle {
+        color: $text-color;
+        margin-top: 0.75rem;
+    }
+
+    .welcome-form {
+        height: fit-content;
+        padding: 0;
+        margin-top: 0.75rem;
+        align-items: flex-start;
+
+        &__input {
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+        }
+
+        &__link {
+            color: #494949;
+            text-decoration: none;
+            border-bottom: 1px dotted #494949;
+            font-size: 10px;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .primary {
+            border-radius: 0.5rem;
+            height: fit-content;
+            padding: 0.75rem;
+            cursor: pointer;
+        }
+    }
+
 }
 
-.form {
-    height: fit-content;
-    &__input {
-        margin-bottom: 1rem;
-    }
-}
+
+
+
 
