@@ -9,6 +9,7 @@ import events from "../../assets/data/events";
 
 const EventsList = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [checkboxStatus, setCheckboxStatus] = useState(true);
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
@@ -31,21 +32,21 @@ const EventsList = (props) => {
     />
   ));
 
-  const checkAll = (event) => {
+  const checkBox = () => {
     const checkbox = document.getElementsByTagName("input");
-    if (event.target.checked === true) {
-      for (let i = 0; i < checkbox.length; i++) {
-        if (checkbox[i].type === "checkbox") {
-          checkbox[i].checked = true;
-        }
-      }
-    } else {
-      for (let i = 0; i < checkbox.length; i++) {
-        if (checkbox[i].type === "checkbox") {
-          checkbox[i].checked = false;
-        }
+    for (let i = 0; i < checkbox.length; i++) {
+      if (checkbox[i].type === "checkbox") {
+        checkbox[i].checked = checkboxStatus;
+        setCheckboxStatus(!checkboxStatus);
       }
     }
+  };
+
+  const checkAll = (event) => {
+    if (
+      event.target.checked ? setCheckboxStatus(true) : setCheckboxStatus(false)
+    );
+    checkBox();
   };
 
   return (
