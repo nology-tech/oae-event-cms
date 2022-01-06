@@ -29,7 +29,10 @@
    }
 
    &-icon {
-      width: 2vw;
+      max-width: 2vw;
       padding: 0.5vw;
+   }
+   &-icon:hover {
+      filter: opacity(50%);
    }
 }
