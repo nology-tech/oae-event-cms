@@ -12,19 +12,19 @@
     column-gap: 0.1vw;
     height: 90vh;
 
-.event-flow__title {
+h1 {
     justify-content: center;
     text-align: right;
     align-self: center;
     margin-bottom: -4rem;
     font-size: calc($base-font * 1.25);
 }
-.event-flow__text {
+p {
     margin-top: -1vh;
     text-align: right;
     color: $text-color;
 }
-.event-flow__header {
+h4 {
     text-align: right;
     color: $title-color;
 }
