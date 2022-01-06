@@ -3,9 +3,15 @@ import Button from "../Button/Button";
 import "./ThemePicker.scss";
 import arrowDown from "../../assets/images/arrow-down.svg";
 
-const ThemePicker = () => {
+const ThemePicker = (props) => {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.handleSubmit();
+  }
+
   return (
-    <form className="themepicker form">
+    <form className="themepicker form" onSubmit={handleSubmit}>
       <div className="themepicker form__title">
         <p className="themepicker form__title-step">Step 04</p>
         <h2 className="themepicker form__title-main">Choose Theme</h2>
@@ -61,7 +67,7 @@ const ThemePicker = () => {
         {/* BACK button */}
         <Button buttonText="Back" buttonType="secondary" />
         {/* NEXT button */}
-        <Button buttonText="Next" buttonType="primary" />
+        <Button buttonText="Next" buttonType="primary" type="submit"/>
       </div>
     </form>
   );

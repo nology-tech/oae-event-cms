@@ -5,7 +5,7 @@ import CreateEvent from "../CreateEvent/CreateEvent";
 const Routing = () => {
  return <>
     <Routes>
-      <Route path="/" element={<CreateEvent />} />
+      <Route path="/" element={<CreateEvent/>}/>
       <Route path="/events" element={<EventsList />} />
       <Route path="/orchestra" />
     </Routes>

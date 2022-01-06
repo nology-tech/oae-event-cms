@@ -1,21 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import "./CreateEvent.scss";
 import EventFlow from "../../components/EventFlow/EventFlow";
 import ScheduleForm from "../../components/EventFlow/ScheduleForm/ScheduleForm";
-import {Route, Routes } from "react-router-dom";
 import ThemePicker from "../../components/ThemePicker/ThemePicker";
 
 
 const CreateEvent = () => {
+
+    const [step, setStep] = useState(0);
+
+    const incrementStep = () => {
+        setStep(step + 1);
+    }
+
     return (
-        <div className="create-event__container">
+        <div className="create-event">
             <EventFlow/>
-            <Routes>
-                <Route path="/" element={<ScheduleForm/>} />
-                <Route path="/event-info-2"/>
-                <Route path="/event-schedule" element={<ScheduleForm/>} />
-                <Route path="/event-theme" element={<ThemePicker/>}/>
-            </Routes>  
+            {
+                step == 0 ? <ScheduleForm handleSubmit={incrementStep} /> : null
+            }
+            {
+                step == 1 ? <ThemePicker handleSubmit={incrementStep} /> : null
+            }
+            {
+                step == 2 ? <h2>Step 3</h2> : null
+            }
         </div>
     )
 }
