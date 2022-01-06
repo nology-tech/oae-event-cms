@@ -1,15 +1,14 @@
 import React from "react";
 import Button from "../../Button/Button";
-import "../../../assets/styles/base/_typography.scss";
-import "../../../assets/styles/_variables.scss";
-import "../PageOne/PageOne.scss";
+import "./PageOne.scss";
 
 const PageOne = () => {
-    return <div>
-                <h1 className="title">Forgotten Your</h1>
-                <h1 className="title--orange">Password.</h1>
-                <h5>Please eneter your email address below to reset </h5>
-        <Button/>
+    return <div className="form">
+                <h1 className="form__title">Forgotten Your<span className="form__title--orange"> Password.</span></h1>
+                <p>Please enter your email address below to reset your password.</p>
+                <h4 className="form__title">Email Address</h4>
+                <input type="text" className="form__input" placeholder="team@oae.co.uk"/>
+        <Button buttonText="Submit" buttonType="primary"/>
     </div>
 }
 
