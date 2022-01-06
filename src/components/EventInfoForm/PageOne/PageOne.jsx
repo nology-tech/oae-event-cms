@@ -6,7 +6,7 @@ import "./PageOne.scss";
 const PageOne = () => {
   function MyDropzone() {
     const onDrop = useCallback((acceptedFiles) => {
-      // Do something with the files
+      
     }, []);
     const { getRootProps, getInputProps, isDragActive } = { onDrop };
 
@@ -23,8 +23,8 @@ const PageOne = () => {
   }
   return (
     <form className="eventinfo">
-      <div className="form__main">
-        <section className="form" id="info-form">
+      <div className="eventInfo__pageOne-form__main">
+        <section className="eventInfo__pageOne-form form" id="info-form">
           {/* Page Titles */}
           <div className="form__title">
             <h3 className="form__title-step">Step 01</h3>
@@ -36,7 +36,7 @@ const PageOne = () => {
             <label className="form__label"> Title </label>
             <input
               type="text"
-              className="form__input"
+              className="eventInfo__pageOne-form__input form__input"
               placeholder="Can You Hear The Shape Of A Drum?"
             />
           </div>
@@ -45,7 +45,7 @@ const PageOne = () => {
           <div className="form__section">
             <label className="form__label"> Series </label>
             <input
-              className="form__input"
+              className="eventInfo__pageOne-form__input form__input"
               type="list"
               placeholder="Bach, The Universe And Everything"
             />
@@ -54,13 +54,13 @@ const PageOne = () => {
           {/* Form Date */}
           <div className="form__section">
             <label className="form__label"> Date </label>
-            <input type="date" className="form__input" />
+            <input type="date" className="eventInfo__pageOne-form__input form__input" />
           </div>
 
           {/* Form Time */}
           <div className="form__section">
             <label className="form__label"> Time </label>
-            <input className="form__input" type="time" />
+            <input className="eventInfo__pageOne-form__input form__input" type="time" />
           </div>
 
           {/* Form Location */}
@@ -68,14 +68,14 @@ const PageOne = () => {
             <label className="form__label"> Location </label>
             <input
               type="text"
-              className="form__input"
+              className="eventInfo__pageOne-form__input form__input"
               placeholder="Kings Place, London"
             />
           </div>
         </section>
 
         {/* Form Image */}
-        <section className="form" id="picture-form">
+        <section className="picture-section form" id="picture-form">
           <label className="form__label"> Upload Image </label>
 
           <div className="form__border-box">
@@ -92,7 +92,7 @@ const PageOne = () => {
           <h4 className="picture-section__remove" id="remove">
             Remove
           </h4>
-          <div className="ButtonTest">
+          <div className="picture-section__button">
             <Button
               buttonType="primary"
               buttonText="Next"

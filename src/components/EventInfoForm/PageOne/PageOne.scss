@@ -4,8 +4,7 @@
 
 
 
-.form {
-    background-color: rgba(21, 255, 0, 0.24);
+.eventInfo__pageOne-form {
     height: 45rem;
     width: 26rem;
 
@@ -14,47 +13,27 @@
         display: flex;
         flex-direction: row;
     }
-
-    &__title {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      gap: 0.5rem;
-      margin-bottom: 2rem;
-    }
   
-    &__label {
-      margin-bottom: 0.5rem;
-    }
-  
-    &__section:not(:last-child) {
-      margin-bottom: 1rem;
-    }
     &__input{
         padding-left: 2rem;
     }
 
   }
 
-  #picture-form {
-    background-color: rgba(255, 0, 0, 0.308);
+  .picture-section {
     margin-top: 6rem;
     height: 39rem;
+
+    &__remove{
+      text-decoration-line: underline;
+    }
+    &__button {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+  }
+  
 }
 
-.eventinfo {
-    background-color: rgba(255, 0, 242, 0.178);
 
-    // &-btn {
-    //     position: relative;
-    //     bottom: 20px;
-    //     right: 40rem;
-    // }
-}
-
-.ButtonTest {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
 
