@@ -1,9 +1,15 @@
 import Button from "../../Button/Button";
 import "./PageOne.scss";
 
-const PageOne = () => {
+const PageOne = (props) => {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.handleSubmit();
+  }
+
   return (
-    <form className="eventinfo">
+    <form className="eventinfo" onSubmit={handleSubmit}>
       <div className="eventInfo__pageOne-form__main">
         <section className="eventInfo__pageOne-form form" id="info-form">
           <div className="form__title">

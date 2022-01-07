@@ -2,9 +2,15 @@ import React from "react";
 import "./PageTwo.scss";
 import Button from "../../Button/Button";
 
-const PageTwo = () => {
-return (
-     <div className="create-event-info-page" >
+const PageTwo = (props) => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        props.handleSubmit();
+    }
+
+    return (
+     <form className="create-event-info-page" onSubmit={handleSubmit}>
         <div className="event-info-header">
             <h3 className="create-event-info__step">Step 02</h3>
             <h1 className="create-event-info__title">Event Information (2/2)</h1>
@@ -24,14 +30,14 @@ return (
                 <h4 className="description__title form__title"> Event Description </h4>
                 <input className=" description__input form__input" id="description" width="100" rows="80" placeholder="We like to think of the series as a community, similar to the one Bach enjoyed in Leipzig where he produced contatas at an extraordinary rate, providing innovative music for the weekly services at the church where he worked from 1723 until his death in 1750. At that time, the congregation was as open to science and new ideas as it was united by faith. It is this spirit that we cae together for a thought provoking contata and a talk..."/>
                 <div className="description__button form__button">
-                <Button buttonType="secondary" buttonText="Back"className="secondary"/>
-                <Button buttonType="primary"
-              buttonText="Next"className="primary"/>
-            </div>
+                    <Button buttonType="secondary" buttonText="Back"className="secondary"/>
+                    <Button buttonType="primary"
+                buttonText="Next"className="primary"/>
+                </div>
             </div>
             
         </div>
-     </div>
+     </form>
         )
     }
 export default PageTwo

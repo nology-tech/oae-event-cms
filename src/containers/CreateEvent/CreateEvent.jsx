@@ -3,7 +3,8 @@ import "./CreateEvent.scss";
 import EventFlow from "../../components/EventFlow/EventFlow";
 import ScheduleForm from "../../components/EventFlow/ScheduleForm/ScheduleForm";
 import ThemePicker from "../../components/ThemePicker/ThemePicker";
-
+import PageOne from '../../components/EventInfoForm/PageOne/PageOne';
+import PageTwo from '../../components/EventInfoForm/PageTwo/PageTwo';
 
 const CreateEvent = () => {
 
@@ -17,13 +18,16 @@ const CreateEvent = () => {
         <div className="create-event">
             <EventFlow/>
             {
-                step == 0 ? <ScheduleForm handleSubmit={incrementStep} /> : null
+                step == 0 ? <PageOne handleSubmit={incrementStep} /> : null
             }
             {
-                step == 1 ? <ThemePicker handleSubmit={incrementStep} /> : null
+                step == 1 ? <PageTwo handleSubmit={incrementStep} /> : null 
             }
             {
-                step == 2 ? <h2>Step 3</h2> : null
+                step == 2 ? <ScheduleForm handleSubmit={incrementStep} /> : null
+            }
+            {
+                step == 3 ? <ThemePicker handleSubmit={incrementStep} /> : null
             }
         </div>
     )
