@@ -7,10 +7,23 @@
     box-sizing: border-box;
 }
 
+.welcome-page {
+    display: flex;
+    flex-direction: column;
+
+    &__logo {
+        margin-top: 2rem;
+        margin-left: 2.5rem;
+    }
+}
+
 .welcome {
     margin-left: 10rem;
-    margin-top: 5rem;
+    height: 85vh;
     width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     &__header {
         font-weight: 700;
@@ -36,6 +49,7 @@
         &__input {
             margin-bottom: 1rem;
             padding-left: 1rem;
+            width: 85%;
         }
 
         &__link {

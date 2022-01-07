@@ -10,8 +10,8 @@ const App = () => {
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Nav />
+        {/* <Header />
+        <Nav /> */}
         <Routes>
           <Route path="/" element={<WelcomePage/>} />
           <Route path="/create" element={<CreateEvent />} />
