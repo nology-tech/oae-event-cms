@@ -4,7 +4,8 @@ import Nav from "./containers/Nav/Nav";
 import EventsList from "./containers/EventsList/EventsList";
 import CreateEvent from "./containers/CreateEvent/CreateEvent";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import PageOne from "./components/ResetPassword/PageOne/PageOne";
+import ForgotPassword from "./components/ForgotPassword/ForgotPassword";
+import ResetPassword from "./components/ResetPassword/ResetPassword";
 
 const App = () => {
   return (
@@ -18,7 +19,8 @@ const App = () => {
           <Route path="/orchestra" />
           
           {/* Temporary */}
-          <Route path="/reset" element={<PageOne />} />
+          <Route path="/reset" element= {<ResetPassword/>}/>
+          <Route path="/forgot" element= {<ForgotPassword/>}/>
         </Routes>
       </Router>
     </div>
