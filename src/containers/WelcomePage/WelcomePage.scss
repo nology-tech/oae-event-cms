@@ -7,16 +7,6 @@
     box-sizing: border-box;
 }
 
-.welcome-page {
-    display: flex;
-    flex-direction: column;
-
-    &__logo {
-        margin-top: 2rem;
-        margin-left: 2.5rem;
-    }
-}
-
 .welcome {
     margin-left: 10rem;
     height: 85vh;

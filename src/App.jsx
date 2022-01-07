@@ -3,15 +3,15 @@ import Header from "./containers/Header/Header";
 import Nav from "./containers/Nav/Nav";
 import EventsList from "./containers/EventsList/EventsList";
 import CreateEvent from "./containers/CreateEvent/CreateEvent";
+import WelcomePage from "./containers/WelcomePage/WelcomePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import WelcomePage from "./pages/WelcomePage/WelcomePage";
 
 const App = () => {
   return (
     <div className="App">
       <Router>
-        {/* <Header />
-        <Nav /> */}
+        <Header />
+        <Nav />
         <Routes>
           <Route path="/" element={<WelcomePage/>} />
           <Route path="/create" element={<CreateEvent />} />
