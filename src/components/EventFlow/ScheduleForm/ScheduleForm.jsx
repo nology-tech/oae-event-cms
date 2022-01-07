@@ -3,13 +3,19 @@ import Button from "../../Button/Button";
 import "./ScheduleForm.scss";
 import TextareaAutosize from 'react-textarea-autosize';
 
-const ScheduleForm = () => {
+const ScheduleForm = (props) => {
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.handleSubmit();
+  }
+
   return (
     <>
-    <form className ="schedule-form form">
+    <form className ="schedule-form form" onSubmit={handleSubmit}>
      <div className="form__title">
           <h3 className="form__title-step">Step 02</h3>
-          <h2 className="form__title-main">Add schedule</h2>
+          <h2 className="form__title-main">Add Schedule</h2>
       </div>
 
       <div className="schedule-form__name form__section">  
@@ -37,7 +43,7 @@ const ScheduleForm = () => {
       </div>
       <div className="schedule-form__buttons form__buttons"> 
         <Button buttonType="tertiary" buttonText="Add" className="form__button-add"/>
-        <Button buttonType="primary" buttonText="Next" className="form__button-next"/>
+        <Button buttonType="primary" buttonText="Next" className="form__button-next" type="submit"/>
       </div>
     </form>
     </>

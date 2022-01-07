@@ -1,7 +1,12 @@
 @use "../../assets/styles/_variables"as *;
 
-.create-event__container {
+.create-event {
   background-color: $back-color;
-  margin-top: 6rem;
+  margin-top: 7rem;
   margin-left: 5.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100vw;
+  column-gap: 2rem;
 }
