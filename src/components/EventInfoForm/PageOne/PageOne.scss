@@ -1,0 +1,43 @@
+@use "../../../assets/styles/_variables.scss"as *;
+@use "../../../assets/styles/base/typography.scss"as *;
+@use "../../../assets/styles/layout/forms" as *;
+
+
+
+.eventInfo__pageOne-form {
+    height: 45rem;
+    width: 26rem;
+
+    &__main
+     {
+        display: flex;
+        flex-direction: row;
+    }
+  
+    &__input{
+        padding-left: 2rem;
+    }
+
+  }
+
+  .picture-section {
+    margin-top: 6rem;
+    height: 39rem;
+
+    &__remove{
+      text-decoration-line: underline;
+    }
+    &__button {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+  }
+  
+}
+
+.form__borderbox-placeholder {
+  width: 30rem;
+  height: 10rem;
+  border: solid 2px $form-input-border-color;
+  border-radius: 15px;
+}
