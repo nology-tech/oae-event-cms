@@ -3,7 +3,12 @@ import "./FormValidationTest.scss";
 import { useForm } from "react-hook-form";
 
 const EventFormValidationTest = () => {
-  const { register, handleSubmit, errors } = useForm();
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
@@ -25,7 +30,7 @@ const EventFormValidationTest = () => {
             id="title"
             name="title"
             className="form__input"
-            ref={register({
+            {...register("title", {
               required: true,
               minLength: { value: 3, message: "too short" },
               maxLength: { value: 20, message: "too long" },
