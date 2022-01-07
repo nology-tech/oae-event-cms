@@ -1,65 +1,65 @@
 @use "../../assets/styles/_variables" as *;
 
-// Note: ThemePicker.scss should only be used for ThemePicker specific styles. You can rely on forms.scss styling for the more "general" styling. Commented out the below code for someone to review
-// --- <3 from Andy
+.themepicker {
+  height: 28rem;
+  width: 29rem;
+  position: fixed;
 
-// .form {
-//   height: 28rem;
-//   width: 29rem;
-//   position: fixed;
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
 
-//   &__title {
-//     display: flex;
-//     justify-content: space-between;
-//     flex-direction: column;
-//     gap: 0.5rem;
-//     margin-bottom: 2rem;
-//   }
+  &__input {
+    height: 2rem;
+    width: 2rem;
+    background-color: $form-input-color;
 
-//   &__label {
-//     margin-bottom: 0.5rem;
-//   }
+    &-color {
+      border: none;
+      width: 2rem;
+    }
+  }
 
-//   &__buttons {
-//     justify-content: flex-end;
-//     gap: 2rem;
-//     align-items: baseline;
-//   }
+  &__label {
+    margin-bottom: 0.5rem;
+  }
 
-//   &__section:not(:last-child) {
-//     margin-bottom: 1rem;
-//   }
+  &__buttons {
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: baseline;
+  }
 
-//   &__section {
-//     &-color {
-//       display: flex;
-//       flex-direction: row;
-//       justify-content: space-between;
-//       border: 1px solid $form-label-color;
-//       width: 4rem;
-//       border-radius: 8px;
-//       padding: 0.2rem;
-//     }
-//     &-img {
-//       width: 0.6rem;
-//       padding-right: 0.5rem;
-//     }
-//   }
+  &__section:not(:last-child) {
+    margin-bottom: 1rem;
+  }
 
-//   &__selectBox {
-//     height: 3rem;
-//     padding: 0 1rem;
-//     border: 1px solid $form-label-color;
-//     border-radius: 8px;
-//   }
-// }
+  &__section {
+    &-color {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border: 1px solid $form-label-color;
+      width: 4rem;
+      border-radius: 8px;
+      padding: 0.2rem;
+    }
+    &-img {
+      width: 0.6rem;
+      padding-right: 0.5rem;
+    }
+  }
 
-// input[type="color"] {
-//   border: none;
-// }
+  &__selectBox {
+    height: 3rem;
+    padding: 0 1rem;
+    border: 1px solid $form-label-color;
+    border-radius: 8px;
+  }
+}
 
-// .themepicker__input {
-//   height: 2rem;
-//   width: 2rem;
-//   background-color: $form-input-color;
-// }
+
