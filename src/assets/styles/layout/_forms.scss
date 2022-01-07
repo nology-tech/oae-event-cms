@@ -2,7 +2,7 @@
 @use "../variables" as *;
 //Base grid setup for form.
 
-.form {
+.form, form {
   width: 25.3vw;
   height: 66.3vh;
   display: flex;
@@ -12,6 +12,7 @@
   padding-top: 4.2vh;
   padding-left: 2.8vw;
   padding-bottom: 4.12vh;
+
 
   &__title {
     &-step {
