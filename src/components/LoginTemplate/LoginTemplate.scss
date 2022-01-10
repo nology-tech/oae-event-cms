@@ -8,54 +8,54 @@
 }
 
 .welcomePage {
-    width: 100vw;
-    height: 100vh;
-  
-    &__rectangle-grey {
-      position: absolute;
-      top: 9rem;
-      right: 39rem;
-      width: 25rem;
-    }
-  
-    &__circle-big {
-      position: absolute;
-      top: 3rem;
-      right: 8rem;
-      width: 10rem;
-    }
-  
-    &__circle-small {
-      position: absolute;
-      bottom: 8rem;
-      right: 30rem;
-      width: 5rem;
-    }
-  
-    &__rectangle-orange {
-      position: absolute;
-      bottom: 11rem;
-      right: 2rem;
-      width: 20rem;
-    }
-  
-    &__preview {
-      position: absolute;
-      top: 12rem;
-      right: 5rem;
-      height: 35rem;
-    }
-  
-    &__image {
-      position: absolute;
-      top: 0rem;
-      right: 0rem;
-      height: 100vh;
-    }
-  
-    &__logo {
-      position: absolute;
-      top: 2rem;
-      left: 2rem;
-    }
+  width: 100vw;
+  height: 100vh;
+
+  &__rectangle-grey {
+    position: absolute;
+    top: 9rem;
+    right: 39rem;
+    width: 25rem;
   }
+
+  &__circle-big {
+    position: absolute;
+    top: 3rem;
+    right: 8rem;
+    width: 10rem;
+  }
+
+  &__circle-small {
+    position: absolute;
+    bottom: 8rem;
+    right: 30rem;
+    width: 5rem;
+  }
+
+  &__rectangle-orange {
+    position: absolute;
+    bottom: 11rem;
+    right: 2rem;
+    width: 20rem;
+  }
+
+  &__preview {
+    position: absolute;
+    top: 12rem;
+    right: 5rem;
+    height: 35rem;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100vh;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+}
