@@ -29,7 +29,7 @@ const EventFormValidationTest = () => {
             name="title"
             className="form__input"
             {...register("title", {
-              required: "fill this in aswell lazy cunt",
+              required: "fill this in aswell mate",
               minLength: { value: 3, message: "too short" },
               maxLength: { value: 20, message: "too long" },
             })}
@@ -45,7 +45,7 @@ const EventFormValidationTest = () => {
             name="series"
             className="form__input"
             {...register("series", {
-              required: "fill this in aswell lazy cunt",
+              required: "fill this in aswell mate",
               minLength: { value: 3, message: "too short" },
               maxLength: { value: 20, message: "too long" },
             })}
@@ -77,7 +77,7 @@ const EventFormValidationTest = () => {
             name="location"
             className="form__input"
             {...register("location", {
-              required: "fill this in aswell lazy cunt",
+              required: "fill this in aswell mate",
               minLength: { value: 3, message: "too short" },
               maxLength: { value: 20, message: "too long" },
             })}
