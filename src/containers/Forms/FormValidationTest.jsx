@@ -6,7 +6,6 @@ const EventFormValidationTest = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm();
 
@@ -30,47 +29,44 @@ const EventFormValidationTest = () => {
             name="title"
             className="form__input"
             {...register("title", {
-              required: true,
+              required: "fill this in aswell lazy cunt",
               minLength: { value: 3, message: "too short" },
               maxLength: { value: 20, message: "too long" },
             })}
-          ></input>
+          />
           {errors.title && <p>{errors.title.message}</p>}
         </div>
 
         <div className="schedule-form__title form__section">
           <label>Series</label>
           <input
-            className="form__label"
             type="text"
             id="series"
             name="series"
             className="form__input"
-            required
-          ></input>
+            {...register("series", {
+              required: "fill this in aswell lazy cunt",
+              minLength: { value: 3, message: "too short" },
+              maxLength: { value: 20, message: "too long" },
+            })}
+          />
+          {errors.series && <p>{errors.series.message}</p>}
         </div>
         <div className="schedule-form__author form__section">
           <label htmlFor="date" className="form__label">
             Date
           </label>
-          <input
-            type="text"
-            id="date"
-            name="date"
-            className="form__input"
-            required
-          ></input>
+          <input type="date" id="date" name="date" className="form__input" />
         </div>
         <div className="schedule-form__author form__section">
           <label>Time</label>
           <input
             className="form__label"
-            type="text"
+            type="time"
             id="time"
             name="time"
             className="form__input"
-            required
-          ></input>
+          />
         </div>
         <div className="schedule-form__author form__section">
           <label>Location</label>
@@ -80,7 +76,13 @@ const EventFormValidationTest = () => {
             id="location"
             name="location"
             className="form__input"
-          ></input>
+            {...register("location", {
+              required: "fill this in aswell lazy cunt",
+              minLength: { value: 3, message: "too short" },
+              maxLength: { value: 20, message: "too long" },
+            })}
+          />
+          {errors.location && <p>{errors.location.message}</p>}
         </div>
         <input type="submit" />
       </form>
