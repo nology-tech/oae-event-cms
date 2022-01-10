@@ -4,8 +4,8 @@ import Button from "../../components/Button/Button";
 import { LoginTemplate } from "../../components/LoginTemplate/LoginTemplate";
 
 const WelcomePage = () => {
-  return (<>
-    
+  return (
+    <>
       <div className="welcome">
         <h1 className="welcome__header">
           Welcome back to the{" "}
@@ -39,7 +39,7 @@ const WelcomePage = () => {
         </div>
       </div>
       <LoginTemplate />
-      </>
+    </>
   );
 };
 
