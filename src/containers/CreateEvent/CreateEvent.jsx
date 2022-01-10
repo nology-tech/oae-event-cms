@@ -18,16 +18,16 @@ const CreateEvent = () => {
         <div className="create-event">
             <EventFlow/>
             {
-                step == 0 ? <PageOne handleSubmit={incrementStep} /> : null
+                step === 0 ? <PageOne handleSubmit={incrementStep} /> : null
             }
             {
-                step == 1 ? <PageTwo handleSubmit={incrementStep} /> : null 
+                step === 1 ? <PageTwo handleSubmit={incrementStep} /> : null 
             }
             {
-                step == 2 ? <ScheduleForm handleSubmit={incrementStep} /> : null
+                step === 2 ? <ScheduleForm handleSubmit={incrementStep} /> : null
             }
             {
-                step == 3 ? <ThemePicker handleSubmit={incrementStep} /> : null
+                step === 3 ? <ThemePicker handleSubmit={incrementStep} /> : null
             }
         </div>
     )
