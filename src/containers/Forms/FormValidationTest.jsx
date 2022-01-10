@@ -22,10 +22,9 @@ const EventFormValidationTest = () => {
         </div>
 
         <div className="schedule-form__name form__section">
-          <label htmlFor="title" className="form__label">
-            Title
-          </label>
+          <label>Title</label>
           <input
+            className="form__label"
             type="text"
             id="title"
             name="title"
@@ -40,10 +39,9 @@ const EventFormValidationTest = () => {
         </div>
 
         <div className="schedule-form__title form__section">
-          <label for="series" className="form__label">
-            Series
-          </label>
+          <label>Series</label>
           <input
+            className="form__label"
             type="text"
             id="series"
             name="series"
@@ -52,7 +50,7 @@ const EventFormValidationTest = () => {
           ></input>
         </div>
         <div className="schedule-form__author form__section">
-          <label for="date" className="form__label">
+          <label htmlFor="date" className="form__label">
             Date
           </label>
           <input
@@ -64,10 +62,9 @@ const EventFormValidationTest = () => {
           ></input>
         </div>
         <div className="schedule-form__author form__section">
-          <label for="time" className="form__label">
-            Time
-          </label>
+          <label>Time</label>
           <input
+            className="form__label"
             type="text"
             id="time"
             name="time"
@@ -76,10 +73,9 @@ const EventFormValidationTest = () => {
           ></input>
         </div>
         <div className="schedule-form__author form__section">
-          <label for="location" className="form__label">
-            Location
-          </label>
+          <label>Location</label>
           <input
+            className="form__label"
             type="text"
             id="location"
             name="location"
