@@ -8,15 +8,21 @@ import PageTwo from '../../components/EventInfoForm/PageTwo/PageTwo';
 
 const CreateEvent = () => {
 
+    // pageNum
     const [step, setStep] = useState(0);
 
     const incrementStep = () => {
         setStep(step + 1);
     }
 
+    // need to use useEffect to refresh this function when data is updated
+    const pull_data = (data) => {
+        console.log(data);
+    }
+
     return (
         <div className="create-event">
-            <EventFlow/>
+            <EventFlow func={pull_data}/>
             {
                 step === 0 ? <PageOne handleSubmit={incrementStep} /> : null
             }

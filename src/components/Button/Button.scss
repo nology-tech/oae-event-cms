@@ -7,6 +7,10 @@
   font-size: 0.75rem;
   border-radius: $universal-border-radius;
   border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .primary {
