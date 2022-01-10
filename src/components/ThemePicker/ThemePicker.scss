@@ -1,7 +1,6 @@
-@use "../../assets/styles/layout/forms" as *;
 @use "../../assets/styles/_variables" as *;
 
-.form {
+.themepicker {
   height: 28rem;
   width: 29rem;
   position: fixed;
@@ -12,6 +11,17 @@
     flex-direction: column;
     gap: 0.5rem;
     margin-bottom: 2rem;
+  }
+
+  &__input {
+    height: 2rem;
+    width: 2rem;
+    background-color: $form-input-color;
+
+    &-color {
+      border: none;
+      width: 2rem;
+    }
   }
 
   &__label {
@@ -52,12 +62,4 @@
   }
 }
 
-input[type="color"] {
-  border: none;
-}
 
-.themepicker__input {
-  height: 2rem;
-  width: 2rem;
-  background-color: $form-input-color;
-}
