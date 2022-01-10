@@ -27,6 +27,10 @@
 .event-flow__header {
     text-align: right;
     color: $title-color;
+    &:hover{
+        cursor: grab;
+        text-decoration: underline;
+    }
 }
 #icon {
     border-radius: 50%;
