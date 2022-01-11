@@ -3,10 +3,17 @@ import "./WelcomePage.scss";
 import Button from "../Button/Button";
 import { LoginTemplate } from "../LoginTemplate/LoginTemplate";
 
-const WelcomePage = () => {
+const WelcomePage = (props) => {
+  const { handleNext } = props;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.handleSubmit();
+  };
+
   return (
-    <>
-      <form className="welcome">
+    <form onSubmit={handleSubmit}>
+      <div className="welcome">
         <h1 className="welcome__header">
           Welcome back to the{" "}
           <span className="welcome__header-highlight">OAE.</span>
@@ -32,14 +39,14 @@ const WelcomePage = () => {
             required
           />
 
-          <a className="welcome-form__link" href="">
+          <a className="welcome-form__link" onClick={handleNext}>
             Forgot your password?
           </a>
           <Button buttonText="Login" buttonType="primary"></Button>
         </div>
-      </form>
+      </div>
       <LoginTemplate />
-    </>
+    </form>
   );
 };
 
