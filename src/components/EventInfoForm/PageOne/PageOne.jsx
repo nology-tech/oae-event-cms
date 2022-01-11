@@ -3,10 +3,6 @@ import "./PageOne.scss";
 import { useForm } from "react-hook-form";
 
 const PageOne = (props) => {
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   props.handleSubmit();
-  // };
 
   const {
     register,
@@ -14,7 +10,9 @@ const PageOne = (props) => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = (data, event) => {
+    event.preventDefault();
+    props.handleSubmit();
     console.log(data);
   };
 
