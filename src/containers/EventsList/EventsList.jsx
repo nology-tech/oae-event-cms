@@ -51,7 +51,7 @@ const EventsList = (props) => {
 
   return (
     <div className="event-list">
-      <h1>Events List</h1>
+      <h2 className="event-list__header">Events List</h2>
       <div className="event-list__UI">
         <div className="event-list__searchbox">
           <SearchBox searchTerm={searchTerm} handleInput={handleInput} />
