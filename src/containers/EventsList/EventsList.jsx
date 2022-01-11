@@ -33,23 +33,6 @@ const EventsList = (props) => {
     />
   ));
 
-  const checkBox = () => {
-    const checkbox = document.getElementsByTagName("input");
-    for (let i = 0; i < checkbox.length; i++) {
-      if (checkbox[i].type === "checkbox") {
-        checkbox[i].checked = checkboxStatus;
-        setCheckboxStatus(!checkboxStatus);
-      }
-    }
-  };
-
-  const checkAll = (event) => {
-    if (
-      event.target.checked ? setCheckboxStatus(true) : setCheckboxStatus(false)
-    );
-    checkBox();
-  };
-
   return (
     <div className="event-list">
       <h2 className="event-list__header">Events List</h2>
@@ -68,7 +51,6 @@ const EventsList = (props) => {
       </div>
       <div className="event-list__table">
         <div className="event-list__headings">
-          <input onChange={checkAll} type="checkbox" />
           <h5 className="event-list__headings-title table__header">Event Name</h5>
           <h5 className="event-list__headings-series table__header">Series</h5>
           <h5 className="event-list__headings-time table__header">Date</h5>

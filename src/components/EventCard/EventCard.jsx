@@ -8,7 +8,6 @@ const EventCard = (props) => {
 
    return (
       <div className="eventCard">
-         <input type="checkbox" />
          <h5 className='eventCard-title'>{eventName}</h5>
          <p className="eventCard-series">{series}</p>
          <p className="eventCard-time">{date}</p>
