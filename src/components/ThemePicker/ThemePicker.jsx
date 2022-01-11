@@ -41,11 +41,6 @@ const ThemePicker = (props) => {
           </label>
           <div className="themepicker__section-color form__section-color">
             <input className="themepicker__input-color" for="theme" type="color" />
-            <img
-              className="themepicker__section-img form__section-img"
-              src={arrowDown}
-              alt="down arrow"
-            />
           </div>
         </div>
 
@@ -55,11 +50,15 @@ const ThemePicker = (props) => {
           </label>
           <div className="themepicker__section-color form__section-color">
             <input className="themepicker__input-color" for="accent" type="color" />
-            <img
-              className="themepicker__section-img form__section-img"
-              src={arrowDown}
-              alt="down arrow"
-            />
+          </div>
+        </div>
+
+        <div className="themepicker__section form__section">
+          <label className="themepicker__subtitle form__label" for="subtitle">
+            Subtitle Color
+          </label>
+          <div className="themepicker__section-color form__section-color">
+            <input className="themepicker__input-color" for="subtitle" type="color" />
           </div>
         </div>
       </div>

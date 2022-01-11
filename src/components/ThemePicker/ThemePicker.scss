@@ -1,9 +1,8 @@
 @use "../../assets/styles/_variables" as *;
 
 .themepicker {
-  height: 28rem;
+  height: 34rem;
   width: 29rem;
-  position: fixed;
 
   &__title {
     display: flex;
@@ -42,15 +41,15 @@
     &-color {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       border: 1px solid $form-label-color;
-      width: 4rem;
-      border-radius: 8px;
-      padding: 0.2rem;
+      width: 2.5rem;
+      border-radius: 6px;
+      padding: 0.1rem;
     }
     &-img {
-      width: 0.6rem;
-      padding-right: 0.5rem;
+      width: 2rem;
+      padding: 0 0.6rem;
     }
   }
 
