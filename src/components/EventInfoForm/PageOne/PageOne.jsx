@@ -5,7 +5,16 @@ const PageOne = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.handleSubmit();
+    const formData = {
+      step: 0,
+      title: event.target.title.value,
+      series: event.target.series.value,
+      time: event.target.time.value,
+      date: event.target.date.value,
+      location: event.target.location.value,
+      imageSrc: "event.target.imgSrc.value"
+    }
+    props.handleSubmit(formData);    
   }
 
   return (
@@ -19,6 +28,7 @@ const PageOne = (props) => {
           <div className="form__section">
             <label className="form__label"> Title </label>
             <input
+              name="title"
               type="text"
               className="eventInfo__pageOne-form__input form__input"
               placeholder="Can You Hear The Shape Of A Drum?"
@@ -27,6 +37,7 @@ const PageOne = (props) => {
           <div className="form__section">
             <label className="form__label"> Series </label>
             <input
+              name="series"
               className="eventInfo__pageOne-form__input form__input"
               type="list"
               placeholder="Bach, The Universe And Everything"
@@ -35,6 +46,7 @@ const PageOne = (props) => {
           <div className="form__section">
             <label className="form__label"> Date </label>
             <input
+              name="date"
               type="date"
               className="eventInfo__pageOne-form__input form__input"
             />
@@ -42,6 +54,7 @@ const PageOne = (props) => {
           <div className="form__section">
             <label className="form__label"> Time </label>
             <input
+              name="time"
               className="eventInfo__pageOne-form__input form__input"
               type="time"
             />
@@ -49,6 +62,7 @@ const PageOne = (props) => {
           <div className="form__section">
             <label className="form__label"> Location </label>
             <input
+              name="location"
               type="text"
               className="eventInfo__pageOne-form__input form__input"
               placeholder="Kings Place, London"

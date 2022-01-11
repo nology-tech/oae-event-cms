@@ -7,7 +7,11 @@ const ScheduleForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.handleSubmit();
+    const formData = {
+      step: 2,
+      schedule: []
+    }
+    props.handleSubmit(formData);
   }
 
   return (
