@@ -98,16 +98,16 @@ const CreateEvent = () => {
         <div className="create-event">
             <EventFlow/>
             {
-                step == 0 ? <PageOne handleSubmit={handleStepZero} /> : null
+                step === 0 ? <PageOne handleSubmit={handleStepZero} /> : null
             }
             {
-                step == 1 ? <PageTwo handleSubmit={handleStepOne} /> : null 
+                step === 1 ? <PageTwo handleSubmit={handleStepOne} /> : null 
             }
             {
-                step == 2 ? <ScheduleForm handleSubmit={handleStepTwo} /> : null
+                step === 2 ? <ScheduleForm handleSubmit={handleStepTwo} /> : null
             }
             {
-                step == 3 ? <ThemePicker handleSubmit={handleStepThree} /> : null
+                step === 3 ? <ThemePicker handleSubmit={handleStepThree} /> : null
             }
         </div>
     )
