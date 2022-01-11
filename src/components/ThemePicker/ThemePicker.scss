@@ -43,9 +43,12 @@
       flex-direction: row;
       justify-content: center;
       border: 1px solid $form-label-color;
-      width: 2.5rem;
+      width: 3rem;
       border-radius: 6px;
-      padding: 0.1rem;
+      padding: 0.2rem;
+    }
+    &-color:hover {
+        border: 3px solid $form-label-color;
     }
     &-img {
       width: 2rem;

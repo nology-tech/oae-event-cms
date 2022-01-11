@@ -35,6 +35,7 @@ const ThemePicker = (props) => {
           </select>
         </div>
 
+        {/* Theme Input */}
         <div className="themepicker__section form__section">
           <label className="themepicker__theme form__label" for="theme">
             Theme Color
@@ -44,6 +45,7 @@ const ThemePicker = (props) => {
           </div>
         </div>
 
+        {/* Accent Input */}
         <div className="themepicker__section form__section">
           <label className="themepicker__accent form__label" for="accent">
             Accent Color
@@ -53,6 +55,7 @@ const ThemePicker = (props) => {
           </div>
         </div>
 
+        {/* Subtitle Input */}
         <div className="themepicker__section form__section">
           <label className="themepicker__subtitle form__label" for="subtitle">
             Subtitle Color
@@ -61,6 +64,7 @@ const ThemePicker = (props) => {
             <input className="themepicker__input-color" for="subtitle" type="color" />
           </div>
         </div>
+
       </div>
       <div className="themepicker__buttons form__buttons">
         {/* BACK button */}
