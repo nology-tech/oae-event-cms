@@ -1,4 +1,4 @@
-@use "../../assets/styles/_variables" as *;
+@use "../../assets/styles/variables"as *;
 
 .event-list {
    display: flex;
@@ -6,12 +6,6 @@
    margin-left: 8vw;
    padding: 10vw 4vw 0 8vw;
    width: 92vw;
-
-   &__header {
-      color: $title-color;
-      font-size: 1.2rem;
-      font-weight: 600;
-   }
 
    &__headings {
       background-color: $back-color;
@@ -46,8 +40,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 3rem;
-      margin-top: 1.5rem;
+      margin-bottom: 4vh;
    }
 
    &__searchbox {
@@ -55,8 +48,7 @@
       flex-direction: row;
       align-items: center;
       max-width: 30vw;
-      border: 2px solid red;
-      padding: 0 1rem;
+
    }
 
    &__searchIcon {
