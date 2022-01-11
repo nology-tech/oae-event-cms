@@ -1,9 +1,5 @@
 @use "../../assets/styles/variables" as *;
 
-:root {
-    --primary-color: $primary-color;
-}
-
 .nav {
     padding-top: 12rem;
     display: flex;
@@ -23,6 +19,7 @@
             width: 1.5em;
             margin: 1rem 2rem;
             cursor: pointer;
+    
         }
     }
 
