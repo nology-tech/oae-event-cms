@@ -4,16 +4,34 @@ import "./ScheduleForm.scss";
 import TextareaAutosize from 'react-textarea-autosize';
 
 const ScheduleForm = (props) => {
+  let scheduleArr = [];
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
-      step: 2,
-      schedule: []
+      name: event.target.name.value,
+      title: event.target.title.value,
+      author: event.target.author.value,
+      description: event.target.description.value,
+      alternateDescription: event.target.alternateDescription.value
     }
-    props.handleSubmit(formData);
+    scheduleArr.push(formData);
+    console.log(scheduleArr);
   }
 
+  const proceedToNextPage = () => {
+    if (scheduleArr.length == 0){
+      // Display error message
+      // Return
+    }
+
+    const formData = {
+      step: 2,
+      schedule: scheduleArr
+    }
+
+    props.handleSubmit(formData);
+  }
   return (
     <>
     <form className ="schedule-form form" onSubmit={handleSubmit}>
@@ -42,16 +60,18 @@ const ScheduleForm = (props) => {
         <label for="alternate-description" className="form__label">
             Alternate Description (optional)
         </label>
-        <TextareaAutosize name="alternate-description" id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
+        <TextareaAutosize name="alternateDescription" id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
         />
       </div>
       <div className="schedule-form__buttons form__buttons"> 
-        <Button buttonType="tertiary" buttonText="Add" className="form__button-add"/>
-        <Button buttonType="primary" buttonText="Next" className="form__button-next" type="submit"/>
+        <Button buttonType="tertiary" buttonText="Add" className="form__button-add" type="submit"/>       
       </div>
     </form>
+    <button onClick={proceedToNextPage}>Next</button>
     </>
   );
 };
 
 export default ScheduleForm;
+
+// <Button buttonType="primary" buttonText="Next" className="form__button-next" type="button"/>
