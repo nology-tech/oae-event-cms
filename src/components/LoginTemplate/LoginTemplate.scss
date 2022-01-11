@@ -13,37 +13,38 @@
 
   &__rectangle-grey {
     position: absolute;
-    top: 9rem;
-    right: 39rem;
-    width: 25rem;
+    top: 18vh;
+    right: 30vw;
+    width: 25vw;
   }
 
   &__circle-big {
     position: absolute;
-    top: 3rem;
-    right: 8rem;
-    width: 10rem;
+    top: 3vh;
+    right: 8vw;
+    width: 10vw;
   }
 
   &__circle-small {
     position: absolute;
-    bottom: 8rem;
-    right: 30rem;
-    width: 5rem;
+    bottom: 8vh;
+    right: 28vw;
+    width: 5vw;
   }
 
   &__rectangle-orange {
     position: absolute;
-    bottom: 11rem;
-    right: 2rem;
-    width: 20rem;
+    bottom: 22vh;
+    right: 3vw;
+    width: 20vw;
   }
 
   &__preview {
     position: absolute;
-    top: 12rem;
-    right: 5rem;
-    height: 35rem;
+    top: 22vh;
+    right: 6vw;
+    // height: 35vh;
+    height: 50vh;
   }
 
   &__image {
