@@ -13,7 +13,7 @@ const EventCard = (props) => {
          <p className="eventCard-series">{series}</p>
          <p className="eventCard-time">{date}</p>
          <p className="eventCard-time">{time}</p>
-         <p className="eventCard-title">{location}</p>
+         <p className="eventCard-location">{location}</p>
          <p className="eventCard-URL">{URL}</p>
          <img className="eventCard-icon" src={editIcon} alt="edit button" />
          <img className="eventCard-icon" src={binIcon} alt="bin button" />

@@ -6,20 +6,24 @@
    margin-left: 8vw;
    padding: 10vw 4vw 0 8vw;
    width: 92vw;
+   background-color: $back-color;
 
    &__header {
       color: $title-color;
       font-size: 1.2rem;
-      font-weight: 600;
+      font-weight: 500;
    }
 
    &__headings {
-      background-color: $back-color;
+      background-color: $event-list-table-row-color;
       border-radius: 0.4rem 0.4rem 0 0;
       display: flex;
       align-items: center;
-      color: $text-color;
-
+      .table__header{
+         padding: 0.5rem 0;
+         color: $event-list-heading-color;
+         font-weight: 500;
+      }
       input {
          width: 2vw;
       }
@@ -55,7 +59,6 @@
       flex-direction: row;
       align-items: center;
       max-width: 30vw;
-      border: 2px solid red;
       padding: 0 1rem;
    }
 

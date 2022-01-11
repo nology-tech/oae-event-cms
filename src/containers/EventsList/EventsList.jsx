@@ -69,12 +69,12 @@ const EventsList = (props) => {
       <div className="event-list__table">
         <div className="event-list__headings">
           <input onChange={checkAll} type="checkbox" />
-          <h5 className="event-list__headings-title">Event Name</h5>
-          <h5 className="event-list__headings-series">Series</h5>
-          <h5 className="event-list__headings-time">Date</h5>
-          <h5 className="event-list__headings-time">Time</h5>
-          <h5 className="event-list__headings-title">Location</h5>
-          <h5 className="event-list__headings-URL">Digital Programme URL</h5>
+          <h5 className="event-list__headings-title table__header">Event Name</h5>
+          <h5 className="event-list__headings-series table__header">Series</h5>
+          <h5 className="event-list__headings-time table__header">Date</h5>
+          <h5 className="event-list__headings-time table__header">Time</h5>
+          <h5 className="event-list__headings-title table__header">Location</h5>
+          <h5 className="event-list__headings-URL table__header">Digital Programme URL</h5>
         </div>
         {eventsList}
       </div>

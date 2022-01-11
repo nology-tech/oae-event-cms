@@ -5,7 +5,11 @@
    flex-direction: row;
    align-items: center;
    justify-content: space-between;
-   color: $text-color;
+   color: $event-list-info-color;
+   padding: 1rem;
+   >h5,p{
+      font-weight: 400;
+   }
 
    input {
       width: 2vw;
@@ -14,9 +18,12 @@
    &-series {
       width: 16vw;
    }
-
+   &-location{
+      width: 12vw;
+   }
    &-title {
       width: 12vw;
+      color: $text-color;
    }
 
    &-time {
