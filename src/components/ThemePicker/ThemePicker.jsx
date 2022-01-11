@@ -7,7 +7,13 @@ const ThemePicker = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.handleSubmit();
+    const formData = {
+      step: 3,
+      fontType: event.target.fontType.value,
+      themeColor: event.target.themeColor.value,
+      accentColor: event.target.accentColor.value
+    }
+    props.handleSubmit(formData);
   }
 
   return (
@@ -25,7 +31,7 @@ const ThemePicker = (props) => {
           <select
             className="themepicker__dropdown form__selectBox"
             id="fonttype"
-            name="fonttype"
+            name="fontType"
           >
             <option value="" disabled selected>
               Please select from one of the following...
@@ -40,7 +46,7 @@ const ThemePicker = (props) => {
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" for="theme" type="color" />
+            <input name="themeColor" className="themepicker__input-color" for="theme" type="color" />
             <img
               className="themepicker__section-img form__section-img"
               src={arrowDown}
@@ -54,7 +60,7 @@ const ThemePicker = (props) => {
             Accent Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" for="accent" type="color" />
+            <input name="accentColor" className="themepicker__input-color" for="accent" type="color" />
             <img
               className="themepicker__section-img form__section-img"
               src={arrowDown}
