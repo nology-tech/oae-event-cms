@@ -19,12 +19,12 @@ const Review = (props) => {
             (
                 <div className='review__right-schedule-card'>
                     <p>{schedule.name}</p>
-                    <p>{schedule.title}</p>
-                    <p>By {schedule.author}</p>
+                    {schedule.title !== "" ? <p>{schedule.title}</p> : null}
+                    {schedule.author !== "" ? <p>By {schedule.author}</p> : null}
                     <h3>Description</h3>
                     <p>{schedule.description}</p>
-                    <h3>Alternative Description</h3>
-                    <p>{schedule.alternateDescription}</p>
+                    {schedule.alternativeDescription !== "" ? <><h3>Alternative Description</h3>
+                    <p>{schedule.alternateDescription}</p></> : null}
                 </div>
             )
         )
