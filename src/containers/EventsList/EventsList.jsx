@@ -52,7 +52,7 @@ const EventsList = (props) => {
             alt="search icon"
           />
         </div>
-        <Link to="/" ><Button buttonText="Add +" buttonType="primary" /></Link>
+        <Link to="/create/event" ><Button buttonText="Add +" buttonType="primary" /></Link>
         
           
       </div>
