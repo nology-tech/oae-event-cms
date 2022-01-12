@@ -1,4 +1,4 @@
-@use "../../assets/styles/variables"as *;
+@use "../../assets/styles/_variables" as *;
 
 .event-list {
    display: flex;
@@ -6,14 +6,25 @@
    margin-left: 8vw;
    padding: 10vw 4vw 0 8vw;
    width: 92vw;
+   background-color: $back-color;
+
+   &__header {
+      color: $title-color;
+      font-size: 1.2rem;
+      font-weight: 400;
+   }
 
    &__headings {
-      background-color: $back-color;
+      background-color: $event-list-table-row-color;
       border-radius: 0.4rem 0.4rem 0 0;
       display: flex;
       align-items: center;
-      color: $text-color;
-
+      padding-left: 1rem;
+      .table__header{
+         padding: 0.6rem 0;
+         color: $event-list-heading-color;
+         font-weight: 500;
+      }
       input {
          width: 2vw;
       }
@@ -40,7 +51,8 @@
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 4vh;
+      margin-bottom: 3rem;
+      margin-top: 1.5rem;
    }
 
    &__searchbox {
@@ -48,7 +60,8 @@
       flex-direction: row;
       align-items: center;
       max-width: 30vw;
-
+      padding: 0 1rem;
+      background-color: $form-input-color; //same colour as what we need
    }
 
    &__searchIcon {
