@@ -5,6 +5,7 @@ import ScheduleForm from "../../components/EventFlow/ScheduleForm/ScheduleForm";
 import ThemePicker from "../../components/ThemePicker/ThemePicker";
 import PageOne from '../../components/EventInfoForm/PageOne/PageOne';
 import PageTwo from '../../components/EventInfoForm/PageTwo/PageTwo';
+import Review from '../../components/Review/Review';
 
 const CreateEvent = () => {
     const [event, setEvent] = useState({});
@@ -108,6 +109,9 @@ const CreateEvent = () => {
             }
             {
                 step === 3 ? <ThemePicker handleSubmit={handleStepThree} /> : null
+            }
+            {
+                step === 4 ? <Review event={event}/> : null
             }
         </div>
     )

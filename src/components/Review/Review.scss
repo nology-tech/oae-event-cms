@@ -1,0 +1,35 @@
+@use "../../assets/styles/variables" as *;
+
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    &__section {
+        background-color: $form-background-color;
+        padding: 1rem;
+        &-title-edit {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 4rem;
+        }
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        &-theme {
+            &-box {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
