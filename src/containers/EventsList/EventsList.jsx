@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/Button/Button";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import Search_Icon from "../../assets/images/Search_Icon.png";
@@ -6,23 +6,44 @@ import {Link} from "react-router-dom";
 
 import EventCard from "../../components/EventCard/EventCard";
 import "./EventsList.scss";
-import events from "../../assets/data/events";
+// import events from "../../assets/data/events";
 
 const EventsList = (props) => {
+  const [dataArr, setDataArr] = useState([]);
+  
+const fetchEventData = () =>{  
+  const Url = "https://oae-mock-api.herokuapp.com/events/"
+  fetch(Url)
+  .then((response) =>{
+return response.json();
+  })
+  .then((result) =>{
+    setDataArr(result)
+    console.log(dataArr);
+  })
+  .catch((error) =>{
+    console.log("There has been an error with this request");
+  })
+}
+
+useEffect(() =>{fetchEventData();
+}, [])
+  
+
   const [searchTerm, setSearchTerm] = useState("");
-  const [checkboxStatus, setCheckboxStatus] = useState(true);
+  // const [checkboxStatus, setCheckboxStatus] = useState(true);
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
     event.preventDefault();
   };
 
-  const filterEvents = events.filter((event) => {
+  const filterEvents = dataArr.filter((event) => {
     const lowerEvent = event.name.toLowerCase();
     return lowerEvent.includes(searchTerm);
   });
 
-  const eventsList = filterEvents.map((event) => (
+  const eventsList = dataArr.map((event) => (
     <EventCard
       eventName={event.name}
       series={event.series}
