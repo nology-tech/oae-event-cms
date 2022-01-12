@@ -1,25 +1,20 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/layout/forms" as *;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 .welcomePage {
   width: 100vw;
   height: 100vh;
 
   &__rectangle-grey {
-    position: absolute;
+    position: fixed;
     top: 18vh;
     right: 30vw;
     width: 25vw;
   }
 
   &__circle-big {
-    position: absolute;
+    position: fixed;
     top: 3vh;
     right: 8vw;
     width: 10vw;
