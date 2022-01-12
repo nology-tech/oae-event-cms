@@ -9,7 +9,7 @@ const App = () => {
     <div className="App">
      <Router>
         <Header />
-        <Nav />
+        {/* <Nav /> */}
         <Routing />
       </Router>
       </div>
