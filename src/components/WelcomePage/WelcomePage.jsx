@@ -20,21 +20,21 @@ const WelcomePage = (props) => {
         </h1>
         <p className="welcome__subtitle">Sign in to the portal below.</p>
         <div className="form welcome-form">
-          <label className="form__label welcome-form__label" name="username">
+          <label className="form__label welcome-form__label" htmlFor="username">
             Username
           </label>
           <input
             className="form__input welcome-form__input"
             type="text"
-            name="username"
+            id="username"
             placeholder="team@oae.co.uk"
             required
           />
-          <label className="form__label welcome-form__label">Password</label>
+          <label className="form__label welcome-form__label" htmlFor="password">Password</label>
           <input
             className="form__input welcome-form__input"
             type="password"
-            name="password"
+            id="password"
             placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
             required
           />
