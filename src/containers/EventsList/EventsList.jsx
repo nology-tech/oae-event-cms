@@ -33,16 +33,6 @@ const EventsList = (props) => {
     />
   ));
 
-  const checkBox = () => {
-    const checkbox = document.getElementsByTagName("input");
-    for (let i = 0; i < checkbox.length; i++) {
-      if (checkbox[i].type === "checkbox") {
-        checkbox[i].checked = checkboxStatus;
-        setCheckboxStatus(!checkboxStatus);
-      }
-    }
-  };
-
   const checkAll = (event) => {
     if (
       event.target.checked ? setCheckboxStatus(true) : setCheckboxStatus(false)
