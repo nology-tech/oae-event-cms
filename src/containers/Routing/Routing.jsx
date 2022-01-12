@@ -7,7 +7,7 @@ import ForgotPassword from "../../components/ForgotPassword/ForgotPassword";
 const Routing = () => {
   return <>
   <Routes>
-    <Route path="/event/create" element={<CreateEvent/>}/>
+    <Route path="/create/event" element={<CreateEvent/>}/>
     <Route path="/" element={<EventsList />} />
      {/* Temporary */}
      {/* <Route path="/login" element={<WelcomePage></WelcomePage>} */}
