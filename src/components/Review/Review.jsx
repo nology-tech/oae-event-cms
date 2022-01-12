@@ -17,14 +17,14 @@ const Review = (props) => {
         console.log(scheduleArr);
         return scheduleArr.map(schedule =>
             (
-                <div className='review__right-schedule-card'>
-                    <p>{schedule.name}</p>
-                    {schedule.title !== "" ? <p>{schedule.title}</p> : null}
-                    {schedule.author !== "" ? <p>By {schedule.author}</p> : null}
-                    <h3>Description</h3>
-                    <p>{schedule.description}</p>
-                    {schedule.alternativeDescription !== "" ? <><h3>Alternative Description</h3>
-                    <p>{schedule.alternateDescription}</p></> : null}
+                <div className='review__section review__right-schedule-card'>
+                    <p className='review__section-input'>{schedule.name}</p>
+                    {schedule.title !== "" ? <p className='review__section-input'>{schedule.title}</p> : null}
+                    {schedule.author !== "" ? <p className='review__section-input'>By {schedule.author}</p> : null}
+                    <p className='review__section-text'>Description</p>
+                    <p className='review__section-input'>{schedule.description}</p>
+                    {schedule.alternativeDescription !== "" ? <><p className='review__section-text'>Alternative Description</p>
+                    <p className='review__section-input'>{schedule.alternateDescription}</p></> : null}
                 </div>
             )
         )
@@ -41,24 +41,24 @@ const Review = (props) => {
                    <p>edit</p>
                    </div>
                    <p className='review__section-header'>Part 1</p>
-                   <p>Name</p>
-                   <p>{event.name}</p> 
-                   <p>Series</p>
-                   <p>{event.series}</p>
-                   <p>Date</p>
-                   <p>{event.date}</p>
-                   <p>Time</p>
-                   <p>{event.time}</p>
+                   <p className='review__section-text'>Name</p>
+                   <p className='review__section-input'>{event.name}</p> 
+                   <p className='review__section-text'>Series</p>
+                   <p className='review__section-input'>{event.series}</p>
+                   <p className='review__section-text'>Date</p>
+                   <p className='review__section-input'>{event.date}</p>
+                   <p className='review__section-text'>Time</p>
+                   <p className='review__section-input'>{event.time}</p>
                    
                    <p className='review__section-header'>Part 2</p>
-                   <p>Heading</p>
-                   <p>{event.intro.heading}</p>
-                   <p>Content</p>
-                   <p>{event.intro.content}</p>
-                   <p>Quote</p>
-                   <p>{event.intro.quote}</p>
-                   <p>Quote Caption</p>
-                   <p>{event.intro.quoteCaption}</p>
+                   <p className='review__section-text'>Heading</p>
+                   <p className='review__section-input'>{event.intro.heading}</p>
+                   <p className='review__section-text'>Content</p>
+                   <p className='review__section-input'>{event.intro.content}</p>
+                   <p className='review__section-text'>Quote</p>
+                   <p className='review__section-input'>{event.intro.quote}</p>
+                   <p className='review__section-text'>Quote Caption</p>
+                   <p className='review__section-input'>{event.intro.quoteCaption}</p>
                 </div>
 
                 <div className='review__section review__left-theme'>
@@ -66,11 +66,11 @@ const Review = (props) => {
                         <h3>Theme Settings</h3>
                         <p>edit</p>
                     </div>
-                    <p>Font Type</p>
-                    <p>{event.theme.templateTheme}</p>
-                    <p>Primary Colour</p>
+                    <p className='review__section-text'>Font Type</p>
+                    <p className='review__section-input'>{event.theme.templateTheme}</p>
+                    <p className='review__section-text'>Primary Colour</p>
                     <div className='review__left-theme-box' style={primaryColorStyles}></div>
-                    <p>Accent Colour</p>
+                    <p className='review__section-text'>Accent Colour</p>
                     <div className='review__left-theme-box' style={accentColorStyles}></div>
 
                 </div>
