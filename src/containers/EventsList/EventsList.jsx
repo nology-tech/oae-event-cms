@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/Button/Button";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import Search_Icon from "../../assets/images/Search_Icon.png";
+import {Link} from "react-router-dom";
 
 import EventCard from "../../components/EventCard/EventCard";
 import "./EventsList.scss";
