@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ThemePicker from "./ThemePicker";
 
@@ -43,6 +43,16 @@ it("should render the color inputs", () => {
 //   const nextButton = screen.getByTestId("nextButton")
 //   userEvent.click
 // })
+
+// when the color inputs are clicked, and a color is chosen, the color shown should match the selected color
+it("should show the hexcode value that matches the selected color on the input", ()=> {
+render(<ThemePicker/>)
+
+const themeInput = screen.getByTestId("theme", {name: "Theme Color"}) 
+fireEvent.input(themeInput, {target: {value: '#333333'}})
+
+expect(themeInput).toHaveValue("#333333")
+})
 
 // when the inputs for the colours are clicked, it should show the colour picker 
 
