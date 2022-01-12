@@ -41,7 +41,7 @@ const ThemePicker = (props) => {
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="theme" type="color" />
+            <input className="themepicker__input-color" htmlFor="theme" type="color" name="Theme Color" data-testid="theme"/>
           </div>
         </div>
 
@@ -51,7 +51,7 @@ const ThemePicker = (props) => {
             Accent Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="accent" type="color" />
+            <input className="themepicker__input-color" htmlFor="accent" type="color" name="Accent Color" data-testid="accent"/>
           </div>
         </div>
 
@@ -61,7 +61,7 @@ const ThemePicker = (props) => {
             Subtitle Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="subtitle" type="color" />
+            <input className="themepicker__input-color" htmlFor="subtitle" type="color" name="Subtitle Color" data-testid="subtitle"/>
           </div>
         </div>
 
@@ -70,7 +70,7 @@ const ThemePicker = (props) => {
         {/* BACK button */}
         <Button buttonText="Back" buttonType="secondary" />
         {/* NEXT button */}
-        <Button buttonText="Next" buttonType="primary" type="submit"/>
+        <Button buttonText="Next" buttonType="primary" type="submit" data-testid="nextButton"/>
       </div>
     </form>
   );
