@@ -3,16 +3,14 @@
 .eventCard {
    display: flex;
    flex-direction: row;
-   align-items: center;
-   justify-content: space-between;
    color: $event-list-info-color;
    padding: 1rem;
+   background-color: $form-input-color;
+   border-bottom: 2px solid $back-color;
+   height: 5rem;
+
    >h5,p{
       font-weight: 400;
-   }
-
-   input {
-      width: 2vw;
    }
 
    &-series {
@@ -35,11 +33,12 @@
       overflow-wrap: break-word;
    }
 
+   // needs fixing, icons are weird looking
    &-icon {
-      max-width: 2vw;
-      padding: 0.5vw;
-   }
-   &-icon:hover {
-      filter: opacity(50%);
+      max-width: 1.8rem;
+      height: fit-content;
+      &:hover {
+         filter: opacity(50%);
+      }
    }
 }

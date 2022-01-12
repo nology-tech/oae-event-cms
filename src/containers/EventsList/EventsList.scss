@@ -3,9 +3,9 @@
 .event-list {
    display: flex;
    flex-direction: column;
-   margin-left: 8vw;
-   padding: 10vw 4vw 0 8vw;
-   width: 92vw;
+   margin-left: 5.6rem;
+   padding: 8rem 2.5rem 0 4rem;
+   width: calc(100% - 90px);
    background-color: $back-color;
 
    &__header {
@@ -18,15 +18,12 @@
       background-color: $event-list-table-row-color;
       border-radius: 0.4rem 0.4rem 0 0;
       display: flex;
-      align-items: center;
+      align-items: left;
       padding-left: 1rem;
       .table__header{
          padding: 0.6rem 0;
          color: $event-list-heading-color;
          font-weight: 500;
-      }
-      input {
-         width: 2vw;
       }
 
       &-series {
@@ -67,12 +64,5 @@
    &__searchIcon {
       width: 1rem;
       height: 1rem;
-   }
-
-   &__headings {
-      display: flex;
-      flex-direction: row;
-      align-items: left;
-      justify-content: space-between;
    }
 }
