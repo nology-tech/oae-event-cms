@@ -31,8 +31,10 @@
 #icon {
     border-radius: 50%;
     border: 3px;
-    height: 3em;
-    width: 3em;
+    height: 3rem;
+    width: 3rem;
+    color: $primary-color;
+    fill: aqua;
 }
 #icon-clicked {
     background-color: $primary-color;

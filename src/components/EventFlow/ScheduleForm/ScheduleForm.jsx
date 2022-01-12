@@ -20,7 +20,7 @@ const ScheduleForm = (props) => {
   }
 
   const proceedToNextPage = () => {
-    if (scheduleArr.length == 0){
+    if (scheduleArr.length === 0){
       // Display error message
       // Return
     }
