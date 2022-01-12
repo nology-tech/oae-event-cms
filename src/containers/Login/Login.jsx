@@ -3,7 +3,6 @@ import ForgotPassword from "../../components/ForgotPassword/ForgotPassword";
 import ResetPassword from "../../components/ResetPassword/ResetPassword";
 import WelcomePage from "../../components/WelcomePage/WelcomePage";
 import CreateEvent from "../CreateEvent/CreateEvent";
-import "./Login.scss";
 
 export const Login = () => {
   const [step, setStep] = useState(0);
