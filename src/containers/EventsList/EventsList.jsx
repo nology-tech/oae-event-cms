@@ -10,7 +10,6 @@ import events from "../../assets/data/events";
 
 const EventsList = (props) => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [checkboxStatus, setCheckboxStatus] = useState(true);
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
@@ -32,13 +31,6 @@ const EventsList = (props) => {
       URL={event.uniqueURL}
     />
   ));
-
-  const checkAll = (event) => {
-    if (
-      event.target.checked ? setCheckboxStatus(true) : setCheckboxStatus(false)
-    );
-    checkBox();
-  };
 
   return (
     <div className="event-list">
