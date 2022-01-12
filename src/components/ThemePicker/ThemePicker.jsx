@@ -30,6 +30,7 @@ const ThemePicker = (props) => {
           </label>
           <select
             className="themepicker__dropdown form__selectBox"
+            required
             id="fonttype"
             name="fontType"
           >
