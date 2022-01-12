@@ -1,18 +1,12 @@
 @use "../../assets/styles/variables" as *;
 @use "../../assets/styles/layout/forms" as *;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .welcome {
   margin-left: 15rem;
   height: 85vh;
   width: 25vw;
   display: flex;
-  position: absolute;
+  position: fixed;
   flex-direction: column;
   justify-content: center;
 
