@@ -26,8 +26,9 @@ return response.json();
   })
 }
 
-useEffect(() =>{fetchEventData();
-}, [])
+useEffect(() => {
+  fetchEventData()
+}, [setDataArr]);
   
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -42,8 +43,8 @@ useEffect(() =>{fetchEventData();
     return lowerEvent.includes(searchTerm);
   });
 
-  const eventsList = filterEvents.map((event) => (
-    <EventCard
+  const eventsList = filterEvents.map((event, index) => (
+    <EventCard key= {"event" + index}
       eventName={event.name}
       series={event.series}
       date={event.date}
