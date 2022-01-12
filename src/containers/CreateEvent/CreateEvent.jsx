@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./CreateEvent.scss";
 import EventFlow from "../../components/EventFlow/EventFlow";
 import ScheduleForm from "../../components/EventFlow/ScheduleForm/ScheduleForm";

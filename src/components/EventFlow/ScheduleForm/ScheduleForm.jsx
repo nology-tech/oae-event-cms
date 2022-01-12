@@ -10,7 +10,7 @@ const ScheduleForm = (props) => {;
 
   // Handler for once ALL schedule items have been added
   const handleNext = (event) => {
-    if (scheduleArr.length == 0){
+    if (scheduleArr.length === 0){
       // Display error message
       // Return
     }
