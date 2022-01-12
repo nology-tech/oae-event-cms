@@ -61,6 +61,7 @@
       align-items: center;
       max-width: 30vw;
       padding: 0 1rem;
+      background-color: $form-input-color; //same colour as what we need
    }
 
    &__searchIcon {
