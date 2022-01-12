@@ -1,3 +1,5 @@
+@use "../../assets/styles/variables" as *;
+
 .nav {
     padding-top: 12rem;
     display: flex;
@@ -6,11 +8,19 @@
     gap: 2rem;
     height: 100vh;
     position: fixed;
-
-    &__icon {
-        height: 1.5em;
-        width: 1.5em;
-        margin: 1rem 2rem;
-        cursor: pointer;
+    a {
+        // border-radius: 3rem;
+        border: none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        .nav__icon {
+            height: 1.5em;
+            width: 1.5em;
+            margin: 1rem 2rem;
+            cursor: pointer;
+    
+        }
     }
+
 }
