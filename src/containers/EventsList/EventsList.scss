@@ -1,6 +1,10 @@
 @use "../../assets/styles/_variables" as *;
 
+
+
 .event-list {
+   // margin: 0;
+   // padding: 0;
    display: flex;
    flex-direction: column;
    margin-left: 5.6rem;

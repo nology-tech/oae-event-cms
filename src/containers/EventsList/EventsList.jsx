@@ -31,7 +31,6 @@ useEffect(() =>{fetchEventData();
   
 
   const [searchTerm, setSearchTerm] = useState("");
-  // const [checkboxStatus, setCheckboxStatus] = useState(true);
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
@@ -43,7 +42,7 @@ useEffect(() =>{fetchEventData();
     return lowerEvent.includes(searchTerm);
   });
 
-  const eventsList = dataArr.map((event) => (
+  const eventsList = filterEvents.map((event) => (
     <EventCard
       eventName={event.name}
       series={event.series}
