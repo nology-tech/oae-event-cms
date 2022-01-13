@@ -77,7 +77,7 @@ const ScheduleForm = (props) => {;
     )
     setListHtml(scheduleArrHtml);
 
-  }, [scheduleArr])
+  }, [scheduleArr]);
 
 
   return (

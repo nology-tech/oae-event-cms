@@ -51,9 +51,6 @@ const CreateEvent = () => {
     }
 
     const handleStepOne = (data) => {
-        const introData = {
-            
-        }
         setEvent({
             ...event,
             intro: {
