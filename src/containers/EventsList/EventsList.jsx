@@ -28,7 +28,7 @@ return response.json();
 
 useEffect(() => {
   fetchEventData()
-}, [setDataArr]);
+}, [dataArr]);
   
 
   const [searchTerm, setSearchTerm] = useState("");
