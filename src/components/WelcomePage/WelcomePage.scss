@@ -1,0 +1,59 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/layout/forms" as *;
+
+.welcome {
+  margin-left: 10rem;
+  height: 85vh;
+  width: 25vw;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: center;
+
+  &__header {
+    font-weight: 700;
+    font-size: 36px;
+    color: $title-color;
+
+    &-highlight {
+      color: $primary-color;
+    }
+  }
+
+  &__subtitle {
+    color: $text-color;
+    margin-top: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .welcome-form {
+    height: fit-content;
+    padding: 0;
+    margin-top: 0.75rem;
+    align-items: flex-start;
+
+    &__input {
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      min-width: 85%;
+      max-width: 85%;
+    }
+
+    &__link {
+      color: #494949;
+      text-decoration: none;
+      border-bottom: 1px dotted #a82b2b;
+      font-size: 10px;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      cursor: pointer;
+    }
+
+    .primary {
+      border-radius: 0.5rem;
+      height: fit-content;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,75 +1,62 @@
 import React, { useState, createRef } from "react";
 import Button from "../Button/Button";
 import "./ResetPassword.scss";
+import LoginTemplate from "../LoginTemplate/LoginTemplate";
 
 const ResetPassword = () => {
-  const [passwordsMatch, setPasswordsMatch] = useState(true);
-  //const [inputFieldText, setInputFieldText] = useState({password1:"", password2:""})
   
-  const onSubmit = (e) => {
-    return e.preventDefault
-  }
-  const password1 = createRef();
-  const password2 = createRef();
-
-  const doPasswordsMatch = () => {
-    const inputField1 = password1.current
-    const inputField2 = password2.current
-    console.log(inputField1)
-
-
- //     setInputFieldText({password1:password1.current.value});
-   //      setInputFieldText({password2:password2.current.value});
-    if (inputField1 === inputField2) {
-      setPasswordsMatch(true);
-
-    } else {
-      setPasswordsMatch(false);
-      return
-    }
-  };
-
-  return (
-    <div className="reset">
-      <div className="left-container">
-        <form onSubmit="onSubmit">
-          <h1 className="left-container__header">
+    return (
+      <form>
+        <div className="welcome forgot-password">
+          <h1 className="welcome__header">
             Reset Your{" "}
-            <span className="left-container__header--orange"> Password.</span>
+            <span className="welcome__header-highlight">Password.</span>
           </h1>
-          <p className="left-container__subtitle">
-            Enter your new password below.
-          </p>
-          <label className="left-container__label">New Password</label>
-
+          <p className="welcome__subtitle">Enter your new password below.</p>
+          <div className="form welcome-form">
+          <label className="form__label welcome-form__label" htmlFor="new- password">
+            New Password
+          </label>
           <input
+            className="form__input welcome-form__input"
             type="password"
+            id="new-password"
+            placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
             required
-            onBlur={doPasswordsMatch}
-          //  ref={node => (password1 = node)}   
-            className="left-container__input"
-            id="password-field-1"
-            placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
           />
-          <label className="left-container__label">Confirm Password</label>
+          <label className="form__label welcome-form__label" htmlFor="confirm-password">Confirm Password</label>
+          <input
+            className="form__input welcome-form__input"
+            type="password"
+            id="confirm-password"
+            placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
+            required
+          />
+   
+            <Button buttonText="Submit" buttonType="primary"></Button>
+          </div>
+        </div>
+        <LoginTemplate />
+      </form>
+    )}
 
-          <input 
-            type="password"
-            required
-          //  ref={node => (password2 = node)}
-            className="left-container__input"
-            id="password-field-2"
-            placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
-          />
-          {passwordsMatch ? (
-            <p>Passwords match!</p>
-          ) : (
-            <p>Passwords don't match!</p>
-          )}
-          <Button onClick={onSubmit} type="submit" buttonText="Submit" buttonType="primary" />
-        </form>
-      </div>
-    </div>
-  );
-};
+    //       <input 
+    //         type="password"
+    //         required
+    //       //  ref={node => (password2 = node)}
+    //         className="left-container__input"
+    //         id="password-field-2"
+    //         placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+    //       />
+    //       {passwordsMatch ? (
+    //         <p>Passwords match!</p>
+    //       ) : (
+    //         <p>Passwords don't match!</p>
+    //       )}
+    //       <Button onClick={onSubmit} type="submit" buttonText="Submit" buttonType="primary" />
+    //     </form>
+    //   </div>
+    // </div>
+//   );
+// };
 export default ResetPassword;
