@@ -42,7 +42,7 @@
     .event-flow__icon1 {
         grid-column: 3/4;
         grid-row: 3/5;
-        filter: invert(77%) sepia(0%) saturate(115%) hue-rotate(57deg) brightness(117%) contrast(95%);
+        filter: invert(20%) sepia(33%) saturate(16%) hue-rotate(182deg) brightness(97%) contrast(95%);
     }
     .event-flow__header2 {
         grid-column: 1/2;
@@ -91,7 +91,6 @@
     .event-flow__icon5 {
         grid-column: 3/4;
         grid-row: 11/13;
-        filter: invert(75%) sepia(0%) saturate(115%) hue-rotate(57deg) brightness(117%) contrast(95%);
     }
     
     @media screen and (max-width: 1024px) {

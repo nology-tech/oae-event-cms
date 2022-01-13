@@ -3,8 +3,8 @@ import "./EventFlow.scss";
 import {ReactComponent as ScheduleIcon} from "../../assets/images/music-list-circle.svg";
 import {ReactComponent as OrchestraIcon} from "../../assets/images/single-note-circle.svg";
 import {ReactComponent as ThemeIcon} from "../../assets/images/paintbrush-circle.svg";
-import {ReactComponent as TickIcon} from "../../assets/images/tick-in-circle.svg";
-import {ReactComponent as InfoIcon} from "../../assets/images/info-circle.svg";
+import {ReactComponent as TickIcon} from "../../assets/images/tick-circle.svg";
+import {ReactComponent as InfoIcon} from "../../assets/images/info-icon.svg";
 
 const EventFlow = () => {
 const [ completed, setCompleted ] = useState(true);
