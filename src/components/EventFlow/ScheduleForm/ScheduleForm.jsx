@@ -55,7 +55,7 @@ const ScheduleForm = (props) => {;
   }
   
   const handleEdit = (i) => {
-
+    
   }
 
   useEffect(() => {
@@ -69,8 +69,8 @@ const ScheduleForm = (props) => {;
       <div key={i} className="schedule-list__cards-row">
         <h5 className="schedule-list__cards-row-title">{schedule.name}</h5>
         <div className="schedule-list__cards-row-buttons">
-          <a className="schedule-list__cards-row-buttons-link" onClick={() => handleEdit(i)}><EditIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
-          <a className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)}><BinIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
+          <a href="/#" className="schedule-list__cards-row-buttons-link" onClick={() => handleEdit(i)}><EditIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
+          <a href="/#" className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)}><BinIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
         </div>
       </div>
       )
