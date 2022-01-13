@@ -34,7 +34,7 @@ const Review = (props) => {
         <div className='review'>
             <div className='review__left'>
                 <div className='review__section review__left-info'>
-                    <p>Step 05</p>
+                    <p className='review__left-info-step'>Step 05</p>
                    <h2>Review</h2>
                    <div className='review__section-title-edit'>
                    <h3>Event Information</h3>

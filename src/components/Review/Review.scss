@@ -34,6 +34,11 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        &-info{
+            &-step {
+                color: $primary-color;
+            }
+        }
         &-theme {
             &-box {
                 height: 20px;
