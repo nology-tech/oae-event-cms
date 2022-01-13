@@ -11,24 +11,23 @@ import "./EventsList.scss";
 const EventsList = (props) => {
   const [dataArr, setDataArr] = useState([]);
   
-const fetchEventData = () =>{  
-  const Url = "https://oae-mock-api.herokuapp.com/events/"
-  fetch(Url)
-  .then((response) =>{
-return response.json();
-  })
-  .then((result) =>{
-    setDataArr(result)
-    console.log(dataArr);
-  })
-  .catch((error) =>{
-    console.log("There has been an error with this request");
-  })
-}
+  const fetchEventData = () =>{  
+    const Url = "https://oae-mock-api.herokuapp.com/events/"
+    fetch(Url)
+    .then((response) =>{
+      return response.json();
+    })
+    .then((result) =>{
+      setDataArr(result);
+    })
+    .catch((error) =>{
+      console.log("There has been an error with this request");
+    })
+  }
 
-useEffect(() => {
+  useEffect(() => {
   fetchEventData()
-}, [setDataArr]);
+  }, [dataArr]);
   
 
   const [searchTerm, setSearchTerm] = useState("");
