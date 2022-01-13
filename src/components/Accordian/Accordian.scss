@@ -1,0 +1,28 @@
+@use "../../assets/styles/variables" as *;
+
+.accordian__item {
+    border-bottom: 1px solid $form-label-color;
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        align-items: center;
+        &-name {
+            color: $form-label-color;
+        }
+        
+    }
+    &-content {
+        word-break: break-all;
+        &-input {
+            margin: 0;
+            color: $text-color;
+            margin-bottom: 0.5rem;
+        }
+        &-text {
+            color: $primary-color;
+            margin: 0;
+            
+        }
+    }
+}

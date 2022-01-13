@@ -5,6 +5,7 @@ import ScheduleForm from "../../components/EventFlow/ScheduleForm/ScheduleForm";
 import ThemePicker from "../../components/ThemePicker/ThemePicker";
 import PageOne from '../../components/EventInfoForm/PageOne/PageOne';
 import PageTwo from '../../components/EventInfoForm/PageTwo/PageTwo';
+import Review from '../../components/Review/Review';
 
 const CreateEvent = () => {
     const [event, setEvent] = useState({});
@@ -51,15 +52,14 @@ const CreateEvent = () => {
     }
 
     const handleStepOne = (data) => {
-        const introData = {
-            heading: data.heading,
-            quote: data.quote,
-            quoteCaption: data.quoteCaption,
-            content: data.content
-        }
         setEvent({
             ...event,
-            intro: introData
+            intro: {
+                heading: data.heading,
+                quote: data.quote,
+                quoteCaption: data.quoteCaption,
+                content: data.content
+            }
         })
         incrementStep();
     }
@@ -115,6 +115,9 @@ const CreateEvent = () => {
             }
             {
                 step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)}/> : null
+            }
+            {
+                step === 4 ? <Review event={event}/> : null
             }
         </div>
            )

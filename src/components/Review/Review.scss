@@ -1,0 +1,50 @@
+@use "../../assets/styles/variables" as *;
+
+.review {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 7rem;
+    &__section {
+        background-color: $form-background-color;
+        padding: 1rem 2rem;
+        width: 25vw;
+        &-title-edit {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: 4rem;
+        }
+        &-text {
+            color: $form-label-color;
+            margin: 0;
+        }
+        &-input {
+            margin: 0;
+            color: $text-color;
+            margin-bottom: 0.5rem;
+        }
+        &-header {
+            color: $primary-color;
+        }
+    }
+    &__left{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        &-theme {
+            &-box {
+                height: 20px;
+                width: 20px;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+    &__right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
