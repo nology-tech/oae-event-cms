@@ -26,12 +26,12 @@ return response.json();
   })
 }
 
-useEffect(() =>{fetchEventData();
-}, [])
+useEffect(() => {
+  fetchEventData()
+}, [setDataArr]);
   
 
   const [searchTerm, setSearchTerm] = useState("");
-  // const [checkboxStatus, setCheckboxStatus] = useState(true);
 
   const handleInput = (event) => {
     setSearchTerm(event.target.value.toLowerCase());
@@ -43,8 +43,8 @@ useEffect(() =>{fetchEventData();
     return lowerEvent.includes(searchTerm);
   });
 
-  const eventsList = dataArr.map((event) => (
-    <EventCard
+  const eventsList = filterEvents.map((event, index) => (
+    <EventCard key= {"event" + index}
       eventName={event.name}
       series={event.series}
       date={event.date}
