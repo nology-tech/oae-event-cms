@@ -19,23 +19,23 @@ const ScheduleForm = (props) => {
       </div>
 
       <div className="schedule-form__name form__section">  
-        <label for="name" className="form__label">Name</label>
+        <label htmlFor="name" className="form__label">Name</label>
         <input type="text" id="name" name="name" className="form__input" required></input>
       </div>
       <div className="schedule-form__title form__section">
-        <label for="title" className="form__label">Title (optional)</label>
+        <label htmlFor="title" className="form__label">Title (optional)</label>
         <input type="text" id="title" name="title" className="form__input"></input>
       </div>
       <div className="schedule-form__author form__section">
-        <label for="author" className="form__label">Author (optional)</label>
+        <label htmlFor="author" className="form__label">Author (optional)</label>
         <input type="text" id="author" name="author" className="form__input"></input>
       </div>
       <div className="schedule-form__description form__section">
-        <label for="description" className="form__label">Description</label>
+        <label htmlFor="description" className="form__label">Description</label>
         <TextareaAutosize name="description" id="description" className="form__input" required />
       </div>  
       <div className = "schedule-form__alternate-description form__section">
-        <label for="alternate-description" className="form__label">
+        <label htmlFor="alternate-description" className="form__label">
             Alternate Description (optional)
         </label>
         <TextareaAutosize name="alternate-description" id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
