@@ -72,7 +72,6 @@ const Review = (props) => {
                     <div className='review__left-theme-box' style={primaryColorStyles}></div>
                     <p className='review__section-text'>Accent Colour</p>
                     <div className='review__left-theme-box' style={accentColorStyles}></div>
-
                 </div>
             </div>
             <div className='review__right'>
