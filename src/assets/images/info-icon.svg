@@ -1,3 +1,8 @@
 <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="39" height="39" rx="19.5" fill="#CACBCD"/>
-</svg>
+<!-- <rect width="39" height="39" rx="19.5" fill="#CACBCD"/>
+
+<path d="M 140.744 0 C 63.138 0 0 63.138 0 140.744 s 63.138 140.744 140.744 140.744 s 140.744 -63.138 140.744 -140.744 S 218.351 0 140.744 0 Z M 140.744 263.488 C 73.063 263.488 18 208.426 18 140.744 S 73.063 18 140.744 18 s 122.744 55.063 122.744 122.744 S 208.425 263.488 140.744 263.488 Z"></path>
+<circle cx="137.549" cy= "86.612" r="12.435"></circle>
+<path d="M 163.374 181.765 l -16.824 9.849 v -71.791 c 0 -3.143 -1.64 -6.058 -4.325 -7.69 c -2.686 -1.632 -6.027 -1.747 -8.818 -0.299 l -23.981 12.436 c -4.413 2.288 -6.135 7.72 -3.847 12.132 c 2.289 4.413 7.72 6.136 12.133 3.847 l 10.838 -5.62 v 72.684 c 0 3.225 1.726 6.203 4.523 7.808 c 1.387 0.795 2.932 1.192 4.477 1.192 c 1.572 0 3.143 -0.411 4.546 -1.232 l 30.371 -17.778 c 4.29 -2.512 5.732 -8.024 3.221 -12.314 S 167.663 179.255 163.374 181.765 Z"></path>
+</svg> -->
+<svg xmlns="http://www.w3.org/2000/svg" width="4rem" height="4rem" fill="currentColor" viewBox="0 0 800 800"><path d="M248,64C146.39,64,64,146.39,64,248s82.39,184,184,184,184-82.39,184-184S349.61,64,248,64Z" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:32px"/><polyline points="220 220 252 220 252 336" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="208" y1="340" x2="296" y2="340" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/><path d="M248,130a26,26,0,1,0,26,26A26,26,0,0,0,248,130Z"/></svg>
