@@ -18,6 +18,15 @@
         padding-left: 2rem;
     }
 
+    &-tooltip {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    &-tooltipIcon {
+      align-self: center;
+    }
+
   }
 
   .picture-section {
