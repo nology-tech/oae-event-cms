@@ -77,7 +77,7 @@ const Review = (props) => {
             <div className='review__right'>
                 <div className='review__section review__right-next'>
                     <h4>Are you happy with all of the information provided for this event?</h4>
-                    <Button buttonType="primary" buttonText="Submit"/>
+                    <Button buttonType="primary" buttonText="Submit" onClick={onSubmit}/>
                 </div>
                 <div className='review__section review__right-schedule'>
                 <div className='review__section-title-edit'>

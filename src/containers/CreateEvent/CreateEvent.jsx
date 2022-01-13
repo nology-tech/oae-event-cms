@@ -96,7 +96,7 @@ const CreateEvent = () => {
 
     return (
         <div className="create-event">
-            <EventFlow/>
+            <EventFlow step={step}/>
             {
                 step === 0 ? <PageOne handleSubmit={handleStepZero} /> : null
             }
