@@ -3,20 +3,27 @@
 .eventCard {
    display: flex;
    flex-direction: row;
-   align-items: center;
    justify-content: space-between;
-   color: $text-color;
+   color: $event-list-info-color;
+   padding: 1rem;
+   background-color: $form-input-color;
+   border-bottom: 2px solid $back-color;
+   height: 5rem;
 
-   input {
-      width: 2vw;
+   >h5,p{
+      font-weight: 400;
+      margin: 0;
    }
 
    &-series {
       width: 16vw;
    }
-
+   &-location{
+      width: 12vw;
+   }
    &-title {
       width: 12vw;
+      color: $text-color;
    }
 
    &-time {
@@ -24,15 +31,16 @@
    }
 
    &-URL {
-      width: 20vw;
+      width: 26vw;
       overflow-wrap: break-word;
    }
 
+   
    &-icon {
-      max-width: 2vw;
-      padding: 0.5vw;
-   }
-   &-icon:hover {
-      filter: opacity(50%);
+      width: 1.5rem;
+      height: fit-content;
+      &:hover {
+         filter: opacity(50%);
+      }
    }
 }
