@@ -60,13 +60,3 @@ it("should fill the searchbox with user input and change events displayed approp
   expect(eventCardOne).toBeInTheDocument();
   expect(eventCardTwo).not.toBeInTheDocument();
 });
-
-it("should have responsive checkboxes", () => {
-  render(<EventsList />);
-  const checkboxes = screen.getAllByRole("checkbox")
-  userEvent.click(checkboxes[0])
-
-  checkboxes.forEach(checkbox => {
-    expect(checkbox).toBeTruthy();
-  })
-})
