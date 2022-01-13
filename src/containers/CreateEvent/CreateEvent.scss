@@ -2,11 +2,11 @@
 
 .create-event {
   background-color: $back-color;
-  margin-top: 7rem;
   margin-left: 5.6rem;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   width: 100vw;
   column-gap: 2rem;
+  padding-top: 3rem;
 }

@@ -2,15 +2,49 @@
 @use "../../../assets/styles/base/typography.scss"as *;
 @use "../../../assets/styles/layout/forms" as *;
 
-.event-info-form{
+
+.event-info-form {
+  height: 45rem;
+  width: 52rem;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  
-  
+  }
+
+  .form__input{
+      padding-left: 2rem;
+  }
+
+.picture-section {
+  padding-top: 6rem;
+  height: 39rem;
+
+  &__remove{
+    text-decoration-line: underline;
+  }
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.description__button{
-  display: flex;
-  justify-content: flex-end;
+}
+
+.form__borderbox-placeholder {
+width: 30rem;
+height: 10rem;
+border: solid 2px $form-input-border-color;
+border-radius: 15px;
+}
+
+button {
+  width: 7.5rem;
+  height: 3rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: $universal-border-radius;
+  border: none;
+}
+.secondary, .tertiary {
+  background-color: $greyBtn-background-color;
+  color: $text-color;
 }

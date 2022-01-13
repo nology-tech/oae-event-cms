@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Button.scss";
 
-const Button = ({buttonText, buttonType}) => {
+const Button = ({buttonText, buttonType, onClick}) => {
 
   let buttonClassName = "button";
 
@@ -14,7 +14,7 @@ const Button = ({buttonText, buttonType}) => {
     buttonClassName += " tertiary";
   }
 
-  return <button className={buttonClassName}>{buttonText}</button>;
+  return <button className={buttonClassName} onClick={onClick}>{buttonText}</button>;
 };
 
 export default Button;

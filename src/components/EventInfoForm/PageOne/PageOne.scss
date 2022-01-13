@@ -1,6 +1,5 @@
 @use "../../../assets/styles/_variables.scss"as *;
 @use "../../../assets/styles/base/typography.scss"as *;
-@use "../../../assets/styles/layout/forms" as *;
 
 
 
@@ -13,31 +12,48 @@
         display: flex;
         flex-direction: row;
     }
-  
+   
     &__input{
         padding-left: 2rem;
+       
     }
+    .field {
+      font-size: calc($base-font * 0.75);
+      font-family: Poppins;
+      color: $text-color;
+    }
+ }
 
-  }
+    .picture-section__container {
+        margin-top: 5rem;
 
-  .picture-section {
-    margin-top: 6rem;
-    height: 39rem;
+    }
+    .picture-section__dropbox-placeholder {
+      font-family: poppins;
+      color: $text-color;
+      line-height: 150%;
+      font-size: calc($base-font * 0.75);
+    }
+  
 
-    &__remove{
+    .picture-section__remove{
       text-decoration-line: underline;
+      color: $primary-color;
     }
-    &__button {
+    .picture-section__button {
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
   }
   
-}
 
-.form__borderbox-placeholder {
-  width: 30rem;
-  height: 10rem;
-  border: solid 2px $form-input-border-color;
+
+.form__borderbox {
+  height: 20rem;
+  width: 26rem;
+  border: $form-input-border-color 2px solid;
   border-radius: 15px;
+  margin-left: -1rem;
+  margin-right: 10rem;
+
 }

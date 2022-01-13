@@ -1,24 +1,62 @@
-import React from "react";
+import React, { useState, createRef } from "react";
 import Button from "../Button/Button";
 import "./ResetPassword.scss";
+import LoginTemplate from "../LoginTemplate/LoginTemplate";
 
 const ResetPassword = () => {
+  
     return (
-    <div className="reset">
-        <div className="left-container">
-            <form>
-                <h1 className="left-container__header">Reset Your <span className="left-container__header--orange"> Password.</span></h1>
-                <p className="left-container__subtitle">Enter your new password below.</p>
-                <label className="left-container__label">New Password</label>
-                <input type="password" required className="left-container__input" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"/>
-                <label className="left-container__label">Confirm Password</label>
-                <input type="password" required className="left-container__input" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"/>
-                <Button buttonText="Submit" buttonType="primary"/>
-            </form>
+      <form>
+        <div className="welcome forgot-password">
+          <h1 className="welcome__header">
+            Reset Your{" "}
+            <span className="welcome__header-highlight">Password.</span>
+          </h1>
+          <p className="welcome__subtitle">Enter your new password below.</p>
+          <div className="form welcome-form">
+          <label className="form__label welcome-form__label" htmlFor="new- password">
+            New Password
+          </label>
+          <input
+            className="form__input welcome-form__input"
+            type="password"
+            id="new-password"
+            placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
+            required
+          />
+          <label className="form__label welcome-form__label" htmlFor="confirm-password">Confirm Password</label>
+          <input
+            className="form__input welcome-form__input"
+            type="password"
+            id="confirm-password"
+            placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
+            required
+          />
+   
+            <Button buttonText="Submit" buttonType="primary"></Button>
+          </div>
         </div>
-        
-    </div>
-
+        <LoginTemplate />
+      </form>
     )}
 
+    //       <input 
+    //         type="password"
+    //         required
+    //       //  ref={node => (password2 = node)}
+    //         className="left-container__input"
+    //         id="password-field-2"
+    //         placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+    //       />
+    //       {passwordsMatch ? (
+    //         <p>Passwords match!</p>
+    //       ) : (
+    //         <p>Passwords don't match!</p>
+    //       )}
+    //       <Button onClick={onSubmit} type="submit" buttonText="Submit" buttonType="primary" />
+    //     </form>
+    //   </div>
+    // </div>
+//   );
+// };
 export default ResetPassword;
