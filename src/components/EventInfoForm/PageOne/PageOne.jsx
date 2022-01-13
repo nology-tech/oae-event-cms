@@ -84,7 +84,7 @@ const PageOne = (props) => {
 
             <div className="form__borderbox">
               <div>
-                <div className="picture-section__dropbox-placeholder form">
+                <div className="picture-section__dropbox-placeholder">
                   image drop placeholder box
                 </div>
               </div>
