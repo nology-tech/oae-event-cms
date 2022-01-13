@@ -1,8 +1,15 @@
 import Button from "../../Button/Button";
 import tooltipInfoIcon from "../../../assets/images/tooltip-info-icon.svg";
+import Tooltip from "../../Tooltip/Tooltip";
 import "./PageOne.scss";
+import { useState } from 'react';
 
 const PageOne = (props) => {
+  const [showTooltip, setShowTooltip] = useState(false);
+
+  const toggleToolTip = () => {
+    setShowTooltip(!showTooltip);
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,7 +27,7 @@ const PageOne = (props) => {
           <div className="form__section">
               <div className="eventInfo__pageOne-form-tooltip">
                 <label className="form__label"> Title </label>
-                <img className="eventInfo__pageOne-form-tooltipIcon" src={tooltipInfoIcon} alt="tool tip info icon" />
+                <img className="eventInfo__pageOne-form-tooltipIcon" src={tooltipInfoIcon} alt="tool tip info icon" onClick={toggleToolTip}/>
               </div>
             <input
               type="text"
