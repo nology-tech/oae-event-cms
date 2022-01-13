@@ -1,6 +1,7 @@
 import React from 'react-dom';
 import "./Review.scss";
 import Button from '../Button/Button';
+import Accordian from '../Accordian/Accordian';
 
 const Review = (props) => {
     const { event } = props;
@@ -15,16 +16,10 @@ const Review = (props) => {
     const generateScheduleList = () => {
         const scheduleArr = event.schedule;
         console.log(scheduleArr);
-        return scheduleArr.map(schedule =>
+        return scheduleArr.map((schedule, i) =>
             (
-                <div className='review__section review__right-schedule-card'>
-                    <p className='review__section-input'>{schedule.name}</p>
-                    {schedule.title !== "" ? <p className='review__section-input'>{schedule.title}</p> : null}
-                    {schedule.author !== "" ? <p className='review__section-input'>By {schedule.author}</p> : null}
-                    <p className='review__section-text'>Description</p>
-                    <p className='review__section-input'>{schedule.description}</p>
-                    {schedule.alternativeDescription !== "" ? <><p className='review__section-text'>Alternative Description</p>
-                    <p className='review__section-input'>{schedule.alternateDescription}</p></> : null}
+                <div key={i} className='accordian review__right-schedule-card'>
+                    <Accordian name={schedule.name} title={schedule.title !== "" ? schedule.title : ""} author={schedule.author !== "" ? schedule.author : ""} description={schedule.description} alternativeDescription={schedule.alternateDescription !== "" ? schedule.alternateDescription : ""}/>
                 </div>
             )
         )

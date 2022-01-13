@@ -1,0 +1,22 @@
+@use "../../assets/styles/variables" as *;
+
+.accordian__item {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $text-color;
+    &-title {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+    &-content {
+        &-input {
+            margin: 0;
+            color: $text-color;
+            margin-bottom: 0.5rem;
+        }
+        &-text {
+            color: $form-label-color;
+            margin: 0;
+        }
+    }
+}
