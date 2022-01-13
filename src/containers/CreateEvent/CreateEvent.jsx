@@ -102,7 +102,6 @@ const CreateEvent = () => {
         
         <div className="create-event">
             <EventFlow/>
-            <button onClick={() => console.log(event)}>click me </button>
             {
                 step === 0 ? <PageOne data={event} handleSubmit={handleStepZero} /> : null
             }
