@@ -11,16 +11,17 @@ const Accordian = (props) => {
     return (
         <div className="accordian__item">
           <div className="accordian__item-title" onClick={() => setIsActive(!isActive)}>
-            <div>{name}</div>
+            <p className="accordian__item-title-name">{name}</p>
             <div>{isActive ? <UpArrow/> : <DownArrow/>}</div>
-          </div>
+            </div>
+            {title !== "" ? <p className='accordian__item-content-input'>{title}</p> : null}
           {isActive && <div className="accordian__item-content">
-          {title !== "" ? <p className='accordian__item-content-input'>{title}</p> : null}
+          
                     {author !== "" ? <p className='accordian__item-content-input'>By {author}</p> : null}
                     <p className='accordian__item-content-text'>Description</p>
                     <p className='accordian__item-content-input'>{description}</p>
                     {alternativeDescription !== "" ? <><p className='accordian__item-content-text'>Alternative Description</p>
-                    <p className='accordian__item-content-input'>{alternativeDescription}</p></> : null}
+                    <p className='accordian__item-content-input'>{ }</p></> : null}
           </div>}
         </div>
       );

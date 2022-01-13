@@ -19,3 +19,40 @@
 #description, #alternate-description {
   padding-top: 0.3rem;
 }
+
+.schedule {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 2rem;
+  align-items: flex-start;
+  &-form {
+
+  }
+  &-list {
+    width: 15vw;
+    background-color: $form-background-color;
+    padding-right: 3.3vw;
+    padding-top: 4.2vh;
+    padding-left: 2.8vw;
+    padding-bottom: 4.12vh;
+    &__title {
+      font-weight: $form-title-weight;
+      color:$title-color;
+    }
+    &__cards {
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-title {
+          color: $text-color;
+        }
+        &-buttons {
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
