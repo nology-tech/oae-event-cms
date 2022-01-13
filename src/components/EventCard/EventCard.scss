@@ -3,6 +3,7 @@
 .eventCard {
    display: flex;
    flex-direction: row;
+   justify-content: space-between;
    color: $event-list-info-color;
    padding: 1rem;
    background-color: $form-input-color;
@@ -30,7 +31,7 @@
    }
 
    &-URL {
-      width: 20vw;
+      width: 26vw;
       overflow-wrap: break-word;
    }
 

@@ -19,8 +19,8 @@
       background-color: $event-list-table-row-color;
       border-radius: 0.4rem 0.4rem 0 0;
       display: flex;
-      align-items: left;
-      padding-left: 1rem;
+      padding: 0 1rem;
+      justify-content: space-between;
       .table__header{
          padding: 0.6rem 0;
          color: $event-list-heading-color;
@@ -43,6 +43,10 @@
       &-URL {
          width: 26vw;
       }
+   }
+
+   &__formatting-div {
+      width: 3rem;
    }
 
    &__UI {
