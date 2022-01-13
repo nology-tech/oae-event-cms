@@ -21,7 +21,7 @@ const Accordian = (props) => {
                     <p className='accordian__item-content-text'>Description</p>
                     <p className='accordian__item-content-input'>{description}</p>
                     {alternativeDescription !== "" ? <><p className='accordian__item-content-text'>Alternative Description</p>
-                    <p className='accordian__item-content-input'>{ }</p></> : null}
+                    <p className='accordian__item-content-input'>{alternativeDescription}</p></> : null}
           </div>}
         </div>
       );

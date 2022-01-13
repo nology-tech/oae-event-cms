@@ -14,6 +14,10 @@ const Review = (props) => {
         backgroundColor: event.theme.accentColor
     }
 
+    const onSubmit = {
+        // This is where the API call would be. 
+    }
+
     const generateScheduleList = () => {
         const scheduleArr = event.schedule;
         console.log(scheduleArr);

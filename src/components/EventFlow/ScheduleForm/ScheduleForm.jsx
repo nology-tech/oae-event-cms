@@ -47,18 +47,17 @@ const ScheduleForm = (props) => {;
     setScheduleArr([...scheduleArr, formData])
     console.log(scheduleArr)
   }
-
-  const handleRemove = (id) => {
-    scheduleArr.splice(id, 1);
-    console.log(scheduleArr);
-    setScheduleArr([...scheduleArr]);
-  }
   
   const handleEdit = (i) => {
     
   }
 
   useEffect(() => {
+    const handleRemove = (id) => {
+      scheduleArr.splice(id, 1);
+      console.log(scheduleArr);
+      setScheduleArr([...scheduleArr]);
+    }
     // 2. Generate some html/jsx to render all the schedule items on the page
     if (scheduleArr.length === 0){
       console.log("Reaching if")
