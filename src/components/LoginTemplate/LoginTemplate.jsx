@@ -11,9 +11,7 @@ import circle from "../../assets//images/ellipse.svg";
 export const LoginTemplate = () => {
   return (
     <div className="welcomePage">
-      <a href="https://oae.co.uk/" target="_blank" rel="noreferrer">
-        <img className="welcomePage__logo" src={logo} alt="logo" />
-      </a>
+      
       <img
         className="welcomePage__image"
         src={background}

@@ -1,6 +1,5 @@
 import "./App.scss";
 import Header from "./containers/Header/Header";
-import Nav from "./containers/Nav/Nav";
 import Routing from "./containers/Routing/Routing";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -9,7 +8,7 @@ const App = () => {
     <div className="App">
      <Router>
       <Header/>
-        <Nav />
+        {/* <Nav /> */}
         <Routing />
       </Router>
       </div>
