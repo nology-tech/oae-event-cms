@@ -26,7 +26,7 @@ const EventsList = (props) => {
   }
 
   useEffect(() => {
-  fetchEventData()
+    fetchEventData()
   }, [dataArr]);
   
 
@@ -65,7 +65,7 @@ const EventsList = (props) => {
             alt="search icon"
           />
         </div>
-        <Link to="/" ><Button buttonText="Add +" buttonType="primary" /></Link>
+        <Link to="/create/event" ><Button buttonText="Add +" buttonType="primary" /></Link>
         
           
       </div>
@@ -77,6 +77,7 @@ const EventsList = (props) => {
           <h5 className="event-list__headings-time table__header">Time</h5>
           <h5 className="event-list__headings-title table__header">Location</h5>
           <h5 className="event-list__headings-URL table__header">Digital Programme URL</h5>
+          <div className="event-list__formatting-div"></div>
         </div>
         {eventsList}
       </div>

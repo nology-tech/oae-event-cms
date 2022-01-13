@@ -3,13 +3,10 @@
 
 
 .event-list {
-   // margin: 0;
-   // padding: 0;
    display: flex;
    flex-direction: column;
    margin-left: 5.6rem;
-   padding: 8rem 2.5rem 0 4rem;
-   width: calc(100% - 90px);
+   padding: 8rem 2.5rem 2.5rem 4rem;
    background-color: $back-color;
 
    &__header {
@@ -22,12 +19,13 @@
       background-color: $event-list-table-row-color;
       border-radius: 0.4rem 0.4rem 0 0;
       display: flex;
-      align-items: left;
-      padding-left: 1rem;
+      padding: 0 1rem;
+      justify-content: space-between;
       .table__header{
          padding: 0.6rem 0;
          color: $event-list-heading-color;
          font-weight: 500;
+         margin: 0;
       }
 
       &-series {
@@ -45,6 +43,10 @@
       &-URL {
          width: 26vw;
       }
+   }
+
+   &__formatting-div {
+      width: 3rem;
    }
 
    &__UI {
