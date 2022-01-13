@@ -36,11 +36,12 @@ const CreateEvent = () => {
 
     //         },
     //     };
-    
+
+
     const handleStepZero = (data) => {
         // Merge form data with event object
         setEvent({
-            name: data.title,
+            name: data.name,
             series: data.series,
             time: data.time,
             date: data.date,
@@ -82,37 +83,43 @@ const CreateEvent = () => {
         })
         incrementStep();
     }
-
     const [step, setStep] = useState(0);
 
     const incrementStep = () => {
         setStep(step + 1);
     }
 
+    const decrementStep = () => {
+        setStep(step - 1);
+    }
+   
     useEffect(() => {
         console.log("There was an event change");
         console.log(event);
     }, [event])
 
     return (
+        
         <div className="create-event">
             <EventFlow step={step}/>
             {
-                step === 0 ? <PageOne handleSubmit={handleStepZero} /> : null
+                step === 0 ? <PageOne data={event} handleSubmit={handleStepZero} /> : null
             }
             {
-                step === 1 ? <PageTwo handleSubmit={handleStepOne} /> : null 
+                step === 1 ? <PageTwo handleSubmit={handleStepOne}
+                handleSubmitBack={step => decrementStep(step)} /> : null
             }
             {
-                step === 2 ? <ScheduleForm handleSubmit={handleStepTwo} /> : null
+                step === 2 ? <ScheduleForm handleSubmit={handleStepTwo} 
+                handleSubmitBack={step => decrementStep(step)} />: null
             }
             {
-                step === 3 ? <ThemePicker handleSubmit={handleStepThree} /> : null
+                step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)}/> : null
             }
             {
                 step === 4 ? <Review event={event}/> : null
             }
         </div>
-    )
-}
+           )
+    }
 export default CreateEvent;

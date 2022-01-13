@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
 import "./ThemePicker.scss";
+import arrowDown from "../../assets/images/arrow-down.svg";
 
 const ThemePicker = (props) => {
 
@@ -17,7 +18,7 @@ const ThemePicker = (props) => {
   }
 
   return (
-    <form className="themepicker form" onSubmit={handleSubmit} name="form">
+    <form className="themepicker form" onSubmit={handleSubmit}>
       <div className="themepicker__title form__title">
         <p className="form__title-step">Step 04</p>
         <h2 className="form__title-main">Choose Theme</h2>
@@ -25,7 +26,7 @@ const ThemePicker = (props) => {
 
       <div className="themepicker__dropdown form__section">
         <div className="themepicker__section form__section">
-          <label className="themepicker__label form__label" htmlFor="fonttype">
+          <label className="themepicker__label form__label" for="fonttype">
             Font Type
           </label>
           <select
@@ -34,17 +35,16 @@ const ThemePicker = (props) => {
             id="fonttype"
             name="fontType"
           >
-            <option value="Please select from one of the following..." disabled selected >
-            Please select from one of the following...
+            <option value="" disabled selected>
+              Please select from one of the following...
             </option>
             <option value="Modern">Modern</option>
             <option value="Classic">Classic</option>
           </select>
         </div>
 
-        {/* Theme Input */}
         <div className="themepicker__section form__section">
-          <label className="themepicker__theme form__label" htmlFor="theme">
+          <label className="themepicker__theme form__label" for="theme">
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
@@ -52,9 +52,8 @@ const ThemePicker = (props) => {
           </div>
         </div>
 
-        {/* Accent Input */}
         <div className="themepicker__section form__section">
-          <label className="themepicker__accent form__label" htmlFor="accent">
+          <label className="themepicker__accent form__label" for="accent">
             Accent Color
           </label>
           <div className="themepicker__section-color form__section-color">
@@ -77,7 +76,7 @@ const ThemePicker = (props) => {
         {/* BACK button */}
         <Button buttonText="Back" buttonType="secondary" />
         {/* NEXT button */}
-        <Button buttonText="Next" buttonType="primary" type="submit" data-testid="nextButton"/>
+        <Button buttonText="Next" buttonType="primary" type="submit"/>
       </div>
     </form>
   );
