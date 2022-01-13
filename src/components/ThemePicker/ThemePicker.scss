@@ -1,7 +1,7 @@
 @use "../../assets/styles/_variables" as *;
 
 .themepicker {
-  height: 28rem;
+  height: 34rem;
   width: 29rem;
 
   &__title {
@@ -20,6 +20,7 @@
     &-color {
       border: none;
       width: 2rem;
+      cursor: pointer;
     }
   }
 
@@ -41,15 +42,22 @@
     &-color {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      border: 1px solid $form-label-color;
-      width: 4rem;
-      border-radius: 8px;
+      justify-content: center;
+      border: 2px solid #e9e9e9;
+      width: 3rem;
+      border-radius: 6px;
       padding: 0.2rem;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+    }
+    &-color:hover {
+        border: 2px solid $form-label-color;
+        
     }
     &-img {
-      width: 0.6rem;
-      padding-right: 0.5rem;
+      width: 2rem;
+      padding: 0 0.6rem;
     }
   }
 

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import Button from "../../Button/Button";
 import "./ScheduleForm.scss";
 import TextareaAutosize from 'react-textarea-autosize';
+import {ReactComponent as EditIcon} from '../../../assets/images/edit-icon.svg';
+import {ReactComponent as BinIcon} from '../../../assets/images/bin-icon.svg';
 
 const ScheduleForm = (props) => {;
 
@@ -12,7 +14,7 @@ const ScheduleForm = (props) => {;
   const handleNext = (event) => {
     if (scheduleArr.length === 0){
       // Display error message
-      // Return
+      return
     }
 
     const formData = {
@@ -34,29 +36,53 @@ const ScheduleForm = (props) => {;
       description: event.target.description.value,
       alternateDescription: event.target.alternateDescription.value
     }
+
+    event.target.name.value = "";
+    event.target.title.value = "";
+    event.target.author.value = "";
+    event.target.description.value = "";
+    event.target.alternateDescription.value = "";   
+
+    
     setScheduleArr([...scheduleArr, formData])
+    console.log(scheduleArr)
+  }
+
+  const handleRemove = (id) => {
+    scheduleArr.splice(id, 1);
+    console.log(scheduleArr);
+    setScheduleArr([...scheduleArr]);
   }
   
+  const handleEdit = (i) => {
+    
+  }
 
   useEffect(() => {
     // 2. Generate some html/jsx to render all the schedule items on the page
+    if (scheduleArr.length === 0){
+      console.log("Reaching if")
+      setListHtml([]);
+    }
+
     const scheduleArrHtml = scheduleArr.map((schedule, i) =>(
       <div key={i} className="schedule-list__cards-row">
-        <h4>{schedule.name}</h4>
+        <h5 className="schedule-list__cards-row-title">{schedule.name}</h5>
         <div className="schedule-list__cards-row-buttons">
-
+          <a href="/#" className="schedule-list__cards-row-buttons-link" onClick={() => handleEdit(i)}><EditIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
+          <a href="/#" className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)}><BinIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
         </div>
       </div>
       )
     )
     setListHtml(scheduleArrHtml);
 
-  }, [scheduleArr])
+  }, [scheduleArr]);
 
 
   return (
     <>
-    <div className="">
+    <div className="schedule">
       <form className ="schedule-form form" onSubmit={handleAdd}>
        <div className="form__title">
             <h3 className="form__title-step">Step 02</h3>
@@ -86,21 +112,19 @@ const ScheduleForm = (props) => {;
           />
         </div>
         <div className="schedule-form__buttons form__buttons">
-          <Button buttonType="tertiary" buttonText="Add" className="form__button-add" type="submit"/>
+          <Button buttonType="tertiary" buttonText="Add" className="form__buttons-add" type="submit"/>
+          <Button buttonType="primary" onClick={handleNext} buttonText="Next" className="form__buttons-next"/>
         </div>
       </form>
-      <button onClick={handleNext}>Next</button>
-    </div>
-    <div className="schedule-list">
-      <h3>Current Schedule</h3>
+      {listHtml.length !== 0 ? <><div className="schedule-list">
+      <h4 className="schedule-list__title">Current Schedule</h4>
       <div className="schedule-list__cards">
         {listHtml}
       </div>
+    </div></> : null}    
     </div>
     </>
   );
 };
 
 export default ScheduleForm;
-
-// <Button buttonType="primary" buttonText="Next" className="form__button-next" type="button"/>
