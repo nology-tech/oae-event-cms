@@ -2,34 +2,6 @@
 @use "../../assets/styles/base/typography"as *;
 @use "../../App.scss" as *;
 
-.event-flow__container {
-    display: grid;
-    align-content: left;
-    padding: 2rem;
-    justify-content: space-between;
-    grid-template-columns: 2fr, 1fr;
-    grid-template-rows: repeat(12, 1fr);
-    column-gap: 0.1vw;
-    height: 90vh;
-
-.event-flow__title {
-    justify-content: center;
-    text-align: right;
-    align-self: center;
-    margin-bottom: -4rem;
-    font-size: calc($base-font * 1.25);
-}
-.event-flow__text {
-    margin-top: -1vh;
-    text-align: right;
-    color: $text-color;
-}
-.event-flow__header {
-    text-align: right;
-    color: $title-color;
-}
-}
-
 .event-flow {
     display: flex;
     flex-direction: column;
@@ -59,7 +31,6 @@
             width: 3em;
         }
         &-icon--complete {
-            background-color: $primary-color;
         }
     }
 }
