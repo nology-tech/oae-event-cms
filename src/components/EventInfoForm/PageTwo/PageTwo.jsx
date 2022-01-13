@@ -11,7 +11,7 @@ const PageTwo = (props) => {
             heading: event.target.heading.value,
             quote: event.target.quote.value,
             quoteCaption: event.target.quoteCaption.value,
-            eventDescription: event.target.eventDescription.value
+            content: event.target.eventDescription.value
           }
         props.handleSubmit(formData);
     }

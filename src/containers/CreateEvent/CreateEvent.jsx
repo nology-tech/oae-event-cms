@@ -52,14 +52,16 @@ const CreateEvent = () => {
 
     const handleStepOne = (data) => {
         const introData = {
-            heading: data.heading,
-            quote: data.quote,
-            quoteCaption: data.quoteCaption,
-            content: data.content
+            
         }
         setEvent({
             ...event,
-            intro: {introData}
+            intro: {
+                heading: data.heading,
+                quote: data.quote,
+                quoteCaption: data.quoteCaption,
+                content: data.content
+            }
         })
         incrementStep();
     }

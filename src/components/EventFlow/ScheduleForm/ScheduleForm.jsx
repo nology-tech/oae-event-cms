@@ -14,7 +14,7 @@ const ScheduleForm = (props) => {;
   const handleNext = (event) => {
     if (scheduleArr.length === 0){
       // Display error message
-      // Return
+      return
     }
 
     const formData = {
@@ -54,6 +54,9 @@ const ScheduleForm = (props) => {;
     setScheduleArr([...scheduleArr]);
   }
   
+  const handleEdit = (i) => {
+
+  }
 
   useEffect(() => {
     // 2. Generate some html/jsx to render all the schedule items on the page
@@ -66,9 +69,8 @@ const ScheduleForm = (props) => {;
       <div key={i} className="schedule-list__cards-row">
         <h5 className="schedule-list__cards-row-title">{schedule.name}</h5>
         <div className="schedule-list__cards-row-buttons">
-          <button onClick={() => handleRemove(i)}>Remove</button>
-          <EditIcon/>
-          <BinIcon/>
+          <a className="schedule-list__cards-row-buttons-link" onClick={() => handleEdit(i)}><EditIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
+          <a className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)}><BinIcon className="schedule-list__cards-row-buttons-link-icon"/></a>
         </div>
       </div>
       )
@@ -110,8 +112,8 @@ const ScheduleForm = (props) => {;
           />
         </div>
         <div className="schedule-form__buttons form__buttons">
-          <Button buttonType="tertiary" buttonText="Add" className="form__button-add" type="submit"/>
-          <Button buttonType="primary" onClick={handleNext} buttonText="Next"/>
+          <Button buttonType="tertiary" buttonText="Add" className="form__buttons-add" type="submit"/>
+          <Button buttonType="primary" onClick={handleNext} buttonText="Next" className="form__buttons-next"/>
         </div>
       </form>
       {listHtml.length !== 0 ? <><div className="schedule-list">
@@ -126,5 +128,3 @@ const ScheduleForm = (props) => {;
 };
 
 export default ScheduleForm;
-
-// <Button buttonType="primary" buttonText="Next" className="form__button-next" type="button"/>

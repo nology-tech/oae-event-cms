@@ -26,7 +26,8 @@
   column-gap: 2rem;
   align-items: flex-start;
   &-form {
-
+    &__buttons {
+    }
   }
   &-list {
     width: 15vw;
@@ -50,7 +51,11 @@
         &-buttons {
           display: flex;
           gap: 1rem;
-          align-items: center;
+          &-link {
+            &-icon:hover{
+              cursor: pointer;
+            }
+          }
         }
       }
     }
