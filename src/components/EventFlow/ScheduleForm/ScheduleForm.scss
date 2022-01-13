@@ -12,8 +12,18 @@
       margin-top: 1rem;
     }
   }
-
-  margin-top: 9rem;
+  button {
+    width: 7.5rem;
+    height: 3rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: $universal-border-radius;
+    border: none;
+  }
+  .secondary, .tertiary {
+    background-color: $greyBtn-background-color;
+    color: $text-color;
+  }
 }
 
 #description, #alternate-description {

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../Button/Button";
 import "./ScheduleForm.scss";
-import TextareaAutosize from 'react-textarea-autosize';
+import TextareaAutosize from'react-textarea-autosize';
 
 const ScheduleForm = (props) => {
   let scheduleArr = [];
@@ -67,11 +67,12 @@ const ScheduleForm = (props) => {
         <Button buttonType="tertiary" buttonText="Add" className="form__button-add" type="submit"/>       
       </div>
     </form>
-    <button onClick={proceedToNextPage}>Next</button>
+    <button className="form__button-back secondary" type="submit" onClick={() => props.handleSubmitBack()}>Back</button>
+    <button className="form__button-next primary" onClick={proceedToNextPage}>Next</button>
+
     </>
   );
 };
 
 export default ScheduleForm;
 
-// <Button buttonType="primary" buttonText="Next" className="form__button-next" type="button"/>

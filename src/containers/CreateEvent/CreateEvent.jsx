@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./CreateEvent.scss";
 import EventFlow from "../../components/EventFlow/EventFlow";
 import ScheduleForm from "../../components/EventFlow/ScheduleForm/ScheduleForm";
@@ -35,11 +35,12 @@ const CreateEvent = () => {
 
     //         },
     //     };
-    
+
+
     const handleStepZero = (data) => {
         // Merge form data with event object
         setEvent({
-            name: data.title,
+            name: data.name,
             series: data.series,
             time: data.time,
             date: data.date,
@@ -58,7 +59,7 @@ const CreateEvent = () => {
         }
         setEvent({
             ...event,
-            intro: {introData}
+            intro: introData
         })
         incrementStep();
     }
@@ -82,34 +83,41 @@ const CreateEvent = () => {
         })
         incrementStep();
     }
-
     const [step, setStep] = useState(0);
 
     const incrementStep = () => {
         setStep(step + 1);
     }
 
+    const decrementStep = () => {
+        setStep(step - 1);
+    }
+   
     useEffect(() => {
         console.log("There was an event change");
         console.log(event);
     }, [event])
 
     return (
+        
         <div className="create-event">
             <EventFlow/>
+            <button onClick={() => console.log(event)}>click me </button>
             {
-                step === 0 ? <PageOne handleSubmit={handleStepZero} /> : null
+                step === 0 ? <PageOne data={event} handleSubmit={handleStepZero} /> : null
             }
             {
-                step === 1 ? <PageTwo handleSubmit={handleStepOne} /> : null 
+                step === 1 ? <PageTwo handleSubmit={handleStepOne}
+                handleSubmitBack={step => decrementStep(step)} /> : null
             }
             {
-                step === 2 ? <ScheduleForm handleSubmit={handleStepTwo} /> : null
+                step === 2 ? <ScheduleForm handleSubmit={handleStepTwo} 
+                handleSubmitBack={step => decrementStep(step)} />: null
             }
             {
-                step === 3 ? <ThemePicker handleSubmit={handleStepThree} /> : null
+                step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)}/> : null
             }
         </div>
-    )
-}
+           )
+    }
 export default CreateEvent;
