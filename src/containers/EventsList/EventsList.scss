@@ -3,13 +3,10 @@
 
 
 .event-list {
-   // margin: 0;
-   // padding: 0;
    display: flex;
    flex-direction: column;
    margin-left: 5.6rem;
-   padding: 8rem 2.5rem 0 4rem;
-   width: calc(100% - 90px);
+   padding: 8rem 2.5rem 2.5rem 4rem;
    background-color: $back-color;
 
    &__header {
@@ -28,6 +25,7 @@
          padding: 0.6rem 0;
          color: $event-list-heading-color;
          font-weight: 500;
+         margin: 0;
       }
 
       &-series {

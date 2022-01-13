@@ -26,7 +26,7 @@ const EventsList = (props) => {
   }
 
   useEffect(() => {
-  fetchEventData()
+    fetchEventData()
   }, [dataArr]);
   
 
