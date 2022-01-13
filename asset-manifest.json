@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/oae-event-cms/static/css/main.3c1509b0.css",
-    "main.js": "/oae-event-cms/static/js/main.962b0318.js",
+    "main.css": "/oae-event-cms/static/css/main.ca3f1e76.css",
+    "main.js": "/oae-event-cms/static/js/main.11532ab7.js",
     "static/js/787.52b9a05b.chunk.js": "/oae-event-cms/static/js/787.52b9a05b.chunk.js",
     "static/media/oae-logo.svg": "/oae-event-cms/static/media/oae-logo.3d614d5f94e1c88fe2c29ffaa0dff234.svg",
     "static/media/calendar-icon.svg": "/oae-event-cms/static/media/calendar-icon.429863eb12ef9883c061dcef697002f5.svg",
@@ -15,13 +15,12 @@
     "index.html": "/oae-event-cms/index.html",
     "static/media/info-icon.svg": "/oae-event-cms/static/media/info-icon.ee56963b5d2614df357fffada331495e.svg",
     "static/media/tick-circle.svg": "/oae-event-cms/static/media/tick-circle.f6ae7c22e37f26db401ca3501df317cc.svg",
-    "static/media/arrow-down.svg": "/oae-event-cms/static/media/arrow-down.5f919ae2a1fda45a136a557e42078d97.svg",
-    "main.3c1509b0.css.map": "/oae-event-cms/static/css/main.3c1509b0.css.map",
-    "main.962b0318.js.map": "/oae-event-cms/static/js/main.962b0318.js.map",
+    "main.ca3f1e76.css.map": "/oae-event-cms/static/css/main.ca3f1e76.css.map",
+    "main.11532ab7.js.map": "/oae-event-cms/static/js/main.11532ab7.js.map",
     "787.52b9a05b.chunk.js.map": "/oae-event-cms/static/js/787.52b9a05b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c1509b0.css",
-    "static/js/main.962b0318.js"
+    "static/css/main.ca3f1e76.css",
+    "static/js/main.11532ab7.js"
   ]
 }
