@@ -11,13 +11,17 @@
 
   &__header{
     margin-top: 12rem;
-    margin-bottom: 6rem;
+    
     color: $title-color;
     &--orange{
       color: $primary-color;
     }
   }
-  // &__button{
-    
-  // }
+  &__image{
+    background-color: white;
+    width: 20rem;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+  
 }
