@@ -1,5 +1,6 @@
 import React from "react";
 import "./PageTwo.scss";
+import Tooltip from "../../Tooltip/Tooltip";
 import Button from "../../Button/Button";
 
 const PageTwo = (props) => {
@@ -30,7 +31,11 @@ const PageTwo = (props) => {
                     <h2 className="form__title-main">Event Information (2/2)</h2>
                 </div>
                 <div className="form__section">
-                    <label className="form__label"> Event Heading </label>
+                    <div className="form__tooltipTitle">
+                        <label className="form__label"> Event Heading </label>
+                        <Tooltip className="tooltip" tipTitle="Event Heading" tipDesc="This will be the opening header element on the event homepage, e.g.
+                                        If this is your first Bach, the Universe & Everything (BAE), welcome!" />
+                    </div>
                     <input name="heading" className="form__input" type="text" value={data?.heading} placeholder="If This Is Your First Bach, the Universe And Everyt...">
                     </input>
                 </div>
@@ -44,7 +49,11 @@ const PageTwo = (props) => {
                 </div>
             </div>
             <div className="description form" >
-                <label className="description__label form__label"> Event Description </label>
+                <div className="form__tooltipTitle">
+                    <label className="description__label form__label"> Event Description </label>
+                    <Tooltip className="tooltip" tipTitle="Event Description" tipDesc="This will be the description used on the event homepage, e.g. 
+                    We like to think of the series as a community" />
+                </div>
                 <input name="eventDescription" className=" description__input form__input" id="description" width="100" rows="80" placeholder="We like to think of the series as a community, similar to the one Bach enjoyed in Leipzig where he produced contatas at..."  value={data?.content}/>
                 <div className="description__button form__button">
                     <button className="form__button-back secondary" type="submit" onClick={handleBack}>Back</button>

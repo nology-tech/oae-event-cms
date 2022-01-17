@@ -4,7 +4,7 @@ import blackCross from "../../assets/images/black-cross.png"
 import "./Tooltip.scss";
 
 const Tooltip = (props) => {
-   const { tipName, tipTitle, tipDesc, toggleTooltips } = props;
+   const { tipTitle, tipDesc } = props;
 
    const [showInfo, setShowInfo] = useState(false)
 
@@ -13,12 +13,12 @@ const Tooltip = (props) => {
    return (
       <div>
          {!showInfo && <img className="tip__icon-info" src={tooltipInfoIcon} alt="information icon" onClick={toggleInfo} />}
-         {showInfo && (<div className={"tip tip__" + tipName}>
+         {showInfo && (<div className={"tip"}>
 
             <div className="tip__flex">
-               <h3 className='tip__title'>{tipTitle}</h3>
+               <h4 className='tip__title'>{tipTitle}</h4>
                <img className="tip__icon-info" src={tooltipInfoIcon} alt="information icon" />
-               <img onClick={toggleTooltips} className="tip__icon-cross" src={blackCross} alt="close window icon" />
+               <img onClick={toggleInfo} className="tip__icon-cross" src={blackCross} alt="close window icon" />
             </div>
 
             <p className='tip__desc'>{tipDesc}</p>

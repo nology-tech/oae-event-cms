@@ -1,7 +1,6 @@
 import Button from "../../Button/Button";
-import tooltipInfoIcon from "../../../assets/images/tooltip-info-icon.svg";
 import "./PageOne.scss";
-import Tooltip from "../../Tooltip/Tooltip";
+
 
 const PageOne = (props) => {
   const data = props.data;
@@ -33,7 +32,6 @@ const PageOne = (props) => {
           <div className="form__section">
               <div className="eventInfo__pageOne-form-tooltip">
                 <label className="form__label"> Title </label>
-                <Tooltip/>
               </div>
             <input
               defaultValue={data?.name}
@@ -55,6 +53,7 @@ const PageOne = (props) => {
           </div>
           <div className="form__section">
             <label className="form__label"> Date </label>
+
             <input
             
               name="date"
