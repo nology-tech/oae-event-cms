@@ -39,9 +39,9 @@ const WelcomePage = (props) => {
             required
           />
 
-          <a className="welcome-form__link" onClick={handleNext}>
+          <p className="welcome-form__link" onClick={handleNext}>
             Forgot your password?
-          </a>
+          </p>
           <Button buttonText="Login" buttonType="primary"></Button>
         </div>
       </div>

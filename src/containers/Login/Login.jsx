@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import ForgotPassword from "../../components/ForgotPassword/ForgotPassword";
 import ResetPassword from "../../components/ResetPassword/ResetPassword";
 import WelcomePage from "../../components/WelcomePage/WelcomePage";
-import CreateEvent from "../CreateEvent/CreateEvent";
 import { Navigate } from "react-router-dom";
 export const Login = () => {
   const [step, setStep] = useState(0);
