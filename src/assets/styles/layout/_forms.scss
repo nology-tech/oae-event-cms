@@ -14,11 +14,14 @@
   padding-bottom: 4.12vh;
 
   &__title {
+    margin-bottom: 1.5rem;
+
     &-step {
       text-align: left;
       color: $primary-color;
       font-weight: $form-title-weight;
       margin: 0;
+      margin-bottom: 0.4rem;
     }
     &-main {
       text-align: left;

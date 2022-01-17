@@ -1,0 +1,57 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/layout/forms" as *;
+
+
+.welcomePage {
+  width: 100vw;
+  height: 100vh;
+
+  &__rectangle-grey {
+    position: fixed;
+    top: 18vh;
+    right: 30vw;
+    width: 25vw;
+  }
+
+  &__circle-big {
+    position: fixed;
+    top: 3vh;
+    right: 8vw;
+    width: 10vw;
+  }
+
+  &__circle-small {
+    position: absolute;
+    bottom: 8vh;
+    right: 28vw;
+    width: 5vw;
+  }
+
+  &__rectangle-orange {
+    position: absolute;
+    bottom: 22vh;
+    right: 3vw;
+    width: 20vw;
+  }
+
+  &__preview {
+    position: absolute;
+    top: 22vh;
+    right: 6vw;
+    // height: 35vh;
+    height: 50vh;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    height: 100vh;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+}
