@@ -11,7 +11,6 @@ const App = () => {
         {/* <Nav /> */}
         <Routing />
       </Router>
-      <FormValidationTest />
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
 import "./ThemePicker.scss";
-import arrowDown from "../../assets/images/arrow-down.svg";
 
 const ThemePicker = (props) => {
 
@@ -18,7 +17,7 @@ const ThemePicker = (props) => {
   }
 
   return (
-    <form className="themepicker form" onSubmit={handleSubmit}>
+    <form className="themepicker form" onSubmit={handleSubmit} name="form">
       <div className="themepicker__title form__title">
         <p className="form__title-step">Step 04</p>
         <h2 className="form__title-main">Choose Theme</h2>
@@ -48,7 +47,7 @@ const ThemePicker = (props) => {
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="theme" type="color" name="themeColor" data-testid="theme"/>
+            <input className="themepicker__input-color" htmlFor="theme" type="color" name="themeColor" data-testid="theme" />
           </div>
         </div>
 
@@ -57,7 +56,7 @@ const ThemePicker = (props) => {
             Accent Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="accent" type="color" name="accentColor" data-testid="accent"/>
+            <input className="themepicker__input-color" htmlFor="accent" type="color" name="accentColor" data-testid="accent" />
           </div>
         </div>
 
@@ -67,7 +66,7 @@ const ThemePicker = (props) => {
             Subtitle Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="subtitle" type="color" name="subtitleColor" data-testid="subtitle"/>
+            <input className="themepicker__input-color" htmlFor="subtitle" type="color" name="subtitleColor" data-testid="subtitle" />
           </div>
         </div>
 
@@ -76,7 +75,7 @@ const ThemePicker = (props) => {
         {/* BACK button */}
         <Button buttonText="Back" buttonType="secondary" />
         {/* NEXT button */}
-        <Button buttonText="Next" buttonType="primary" type="submit"/>
+        <Button buttonText="Next" buttonType="primary" type="submit" />
       </div>
     </form>
   );
