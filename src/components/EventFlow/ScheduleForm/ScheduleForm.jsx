@@ -5,8 +5,8 @@ import TextareaAutosize from 'react-textarea-autosize';
 import {ReactComponent as EditIcon} from '../../../assets/images/edit-icon.svg';
 import {ReactComponent as BinIcon} from '../../../assets/images/bin-icon.svg';
 
-const ScheduleForm = (props) => {;
-
+const ScheduleForm = (props) => {
+  const data = props.data;
   const [scheduleArr, setScheduleArr] = useState([]);
   const [listHtml, setListHtml] = useState([]);
 
@@ -22,7 +22,15 @@ const ScheduleForm = (props) => {;
       schedule: scheduleArr
     }
 
-    props.handleSubmit(formData);
+    props.handleNext(formData);
+  }
+
+  const handleBack = (event) => {
+    event.preventDefault();
+    const formData = {
+      step: 1
+    }
+    props.handleBack(formData)
   }
 
   // Handler for adding an INVIDIVUDAL schedule item
@@ -80,37 +88,45 @@ const ScheduleForm = (props) => {;
   return (
     <>
     <div className="schedule">
-      <form className ="schedule-form form" onSubmit={handleAdd}>
+      <form className ="schedule-form form" onSubmit={handleAdd} value={data?.schedule} >
        <div className="form__title">
             <h3 className="form__title-step">Step 02</h3>
             <h2 className="form__title-main">Add Schedule</h2>
         </div>
         <div className="schedule-form__name form__section">
           <label for="name" className="form__label">Name</label>
-          <input type="text" id="name" name="name" className="form__input" required></input>
+          <input type="text" id="name" name="name" className="form__input" value={data?.name}required></input>
         </div>
         <div className="schedule-form__title form__section">
           <label for="title" className="form__label">Title (optional)</label>
-          <input type="text" id="title" name="title" className="form__input"></input>
+          <input type="text" id="title" name="title" className="form__input" value={data?.title}></input>
         </div>
         <div className="schedule-form__author form__section">
           <label for="author" className="form__label">Author (optional)</label>
-          <input type="text" id="author" name="author" className="form__input"></input>
+          <input type="text" id="author" name="author" className="form__input" value={data?.author}></input>
         </div>
         <div className="schedule-form__description form__section">
           <label for="description" className="form__label">Description</label>
-          <TextareaAutosize name="description" id="description" className="form__input" required />
+          <TextareaAutosize name="description" id="description" className="form__input" 
+          value={data?.description} required />
         </div>
         <div className = "schedule-form__alternate-description form__section">
           <label for="alternate-description" className="form__label">
               Alternate Description (optional)
           </label>
-          <TextareaAutosize name="alternateDescription" id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
+          <TextareaAutosize name="alternateDescription"value={data?.alternateDescription} id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
           />
         </div>
         <div className="schedule-form__buttons form__buttons">
-          <Button buttonType="tertiary" buttonText="Add" className="form__buttons-add" type="submit"/>
-          <Button buttonType="primary" onClick={handleNext} buttonText="Next" className="form__buttons-next"/>
+          <Button 
+          
+          buttonType="tertiary" buttonText="Add" className="form__buttons-add" type="submit"/>
+          <Button 
+          type="submit"
+          buttonType="secondary" onClick={handleBack} buttonText="Back" className="form__buttons-next"/>
+          <Button 
+          type="submit" buttonType="primary" onClick={handleNext} buttonText="Next" className="form__buttons-next"/>
+          
         </div>
       </form>
       {listHtml.length !== 0 ? <><div className="schedule-list">

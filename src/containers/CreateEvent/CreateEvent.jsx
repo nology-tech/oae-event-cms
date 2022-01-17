@@ -110,8 +110,9 @@ const CreateEvent = () => {
                 handleSubmitBack={step => decrementStep(step)} /> : null
             }
             {
-                step === 2 ? <ScheduleForm handleSubmit={handleStepTwo} 
-                handleSubmitBack={step => decrementStep(step)} />: null
+                step === 2 ? <ScheduleForm handleNext={handleStepTwo} 
+                handleBack={step => decrementStep(step)} />: null
+
             }
             {
                 step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)}/> : null

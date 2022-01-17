@@ -16,7 +16,13 @@ const ThemePicker = (props) => {
     }
     props.handleSubmit(formData);
   }
-
+  const handleBack = (event) => {
+    event.preventDefault();
+    const formData = {
+      step: 3
+    }
+    props.handleSubmitBack(formData)
+  }
   return (
     <form className="themepicker form" onSubmit={handleSubmit}>
       <div className="themepicker__title form__title">
@@ -74,7 +80,8 @@ const ThemePicker = (props) => {
       </div>
       <div className="themepicker__buttons form__buttons">
         {/* BACK button */}
-        <Button buttonText="Back" buttonType="secondary" />
+        <Button type="submit" onClick={handleBack}
+        buttonText="Back" buttonType="secondary" />
         {/* NEXT button */}
         <Button buttonText="Next" buttonType="primary" type="submit"/>
       </div>

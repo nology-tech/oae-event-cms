@@ -3,39 +3,22 @@
 @use "../../../assets/styles/layout/forms" as *;
 
 
-.event-info-form {
+.eventInfo__pageTwo-form {
   height: 45rem;
-  width: 52rem;
-  display: flex;
-  flex-direction: row;
-  }
-
-  .form__input{
-      padding-left: 2rem;
-  }
-
-.picture-section {
-  padding-top: 6rem;
-  height: 39rem;
-
-  &__remove{
-    text-decoration-line: underline;
-  }
-  &__button {
+  width: 26rem;
+  
+  &__main
+  {
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+        flex-direction: row;
+  }
+  &__input{
+    padding-left: 2rem;
+  }
 }
-
+.description {
+    margin-top: 5.5rem;
 }
-
-.form__borderbox-placeholder {
-width: 30rem;
-height: 10rem;
-border: solid 2px $form-input-border-color;
-border-radius: 15px;
-}
-
 button {
   width: 7.5rem;
   height: 3rem;
