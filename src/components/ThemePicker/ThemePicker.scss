@@ -1,4 +1,4 @@
-@use "../../assets/styles/_variables" as *;
+@use "../../assets/styles/_variables"as *;
 
 .themepicker {
   height: 28rem;
@@ -20,6 +20,7 @@
     &-color {
       border: none;
       width: 2rem;
+      cursor: pointer;
     }
   }
 
@@ -41,12 +42,19 @@
     &-color {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      border: 1px solid $form-label-color;
-      width: 4rem;
-      border-radius: 8px;
+      justify-content: center;
+      border: 2px solid #E9E9E9;
+      width: 3rem;
+      border-radius: 6px;
       padding: 0.2rem;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid $form-label-color;
+      }
     }
+
     &-img {
       width: 0.6rem;
       padding-right: 0.5rem;
@@ -60,5 +68,3 @@
     border-radius: 8px;
   }
 }
-
-

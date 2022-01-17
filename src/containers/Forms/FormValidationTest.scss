@@ -1,0 +1,20 @@
+@use "../../assets/styles/variables" as *;
+
+.form {
+  &__buttons {
+    > .tertiary {
+      width: 5.4rem;
+      height: 2rem;
+      font-size: 0.625rem;
+    }
+
+    > .primary {
+      margin-top: 1rem;
+    }
+  }
+}
+
+#description,
+#alternate-description {
+  padding-top: 0.3rem;
+}

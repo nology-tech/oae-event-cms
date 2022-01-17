@@ -6,12 +6,12 @@ import { BrowserRouter as Router } from "react-router-dom";
 const App = () => {
   return (
     <div className="App">
-     <Router>
-      <Header/>
+      <Router>
+        <Header />
         {/* <Nav /> */}
         <Routing />
       </Router>
-      </div>
+    </div>
   );
 };
 
