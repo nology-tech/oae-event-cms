@@ -16,7 +16,7 @@ const EventForms = () => {
   console.log(watch("example")); // you can watch individual input by pass the name of the input
 
   return (
-    <form class="Event-Form" onSubmit={handleSubmit(onSubmit)}>
+    <form class="event-form" onSubmit={handleSubmit(onSubmit)}>
       {/* register your input into the hook by invoking the "register" function */}
       <input defaultValue="test" {...register("example")} />
       <br />
