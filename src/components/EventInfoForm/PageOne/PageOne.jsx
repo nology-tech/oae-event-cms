@@ -1,6 +1,7 @@
 import Button from "../../Button/Button";
 import tooltipInfoIcon from "../../../assets/images/tooltip-info-icon.svg";
 import "./PageOne.scss";
+import Tooltip from "../../Tooltip/Tooltip";
 
 const PageOne = (props) => {
 
@@ -21,6 +22,7 @@ const PageOne = (props) => {
               <div className="eventInfo__pageOne-form-tooltip">
                 <label className="form__label"> Title </label>
                 <img className="eventInfo__pageOne-form-tooltipIcon" src={tooltipInfoIcon} alt="tool tip info icon" />
+                <Tooltip/>
               </div>
             <input
               type="text"
