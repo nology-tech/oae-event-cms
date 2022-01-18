@@ -1,0 +1,32 @@
+@use "../../assets/styles/_variables"as *;
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  gap: 1rem;
+
+  &__header {
+    margin-top: 12rem;
+
+    color: $title-color;
+
+    &--orange {
+      color: $primary-color;
+    }
+  }
+
+  &__image {
+    background-color: white;
+    width: 20rem;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    cursor: pointer;
+  }
+}
