@@ -8,7 +8,9 @@ import PageTwo from '../../components/EventInfoForm/PageTwo/PageTwo';
 import Review from '../../components/Review/Review';
 
 const CreateEvent = () => {
-    const [event, setEvent] = useState({});
+    const [event, setEvent] = useState({
+        intro: []
+    });
 
     // let event = {
     //         name: "",
@@ -46,7 +48,9 @@ const CreateEvent = () => {
             time: data.time,
             date: data.date,
             location: data.location,
-            imageSrc: data.imageSrc
+            imageSrc: data.imageSrc,
+            intro: event.intro || [],
+            schedule: event.schedule || []
         })        
         incrementStep();
     }
@@ -54,12 +58,7 @@ const CreateEvent = () => {
     const handleStepOne = (data) => {
         setEvent({
             ...event,
-            intro: {
-                heading: data.heading,
-                quote: data.quote,
-                quoteCaption: data.quoteCaption,
-                content: data.content
-            }
+            intro: data.intro,
         })
         incrementStep();
     }
@@ -106,12 +105,12 @@ const CreateEvent = () => {
                 step === 0 ? <PageOne data={event} handleSubmit={handleStepZero} /> : null
             }
             {
-                step === 1 ? <PageTwo handleSubmit={handleStepOne}
+                step === 1 ? <PageTwo formData={event} handleSubmit={handleStepOne}
                 handleSubmitBack={step => decrementStep(step)} /> : null
             }
             {
                 step === 2 ? <ScheduleForm handleNext={handleStepTwo} 
-                handleBack={step => decrementStep(step)} />: null
+                handleBack={step => decrementStep(step)} data={event} />: null
 
             }
             {

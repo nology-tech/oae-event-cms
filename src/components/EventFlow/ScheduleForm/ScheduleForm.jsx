@@ -7,7 +7,7 @@ import {ReactComponent as BinIcon} from '../../../assets/images/bin-icon.svg';
 
 const ScheduleForm = (props) => {
   const data = props.data;
-  const [scheduleArr, setScheduleArr] = useState([]);
+  const [scheduleArr, setScheduleArr] = useState(data.schedule);
   const [listHtml, setListHtml] = useState([]);
 
   // Handler for once ALL schedule items have been added
@@ -88,33 +88,33 @@ const ScheduleForm = (props) => {
   return (
     <>
     <div className="schedule">
-      <form className ="schedule-form form" onSubmit={handleAdd} value={data?.schedule} >
+      <form className ="schedule-form form" onSubmit={handleAdd} defaultValue={data?.schedule} >
        <div className="form__title">
             <h3 className="form__title-step">Step 02</h3>
             <h2 className="form__title-main">Add Schedule</h2>
         </div>
         <div className="schedule-form__name form__section">
-          <label for="name" className="form__label">Name</label>
-          <input type="text" id="name" name="name" className="form__input" value={data?.name}required></input>
+          <label htmlFor="name" className="form__label">Name</label>
+          <input type="text" id="name" name="name" className="form__input" defaultValue={data?.name} required></input>
         </div>
         <div className="schedule-form__title form__section">
-          <label for="title" className="form__label">Title (optional)</label>
-          <input type="text" id="title" name="title" className="form__input" value={data?.title}></input>
+          <label htmlFor="title" className="form__label">Title (optional)</label>
+          <input type="text" id="title" name="title" className="form__input" defaultValue={data?.title}></input>
         </div>
         <div className="schedule-form__author form__section">
-          <label for="author" className="form__label">Author (optional)</label>
-          <input type="text" id="author" name="author" className="form__input" value={data?.author}></input>
+          <label htmlFor="author" className="form__label">Author (optional)</label>
+          <input type="text" id="author" name="author" className="form__input" defaultValue={data?.author}></input>
         </div>
         <div className="schedule-form__description form__section">
-          <label for="description" className="form__label">Description</label>
+          <label htmlFor="description" className="form__label">Description</label>
           <TextareaAutosize name="description" id="description" className="form__input" 
-          value={data?.description} required />
+          defaultValue={data?.description} required />
         </div>
         <div className = "schedule-form__alternate-description form__section">
-          <label for="alternate-description" className="form__label">
+          <label htmlFor="alternate-description" className="form__label">
               Alternate Description (optional)
           </label>
-          <TextareaAutosize name="alternateDescription"value={data?.alternateDescription} id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
+          <TextareaAutosize name="alternateDescription" defaultValue={data?.alternateDescription} id="alternate-description" className="form__input" placeholder="E.g.Lyric Translations" cacheMeasurements
           />
         </div>
         <div className="schedule-form__buttons form__buttons">
