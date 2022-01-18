@@ -8,10 +8,10 @@
   gap: 5rem;
   color: $title-color;
   padding: 0.3rem 1.5rem;
-  position: fixed;
   font-weight: 700;
   background-color: $form-background-color;
   width: 100vw;
+  height: 4.29rem;
 
   &__logo {
     width: 3rem;
@@ -22,5 +22,6 @@
     min-height: 2.81rem;
     min-width: 6.75rem;
     margin-right: 4.06rem;
+    // justify-self: flex-end;
   }
 }

@@ -1,16 +1,22 @@
 import "./App.scss";
 import Header from "./containers/Header/Header";
-import Nav from "./containers/Nav/Nav";
 import Routing from "./containers/Routing/Routing";
 import { BrowserRouter as Router } from "react-router-dom";
+import { useState } from 'react';
 
 const App = () => {
+  const [logoutButton, setLogoutButton] = useState(false)
+
+  const toggleLogoutButton = () => {
+    setLogoutButton(!logoutButton)
+  }
+
   return (
     <div className="App">
       <Router>
-        <Header />
-        <Nav />
-        <Routing />
+        <Header logoutButton={logoutButton} toggleLogoutButton={toggleLogoutButton} />
+
+        <Routing toggleLogoutButton={toggleLogoutButton} />
       </Router>
     </div>
   );
