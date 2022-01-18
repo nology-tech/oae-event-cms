@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { LoginTemplate } from "../LoginTemplate/LoginTemplate";
 import { useAuth } from "../../contexts/AuthContext";
 import { useRef, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate} from 'react-router-dom';
 import {auth} from "../../firebase.js";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import Login from "../../firebase";
@@ -12,27 +12,31 @@ import Login from "../../firebase";
 
 const WelcomePage = (props) => {
   const auth = getAuth()
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  // const { login } = useAuth()
-  const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
-  const history = useNavigate()
- 
+  // const emailRef = useRef()
+  // const passwordRef = useRef()
 
-  console.log("The auth is...");
-  console.log(auth);
+  // const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+ 
+  const navigate = useNavigate();
+
 
   async function handleSubmit(event) {
     event.preventDefault();
+    const email = event.target[0].value
+    const password = event.target[1].value
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log("WE SIGNED IN YAY!!");
+        // navigate.push("/")
+        navigate('/');
+      
       })
       .catch((error) => {
         console.log("Uh oh! We didn't sign on");
+        alert("Try again 😼")
         const errorCode = error.code;
         const errorMessage = error.message;
       });
@@ -78,7 +82,7 @@ const WelcomePage = (props) => {
           <label className="form__label welcome-form__label" htmlFor="password">Password</label>
           <input
             className="form__input welcome-form__input"
-            type="password"
+            type="text"
             id="password"
             placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
             required
