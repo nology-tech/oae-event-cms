@@ -117,14 +117,15 @@ const ScheduleForm = (props) => {
           />
         </div>
         <div className="schedule-form__buttons form__buttons">
-          <Button 
-          
+          <Button           
           buttonType="tertiary" buttonText="Add" className="form__buttons-add" type="submit"/>
-          <Button 
-          type="submit"
-          buttonType="secondary" onClick={handleBack} buttonText="Back" className="form__buttons-next"/>
-          <Button 
-          type="submit" buttonType="primary" onClick={handleNext} buttonText="Next" className="form__buttons-next"/>
+          <div className="schedule-form__buttons-nav">
+            <Button
+            type="submit"
+            buttonType="secondary" onClick={handleBack} buttonText="Back" className="form__buttons-next"/>
+            <Button
+            type="submit" buttonType="primary" onClick={handleNext} buttonText="Next" className="form__buttons-next"/>
+          </div>
           
         </div>
       </form>
