@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./PageTwo.scss";
 import Button from "../../Button/Button";
 import TextareaAutosize from "react-textarea-autosize";
@@ -10,6 +10,7 @@ const PageTwo = (props) => {
   const handleBack = props.handleSubmitBack;
   const handleNext = props.handleSubmit;
   const [eventContentArr, setEventContentArr] = useState(formData.intro);
+  const [eventContentArrHtml, setEventContentArrHtml] = useState([]);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -35,13 +36,25 @@ const PageTwo = (props) => {
     console.log(eventContentArr);
   };
 
-  const eventcontentArrHtml = eventContentArr.map((eventContent, i) => (
-    <div key={i} className="event-content-list__cards-row">
-      <h5 className="event-content-list__cards-row-title">
-        {eventContent.heading}
-      </h5>
-    </div>
-  ));
+  useEffect(() => {
+    const handleRemove = (id) => {
+      eventContentArr.splice(id, 1);
+      setEventContentArr([...eventContentArr]);
+    }
+
+    const html = eventContentArr.map((eventContent, i) => (
+      <div key={i} className="event-content-list__cards-row">
+        <h5 className="event-content-list__cards-row-title">
+          {eventContent.heading}
+        </h5>
+        <Button buttonType="icon" className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)} buttonText={<BinIcon className=""/>}></Button>
+      </div>
+    ));
+      setEventContentArrHtml(html)
+
+  }, [eventContentArr])
+  
+
 
   return (
     <>
@@ -93,11 +106,11 @@ const PageTwo = (props) => {
             </div>
           </div>
         </form>
-        {eventcontentArrHtml.length !== 0 ? (
+        {eventContentArrHtml.length !== 0 ? (
           <>
             <div className="event-info-2-list">
               <h4 className="event-info-2-lis__title">Event Content</h4>
-              <div className="event-info-2-list__cards">{eventcontentArrHtml}</div>
+              <div className="event-info-2-list__cards">{eventContentArrHtml}</div>
             </div>
           </>
         ) : null}
