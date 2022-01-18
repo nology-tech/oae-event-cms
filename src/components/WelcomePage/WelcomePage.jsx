@@ -2,13 +2,58 @@ import React from "react";
 import "./WelcomePage.scss";
 import Button from "../Button/Button";
 import { LoginTemplate } from "../LoginTemplate/LoginTemplate";
+import { useAuth } from "../../contexts/AuthContext";
+import { useRef, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import {auth} from "../../firebase.js";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import Login from "../../firebase";
+
 
 const WelcomePage = (props) => {
-  const { handleNext } = props;
+  const auth = getAuth()
+  const emailRef = useRef()
+  const passwordRef = useRef()
+  // const { login } = useAuth()
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false)
+  const history = useNavigate()
+ 
 
-  const handleSubmit = (event) => {
+  console.log("The auth is...");
+  console.log(auth);
+
+  async function handleSubmit(event) {
     event.preventDefault();
-    props.handleSubmit();
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("WE SIGNED IN YAY!!");
+      })
+      .catch((error) => {
+        console.log("Uh oh! We didn't sign on");
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+
+  
+
+    // try {
+    //   setError("")
+    //   setLoading(true)
+    //   await auth. login(emailRef.current.value, passwordRef.current.value)
+    //   history.push("/")
+    // } catch {
+    //   setError("Failed to log in");
+    // }
+    // setLoading(false)
+
+    // event.preventDefault();
+    // props.handleSubmit();
+
+
+
   };
 
   return (
@@ -38,11 +83,12 @@ const WelcomePage = (props) => {
             placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
             required
           />
-
+          {/* 
           <a className="welcome-form__link" onClick={handleNext}>
             Forgot your password?
-          </a>
-          <Button buttonText="Login" buttonType="primary"></Button>
+          </a> */}
+          <Link to="/forgot-password">Forgot Password?</Link>
+          <Button disbaled={loading} buttonText="Login" buttonType="primary"></Button>
         </div>
       </div>
       <LoginTemplate />
