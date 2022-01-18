@@ -24,10 +24,19 @@ const Review = (props) => {
     const generateScheduleList = () => {
         const scheduleArr = event.schedule;
         console.log(scheduleArr);
-        return scheduleArr.map((schedule, i) =>
-            (
+        return scheduleArr.map((schedule, i) => (
                 <div key={i} className='accordian review__right-schedule-card'>
                     <Accordian name={schedule.name} title={schedule.title !== "" ? schedule.title : ""} author={schedule.author !== "" ? schedule.author : ""} description={schedule.description} alternativeDescription={schedule.alternateDescription !== "" ? schedule.alternateDescription : ""}/>
+                </div>
+            )
+        )
+    }
+
+    const generateIntroList = () => {
+        const introArr = event.intro;
+        return introArr.map((intro, i) => (
+                <div key={i} className="accordian review__left-info-2">
+                    <Accordian heading={intro.heading} text={intro.content}/>
                 </div>
             )
         )
@@ -54,14 +63,7 @@ const Review = (props) => {
                    <p className='review__section-input'>{event.time}</p>
                    
                    <p className='review__section-header'>Part 2</p>
-                   <p className='review__section-text'>Heading</p>
-                   <p className='review__section-input'>{event.intro.heading}</p>
-                   <p className='review__section-text'>Content</p>
-                   <p className='review__section-input'>{event.intro.content}</p>
-                   <p className='review__section-text'>Quote</p>
-                   <p className='review__section-input'>{event.intro.quote}</p>
-                   <p className='review__section-text'>Quote Caption</p>
-                   <p className='review__section-input'>{event.intro.quoteCaption}</p>
+                   {generateIntroList()}
                 </div>
 
                 <div className='review__section review__left-theme'>
