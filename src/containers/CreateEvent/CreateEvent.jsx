@@ -50,7 +50,8 @@ const CreateEvent = () => {
             location: data.location,
             imageSrc: data.imageSrc,
             intro: event.intro || [],
-            schedule: event.schedule || []
+            schedule: event.schedule || [],
+            theme: event.theme || {}
         })        
         incrementStep();
     }
@@ -75,9 +76,10 @@ const CreateEvent = () => {
         setEvent({
             ...event,
             theme: {
-                templateTheme: data.fontType,
-                primaryColor: data.themeColor,
-                accentColor: data.accentColor
+                fontType: data.fontType,
+                themeColor: data.themeColor,
+                accentColor: data.accentColor,
+                subtitleColor: data.subtitleColor
             }
         })
         incrementStep();
@@ -90,6 +92,10 @@ const CreateEvent = () => {
 
     const decrementStep = () => {
         setStep(step - 1);
+    }
+
+    const setReviewStep = (step) => {
+        setStep(step);
     }
    
     useEffect(() => {
@@ -114,10 +120,10 @@ const CreateEvent = () => {
 
             }
             {
-                step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)}/> : null
+                step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)} data={event}/> : null
             }
             {
-                step === 4 ? <Review event={event}/> : null
+                step === 4 ? <Review event={event} setReviewStep={setReviewStep}/> : null
             }
         </div>
            )

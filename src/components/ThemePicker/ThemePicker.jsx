@@ -5,6 +5,8 @@ import arrowDown from "../../assets/images/arrow-down.svg";
 
 const ThemePicker = (props) => {
 
+  const {data} = props;
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
@@ -12,10 +14,11 @@ const ThemePicker = (props) => {
       fontType: event.target.fontType.value,
       themeColor: event.target.themeColor.value,
       accentColor: event.target.accentColor.value,
-      subtitleColor: event.target.accentColor.value
+      subtitleColor: event.target.subtitleColor.value
     }
     props.handleSubmit(formData);
   }
+
   const handleBack = (event) => {
     event.preventDefault();
     const formData = {
@@ -23,6 +26,7 @@ const ThemePicker = (props) => {
     }
     props.handleSubmitBack(formData)
   }
+
   return (
     <form className="themepicker form" onSubmit={handleSubmit}>
       <div className="themepicker__title form__title">
@@ -40,12 +44,13 @@ const ThemePicker = (props) => {
             required
             id="fonttype"
             name="fontType"
+            defaultValue={data.theme.fontType}
           >
-            <option value="" disabled selected>
+            <option defaultValue="" disabled selected>
               Please select from one of the following...
             </option>
-            <option value="Modern">Modern</option>
-            <option value="Classic">Classic</option>
+            <option defaultValue="Modern">Modern</option>
+            <option defaultValue="Classic">Classic</option>
           </select>
         </div>
 
@@ -54,7 +59,7 @@ const ThemePicker = (props) => {
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="theme" type="color" name="themeColor" data-testid="theme"/>
+            <input className="themepicker__input-color" htmlFor="theme" type="color" name="themeColor" data-testid="theme" defaultValue={data.theme.themeColor}/>
           </div>
         </div>
 
@@ -63,7 +68,7 @@ const ThemePicker = (props) => {
             Accent Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="accent" type="color" name="accentColor" data-testid="accent"/>
+            <input className="themepicker__input-color" htmlFor="accent" type="color" name="accentColor" data-testid="accent" defaultValue={data.theme.accentColor}/>
           </div>
         </div>
 
@@ -73,7 +78,7 @@ const ThemePicker = (props) => {
             Subtitle Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="subtitle" type="color" name="subtitleColor" data-testid="subtitle"/>
+            <input className="themepicker__input-color" htmlFor="subtitle" type="color" name="subtitleColor" data-testid="subtitle" defaultValue={data.theme.subtitleColor}/>
           </div>
         </div>
 

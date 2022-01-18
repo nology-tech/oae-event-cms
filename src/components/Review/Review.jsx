@@ -5,13 +5,16 @@ import Accordian from '../Accordian/Accordian';
 import {ReactComponent as EditIcon} from '../../assets/images/edit-icon.svg';
 
 const Review = (props) => {
-    const { event } = props;
+    const { event, setReviewStep } = props;
 
     const primaryColorStyles = {
-        backgroundColor: event.theme.primaryColor
+        backgroundColor: event.theme.themeColor
     }
     const accentColorStyles = {
         backgroundColor: event.theme.accentColor
+    }
+    const subtitleColorStyles = {
+        backgroundColor: event.theme.subtitleColor
     }
 
     const onSubmit = {
@@ -38,7 +41,7 @@ const Review = (props) => {
                    <h2>Review</h2>
                    <div className='review__section-title-edit'>
                    <h3>Event Information</h3>
-                   <EditIcon/>
+                   <button onClick={() => setReviewStep(0)}><EditIcon/></button>
                    </div>
                    <p className='review__section-header'>Part 1</p>
                    <p className='review__section-text'>Name</p>
@@ -64,14 +67,16 @@ const Review = (props) => {
                 <div className='review__section review__left-theme'>
                     <div class='review__section-title-edit'>
                         <h3>Theme Settings</h3>
-                        <EditIcon/>
+                        <button onClick={() => setReviewStep(3)}><EditIcon/></button>
                     </div>
                     <p className='review__section-text'>Font Type</p>
-                    <p className='review__section-input'>{event.theme.templateTheme}</p>
+                    <p className='review__section-input'>{event.theme.fontType}</p>
                     <p className='review__section-text'>Primary Colour</p>
                     <div className='review__left-theme-box' style={primaryColorStyles}></div>
                     <p className='review__section-text'>Accent Colour</p>
                     <div className='review__left-theme-box' style={accentColorStyles}></div>
+                    <p className='review__section-text'>Subitle Colour</p>
+                    <div className='review__left-theme-box' style={subtitleColorStyles}></div>
                 </div>
             </div>
             <div className='review__right'>
@@ -82,7 +87,7 @@ const Review = (props) => {
                 <div className='review__section review__right-schedule'>
                 <div className='review__section-title-edit'>
                     <h3>Event Schedule</h3>
-                    <EditIcon/>
+                    <button onClick={() => setReviewStep(2)}><EditIcon/></button>
                 </div>
                 {generateScheduleList()}
                 </div>
