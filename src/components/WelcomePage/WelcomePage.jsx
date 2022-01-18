@@ -4,7 +4,7 @@ import Button from "../Button/Button";
 import { LoginTemplate } from "../LoginTemplate/LoginTemplate";
 
 const WelcomePage = (props) => {
-  const { handleNext } = props;
+  const { handleNext, toggleLogoutButton } = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -42,7 +42,7 @@ const WelcomePage = (props) => {
           <a className="welcome-form__link" onClick={handleNext}>
             Forgot your password?
           </a>
-          <Button buttonText="Login" buttonType="primary"></Button>
+          <Button buttonText="Login" buttonType="primary" onClick={toggleLogoutButton}></Button>
         </div>
       </div>
       <LoginTemplate />
