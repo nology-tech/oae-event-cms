@@ -97,6 +97,22 @@ const CreateEvent = () => {
     const setReviewStep = (step) => {
         setStep(step);
     }
+
+    const handleFinalSubmit = () => {
+        const fetchOptions = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(event)
+          }
+
+        fetch("http://localhost:8080/events/add", fetchOptions)
+            .then(res => res.json())
+            .then(res => {
+                alert("SUCCESSFUL CREATE");
+            })
+    }
    
     useEffect(() => {
         console.log("There was an event change");
@@ -123,7 +139,7 @@ const CreateEvent = () => {
                 step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)} data={event}/> : null
             }
             {
-                step === 4 ? <Review event={event} setReviewStep={setReviewStep}/> : null
+                step === 4 ? <Review event={event} setReviewStep={setReviewStep} handleSubmit={handleFinalSubmit} /> : null
             }
         </div>
            )

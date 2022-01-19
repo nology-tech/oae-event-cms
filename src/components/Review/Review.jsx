@@ -1,5 +1,12 @@
 import React from "react-dom";
+import Accordian from "../Accordian/Accordian";
+import BinIcon from "../IconButton/BinIconButton/BinIconButton";
+import EditIcon from "../IconButton/EditIconButton/EditIconButton";
+import Button from "../Button/Button";
+
 import "./Review.scss";
+
+const Review = (props) => {
   const { event, setReviewStep } = props;
 
   const primaryColorStyles = {
@@ -12,8 +19,9 @@ import "./Review.scss";
     backgroundColor: event.theme.subtitleColor,
   };
 
-  const onSubmit = {
+  const onSubmit = () => {
     // This is where the API call would be.
+    props.handleSubmit();
   };
 
   const generateScheduleList = () => {
