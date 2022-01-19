@@ -4,8 +4,7 @@ import "./ThemePicker.scss";
 import arrowDown from "../../assets/images/arrow-down.svg";
 
 const ThemePicker = (props) => {
-
-  const {data} = props;
+  const { data } = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -14,18 +13,18 @@ const ThemePicker = (props) => {
       fontType: event.target.fontType.value,
       themeColor: event.target.themeColor.value,
       accentColor: event.target.accentColor.value,
-      subtitleColor: event.target.subtitleColor.value
-    }
+      subtitleColor: event.target.subtitleColor.value,
+    };
     props.handleSubmit(formData);
-  }
+  };
 
   const handleBack = (event) => {
     event.preventDefault();
     const formData = {
-      step: 3
-    }
-    props.handleSubmitBack(formData)
-  }
+      step: 3,
+    };
+    props.handleSubmitBack(formData);
+  };
 
   return (
     <form className="themepicker form" onSubmit={handleSubmit}>
@@ -59,7 +58,14 @@ const ThemePicker = (props) => {
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="theme" type="color" name="themeColor" data-testid="theme" defaultValue={data.theme.themeColor}/>
+            <input
+              className="themepicker__input-color"
+              htmlFor="theme"
+              type="color"
+              name="themeColor"
+              data-testid="theme"
+              defaultValue={data.theme.themeColor}
+            />
           </div>
         </div>
 
@@ -68,27 +74,47 @@ const ThemePicker = (props) => {
             Accent Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="accent" type="color" name="accentColor" data-testid="accent" defaultValue={data.theme.accentColor}/>
+            <input
+              className="themepicker__input-color"
+              htmlFor="accent"
+              type="color"
+              name="accentColor"
+              data-testid="accent"
+              defaultValue={data.theme.accentColor}
+            />
           </div>
         </div>
 
         {/* Subtitle Input */}
         <div className="themepicker__section form__section">
-          <label className="themepicker__subtitle form__label" htmlFor="subtitle">
+          <label
+            className="themepicker__subtitle form__label"
+            htmlFor="subtitle"
+          >
             Subtitle Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="subtitle" type="color" name="subtitleColor" data-testid="subtitle" defaultValue={data.theme.subtitleColor}/>
+            <input
+              className="themepicker__input-color"
+              htmlFor="subtitle"
+              type="color"
+              name="subtitleColor"
+              data-testid="subtitle"
+              defaultValue={data.theme.subtitleColor}
+            />
           </div>
         </div>
-
       </div>
       <div className="themepicker__buttons form__buttons">
         {/* BACK button */}
-        <Button type="submit" onClick={handleBack}
-        buttonText="Back" buttonType="secondary" />
+        <Button
+          type="submit"
+          onClick={handleBack}
+          buttonText="Back"
+          buttonType="secondary"
+        />
         {/* NEXT button */}
-        <Button buttonText="Next" buttonType="primary" type="submit"/>
+        <Button buttonText="Next" buttonType="primary" type="submit" />
       </div>
     </form>
   );
