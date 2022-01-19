@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
 import "./ThemePicker.scss";
-import arrowDown from "../../assets/images/arrow-down.svg";
 
 const ThemePicker = (props) => {
   const { data } = props;
@@ -27,7 +26,7 @@ const ThemePicker = (props) => {
   };
 
   return (
-    <form className="themepicker form" onSubmit={handleSubmit}>
+    <form className="themepicker form" onSubmit={handleSubmit} name="form">
       <div className="themepicker__title form__title">
         <p className="form__title-step">Step 04</p>
         <h2 className="form__title-main">Choose Theme</h2>
@@ -58,6 +57,7 @@ const ThemePicker = (props) => {
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
+
             <input
               className="themepicker__input-color"
               htmlFor="theme"
