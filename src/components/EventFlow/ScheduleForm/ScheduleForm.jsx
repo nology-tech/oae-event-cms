@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../Button/Button";
+import BinIconButton from "../../IconButton/BinIconButton/BinIconButton";
+import EditIconButton from "../../IconButton/EditIconButton/EditIconButton";
 import "./ScheduleForm.scss";
 import TextareaAutosize from 'react-textarea-autosize';
-import {ReactComponent as EditIcon} from '../../../assets/images/edit-icon.svg';
-import {ReactComponent as BinIcon} from '../../../assets/images/bin-icon.svg';
+
 
 const ScheduleForm = (props) => {
   const data = props.data;
@@ -76,7 +77,10 @@ const ScheduleForm = (props) => {
       <div key={i} className="schedule-list__cards-row">
         <h5 className="schedule-list__cards-row-title">{schedule.name}</h5>
         <div className="schedule-list__cards-row-buttons">
-          <Button buttonType="icon" className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)} buttonText={<BinIcon className="schedule-list__cards-row-buttons-link-icon"/>}></Button>
+          <BinIconButton buttonType="delete" className="schedule-form__icon" /*onClick={() => handleRemove(i)} *//>
+        </div>
+        <div className="schedule-list__cards-row-buttons">
+          <EditIconButton buttonType="edit"  className="schedule-form__icon" /*onClick={() => handleEdit(i)} */ />
         </div>
       </div>
       )

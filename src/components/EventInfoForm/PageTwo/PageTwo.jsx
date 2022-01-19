@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./PageTwo.scss";
 import Button from "../../Button/Button";
 import TextareaAutosize from "react-textarea-autosize";
-import {ReactComponent as EditIcon} from '../../../assets/images/edit-icon.svg';
-import {ReactComponent as BinIcon} from '../../../assets/images/bin-icon.svg';
+import EditIconButton from "../../IconButton/EditIconButton/EditIconButton";
+import BinIconButton from "../../IconButton/BinIconButton/BinIconButton";
 
 const PageTwo = (props) => {
   const formData = props.formData;
@@ -47,7 +47,8 @@ const PageTwo = (props) => {
         <h5 className="event-content-list__cards-row-title">
           {eventContent.heading}
         </h5>
-        <Button buttonType="icon" className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)} buttonText={<BinIcon className=""/>}></Button>
+        <BinIconButton buttonType="icon" className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)}/>
+        <EditIconButton buttonType="icon" className="schedule-list__cards-row-buttons-link"/>
       </div>
     ));
       setEventContentArrHtml(html)

@@ -2,7 +2,7 @@ import React from 'react-dom';
 import "./Review.scss";
 import Button from '../Button/Button';
 import Accordian from '../Accordian/Accordian';
-import {ReactComponent as EditIcon} from '../../assets/images/edit-icon.svg';
+import EditIconButton from "../IconButton/EditIconButton/EditIconButton";
 
 const Review = (props) => {
     const { event, setReviewStep } = props;
@@ -50,7 +50,7 @@ const Review = (props) => {
                    <h2>Review</h2>
                    <div className='review__section-title-edit'>
                    <h3>Event Information</h3>
-                   <button onClick={() => setReviewStep(0)}><EditIcon/></button>
+                   <EditIconButton onClick={() => setReviewStep(0)}/>
                    </div>
                    <p className='review__section-header'>Part 1</p>
                    <p className='review__section-text'>Name</p>
@@ -69,7 +69,7 @@ const Review = (props) => {
                 <div className='review__section review__left-theme'>
                     <div class='review__section-title-edit'>
                         <h3>Theme Settings</h3>
-                        <button onClick={() => setReviewStep(3)}><EditIcon/></button>
+                        <EditIconButton onClick={() => setReviewStep(3)}/>
                     </div>
                     <p className='review__section-text'>Font Type</p>
                     <p className='review__section-input'>{event.theme.fontType}</p>
@@ -89,7 +89,7 @@ const Review = (props) => {
                 <div className='review__section review__right-schedule'>
                 <div className='review__section-title-edit'>
                     <h3>Event Schedule</h3>
-                    <button onClick={() => setReviewStep(2)}><EditIcon/></button>
+                    <EditIconButton onClick={() => setReviewStep(2)}/>
                 </div>
                 {generateScheduleList()}
                 </div>

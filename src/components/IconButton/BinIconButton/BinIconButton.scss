@@ -1,0 +1,13 @@
+@use "../../../assets/styles/variables" as *;
+
+.icon {
+    display: flex;
+    align-items: right;
+    width: 2.0rem;
+    height: 1.5rem;
+    border: none;
+    background-color: $form-background-color;
+    &:hover {
+       filter: opacity(40%);
+    }
+}
