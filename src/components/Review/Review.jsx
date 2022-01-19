@@ -1,5 +1,11 @@
 import React from "react-dom";
 import "./Review.scss";
+import Accordian from "../Accordian/Accordian";
+import Button from "../Button/Button";
+import BinIconButton from "../../IconButton/BinIconButton/BinIconButton";
+import EditIconButton from "../../IconButton/EditIconButton/EditIconButton";
+
+const Review = (props) => {
   const { event, setReviewStep } = props;
 
   const primaryColorStyles = {
