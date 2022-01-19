@@ -6,13 +6,13 @@ import {Link} from "react-router-dom";
 
 import EventCard from "../../components/EventCard/EventCard";
 import "./EventsList.scss";
-// import events from "../../assets/data/events";
+
 
 const EventsList = (props) => {
   const [dataArr, setDataArr] = useState([]);
   
   const fetchEventData = () =>{  
-    const Url = "https://oae-mock-api.herokuapp.com/events/"
+    const Url = "https://localhost:8080/events"
     fetch(Url)
     .then((response) =>{
       return response.json();
@@ -42,8 +42,8 @@ const EventsList = (props) => {
     return lowerEvent.includes(searchTerm);
   });
 
-  const eventsList = filterEvents.map((event, index) => (
-    <EventCard key= {"event" + index}
+  const eventsList = filterEvents.map((event, id) => (
+    <EventCard key= {"event" + id}
       eventName={event.name}
       series={event.series}
       date={event.date}
