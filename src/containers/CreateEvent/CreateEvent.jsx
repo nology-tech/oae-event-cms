@@ -9,7 +9,9 @@ import Review from '../../components/Review/Review';
 
 const CreateEvent = () => {
     const [event, setEvent] = useState({
-        intro: []
+        intro: [],
+        // Note: How is this used?
+        featuredEvent: true
     });
 
     // let event = {
@@ -76,8 +78,8 @@ const CreateEvent = () => {
         setEvent({
             ...event,
             theme: {
-                fontType: data.fontType,
-                themeColor: data.themeColor,
+                templateTheme: data.templateTheme,
+                primaryColor: data.primaryColor,
                 accentColor: data.accentColor,
                 subtitleColor: data.subtitleColor
             }
@@ -99,6 +101,8 @@ const CreateEvent = () => {
     }
 
     const handleFinalSubmit = () => {
+        // Note: Is this property needed?
+        event.featuredEvent = true;
         const fetchOptions = {
             method: 'POST',
             headers: {

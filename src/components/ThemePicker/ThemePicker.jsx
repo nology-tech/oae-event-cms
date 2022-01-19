@@ -10,8 +10,8 @@ const ThemePicker = (props) => {
     event.preventDefault();
     const formData = {
       step: 3,
-      fontType: event.target.fontType.value,
-      themeColor: event.target.themeColor.value,
+      templateTheme: event.target.templateTheme.value,
+      primaryColor: event.target.primaryColor.value,
       accentColor: event.target.accentColor.value,
       subtitleColor: event.target.subtitleColor.value,
     };
@@ -35,15 +35,15 @@ const ThemePicker = (props) => {
 
       <div className="themepicker__dropdown form__section">
         <div className="themepicker__section form__section">
-          <label className="themepicker__label form__label" for="fonttype">
+          <label className="themepicker__label form__label" for="templateTheme">
             Font Type
           </label>
           <select
             className="themepicker__dropdown form__selectBox"
             required
-            id="fonttype"
-            name="fontType"
-            defaultValue={data.theme.fontType}
+            id="templateTheme"
+            name="templateTheme"
+            defaultValue={data.theme.templateTheme}
           >
             <option defaultValue="" disabled selected>
               Please select from one of the following...
@@ -62,9 +62,9 @@ const ThemePicker = (props) => {
               className="themepicker__input-color"
               htmlFor="theme"
               type="color"
-              name="themeColor"
+              name="primaryColor"
               data-testid="theme"
-              defaultValue={data.theme.themeColor}
+              defaultValue={data.theme.primaryColor}
             />
           </div>
         </div>

@@ -87,7 +87,7 @@ const Review = (props) => {
             </button>
           </div>
           <p className="review__section-text">Font Type</p>
-          <p className="review__section-input">{event.theme.fontType}</p>
+          <p className="review__section-input">{event.theme.templateTheme}</p>
           <p className="review__section-text">Primary Colour</p>
           <div
             className="review__left-theme-box"
