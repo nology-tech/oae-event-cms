@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "../../Button/Button";
-import BinIconButton from "../../IconButton/BinIconButton/BinIconButton";
-import EditIconButton from "../../IconButton/EditIconButton/EditIconButton";
 import "./ScheduleForm.scss";
 import TextareaAutosize from "react-textarea-autosize";
-import { ReactComponent as EditIcon } from "../../../assets/images/edit-icon.svg";
 import { ReactComponent as BinIcon } from "../../../assets/images/bin-icon.svg";
 
 const ScheduleForm = (props) => {
@@ -56,8 +53,6 @@ const ScheduleForm = (props) => {
     setScheduleArr([...scheduleArr, formData]);
     console.log(scheduleArr);
   };
-
-  const handleEdit = (i) => {};
 
   useEffect(() => {
     const handleRemove = (id) => {

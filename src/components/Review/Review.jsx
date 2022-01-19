@@ -1,6 +1,5 @@
 import React from "react-dom";
 import Accordian from "../Accordian/Accordian";
-import BinIcon from "../IconButton/BinIconButton/BinIconButton";
 import EditIcon from "../IconButton/EditIconButton/EditIconButton";
 import Button from "../Button/Button";
 
