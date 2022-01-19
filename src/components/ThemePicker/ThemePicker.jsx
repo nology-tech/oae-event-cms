@@ -4,18 +4,27 @@ import "./ThemePicker.scss";
 import arrowDown from "../../assets/images/arrow-down.svg";
 
 const ThemePicker = (props) => {
+  const { data } = props;
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = {
       step: 3,
-      fontType: event.target.fontType.value,
-      themeColor: event.target.themeColor.value,
+      templateTheme: event.target.templateTheme.value,
+      primaryColor: event.target.primaryColor.value,
       accentColor: event.target.accentColor.value,
-      subtitleColor: event.target.accentColor.value
-    }
+      subtitleColor: event.target.subtitleColor.value,
+    };
     props.handleSubmit(formData);
-  }
+  };
+
+  const handleBack = (event) => {
+    event.preventDefault();
+    const formData = {
+      step: 3,
+    };
+    props.handleSubmitBack(formData);
+  };
 
   return (
     <form className="themepicker form" onSubmit={handleSubmit}>
@@ -26,20 +35,21 @@ const ThemePicker = (props) => {
 
       <div className="themepicker__dropdown form__section">
         <div className="themepicker__section form__section">
-          <label className="themepicker__label form__label" for="fonttype">
+          <label className="themepicker__label form__label" for="templateTheme">
             Font Type
           </label>
           <select
             className="themepicker__dropdown form__selectBox"
             required
-            id="fonttype"
-            name="fontType"
+            id="templateTheme"
+            name="templateTheme"
+            defaultValue={data.theme.templateTheme}
           >
-            <option value="" disabled selected>
+            <option defaultValue="" disabled selected>
               Please select from one of the following...
             </option>
-            <option value="Modern">Modern</option>
-            <option value="Classic">Classic</option>
+            <option defaultValue="Modern">Modern</option>
+            <option defaultValue="Classic">Classic</option>
           </select>
         </div>
 
@@ -48,7 +58,14 @@ const ThemePicker = (props) => {
             Theme Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="theme" type="color" name="themeColor" data-testid="theme"/>
+            <input
+              className="themepicker__input-color"
+              htmlFor="theme"
+              type="color"
+              name="primaryColor"
+              data-testid="theme"
+              defaultValue={data.theme.primaryColor}
+            />
           </div>
         </div>
 
@@ -57,26 +74,47 @@ const ThemePicker = (props) => {
             Accent Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="accent" type="color" name="accentColor" data-testid="accent"/>
+            <input
+              className="themepicker__input-color"
+              htmlFor="accent"
+              type="color"
+              name="accentColor"
+              data-testid="accent"
+              defaultValue={data.theme.accentColor}
+            />
           </div>
         </div>
 
         {/* Subtitle Input */}
         <div className="themepicker__section form__section">
-          <label className="themepicker__subtitle form__label" htmlFor="subtitle">
+          <label
+            className="themepicker__subtitle form__label"
+            htmlFor="subtitle"
+          >
             Subtitle Color
           </label>
           <div className="themepicker__section-color form__section-color">
-            <input className="themepicker__input-color" htmlFor="subtitle" type="color" name="subtitleColor" data-testid="subtitle"/>
+            <input
+              className="themepicker__input-color"
+              htmlFor="subtitle"
+              type="color"
+              name="subtitleColor"
+              data-testid="subtitle"
+              defaultValue={data.theme.subtitleColor}
+            />
           </div>
         </div>
-
       </div>
       <div className="themepicker__buttons form__buttons">
         {/* BACK button */}
-        <Button buttonText="Back" buttonType="secondary" />
+        <Button
+          type="submit"
+          onClick={handleBack}
+          buttonText="Back"
+          buttonType="secondary"
+        />
         {/* NEXT button */}
-        <Button buttonText="Next" buttonType="primary" type="submit"/>
+        <Button buttonText="Next" buttonType="primary" type="submit" />
       </div>
     </form>
   );

@@ -3,7 +3,6 @@ import Button from "../../components/Button/Button";
 import SearchBox from "../../components/SearchBox/SearchBox";
 import Search_Icon from "../../assets/images/Search_Icon.png";
 import {Link} from "react-router-dom";
-
 import EventCard from "../../components/EventCard/EventCard";
 import "./EventsList.scss";
 
@@ -12,8 +11,8 @@ const EventsList = (props) => {
   const [dataArr, setDataArr] = useState([]);
   
   const fetchEventData = () =>{  
-    const Url = "http://localhost:8080/events"
-    fetch(Url)
+    const URL = "http://localhost:8080/events"
+    fetch(URL)
     .then((response) =>{
       return response.json();
     })
@@ -27,7 +26,7 @@ const EventsList = (props) => {
 
   useEffect(() => {
     fetchEventData()
-  }, [dataArr]);
+  }, []);
   
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -42,8 +41,8 @@ const EventsList = (props) => {
     return lowerEvent.includes(searchTerm);
   });
 
-  const eventsList = filterEvents.map((event, id) => (
-    <EventCard key= {"event" + id}
+  const eventsList = filterEvents.map((event, index) => (
+    <EventCard key= {"event" + index}
       eventName={event.name}
       series={event.series}
       date={event.date}

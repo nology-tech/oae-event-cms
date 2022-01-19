@@ -2,6 +2,7 @@ import React from 'react';
 import editIcon from "../../assets/images/edit-icon.svg";
 import binIcon from "../../assets/images/bin-icon.svg";
 import "./EventCard.scss";
+import HandleDelete from './HandleDelete';
 
 const EventCard = (props) => {
    const { eventName, series, date, time, location, URL } = props;
@@ -16,10 +17,10 @@ const EventCard = (props) => {
          <p className="eventCard-URL">{URL}</p>
          <div className="eventCard__icons">
             <img className="eventCard-icon" src={editIcon} alt="edit button" />
-            <img className="eventCard-icon" src={binIcon} alt="bin button" />
+            <img className="eventCard-icon" src={binIcon} alt="bin button" onClick={HandleDelete}/>
          </div>
       </div>
    )
 }
 
-export default EventCard
+export default EventCard;
