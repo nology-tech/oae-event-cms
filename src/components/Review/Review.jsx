@@ -1,14 +1,9 @@
 import React from "react-dom";
 import "./Review.scss";
-import Button from "../Button/Button";
-import Accordian from "../Accordian/Accordian";
-import { ReactComponent as EditIcon } from "../../assets/images/edit-icon.svg";
-
-const Review = (props) => {
   const { event, setReviewStep } = props;
 
   const primaryColorStyles = {
-    backgroundColor: event.theme.themeColor,
+    backgroundColor: event.theme.primaryColor
   };
   const accentColorStyles = {
     backgroundColor: event.theme.accentColor,
