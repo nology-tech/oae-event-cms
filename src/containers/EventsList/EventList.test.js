@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import CreateEvent from "../CreateEvent/CreateEvent";
 import EventsList from "./EventsList";
 
 
@@ -7,7 +8,7 @@ it("should render the Main Title of the Events List", () => {
 
   render(<EventsList />);
 
-  const component = screen.getByRole('heading', { level: 1 });
+  const component = screen.getByRole('heading', { level: 2 });
 
   expect(component).toBeInTheDocument();
 });
@@ -33,6 +34,27 @@ it("should render the add button on the Events List", () => {
 
   expect(button).toBeInTheDocument();
 });
+
+// write test to check the add button works
+it("should redirect you to the create event page when you press the add button", () => {
+  render(<EventsList/>);
+
+  const button = screen.getByRole("button");
+  userEvent.click(button);
+  
+  const eventsList = screen.getByRole("heading", {level: 2})
+
+  expect(eventsList).not.toBeInTheDocument();
+})
+
+// write test to check the delete button works
+it("should remove the event from the events list", () => {
+  render(<EventsList/>);
+
+  const deleteIcons = screen.getAllByAltText("bin button");
+
+  
+})
 
 it("should load the icon images on the event cards", () => {
   render(<EventsList />);
