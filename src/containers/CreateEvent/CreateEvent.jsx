@@ -8,7 +8,11 @@ import PageTwo from '../../components/EventInfoForm/PageTwo/PageTwo';
 import Review from '../../components/Review/Review';
 
 const CreateEvent = () => {
-    const [event, setEvent] = useState({});
+    const [event, setEvent] = useState({
+        intro: [],
+        // Note: How is this used?
+        featuredEvent: true
+    });
 
     // let event = {
     //         name: "",
@@ -46,7 +50,10 @@ const CreateEvent = () => {
             time: data.time,
             date: data.date,
             location: data.location,
-            imageSrc: data.imageSrc
+            imageSrc: data.imageSrc,
+            intro: event.intro || [],
+            schedule: event.schedule || [],
+            theme: event.theme || {}
         })        
         incrementStep();
     }
@@ -54,12 +61,7 @@ const CreateEvent = () => {
     const handleStepOne = (data) => {
         setEvent({
             ...event,
-            intro: {
-                heading: data.heading,
-                quote: data.quote,
-                quoteCaption: data.quoteCaption,
-                content: data.content
-            }
+            intro: data.intro,
         })
         incrementStep();
     }
@@ -76,9 +78,10 @@ const CreateEvent = () => {
         setEvent({
             ...event,
             theme: {
-                templateTheme: data.fontType,
-                primaryColor: data.themeColor,
-                accentColor: data.accentColor
+                templateTheme: data.templateTheme,
+                primaryColor: data.primaryColor,
+                accentColor: data.accentColor,
+                subtitleColor: data.subtitleColor
             }
         })
         incrementStep();
@@ -91,6 +94,28 @@ const CreateEvent = () => {
 
     const decrementStep = () => {
         setStep(step - 1);
+    }
+
+    const setReviewStep = (step) => {
+        setStep(step);
+    }
+
+    const handleFinalSubmit = () => {
+        // Note: Is this property needed?
+        event.featuredEvent = true;
+        const fetchOptions = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(event)
+          }
+
+        fetch("http://localhost:8080/events/add", fetchOptions)
+            .then(res => res.json())
+            .then(res => {
+                alert("SUCCESSFUL CREATE");
+            })
     }
    
     useEffect(() => {
@@ -106,18 +131,19 @@ const CreateEvent = () => {
                 step === 0 ? <PageOne data={event} handleSubmit={handleStepZero} /> : null
             }
             {
-                step === 1 ? <PageTwo handleSubmit={handleStepOne}
+                step === 1 ? <PageTwo formData={event} handleSubmit={handleStepOne}
                 handleSubmitBack={step => decrementStep(step)} /> : null
             }
             {
-                step === 2 ? <ScheduleForm handleSubmit={handleStepTwo} 
-                handleSubmitBack={step => decrementStep(step)} />: null
+                step === 2 ? <ScheduleForm handleNext={handleStepTwo} 
+                handleBack={step => decrementStep(step)} data={event} />: null
+
             }
             {
-                step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)}/> : null
+                step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)} data={event}/> : null
             }
             {
-                step === 4 ? <Review event={event}/> : null
+                step === 4 ? <Review event={event} setReviewStep={setReviewStep} handleSubmit={handleFinalSubmit} /> : null
             }
         </div>
            )

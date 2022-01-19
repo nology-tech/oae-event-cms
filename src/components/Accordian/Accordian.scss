@@ -2,15 +2,19 @@
 
 .accordian__item {
     border-bottom: 1px solid $form-label-color;
+    margin-bottom: 0.5rem;
     &-title {
         display: flex;
         justify-content: space-between;
         margin-top: 1rem;
         align-items: center;
         &-name {
-            color: $form-label-color;
+            color: $title-color;
         }
         
+    }
+    &-title:hover {
+        cursor: pointer;
     }
     &-content {
         word-break: break-all;
