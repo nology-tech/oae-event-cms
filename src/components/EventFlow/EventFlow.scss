@@ -17,18 +17,18 @@
         column-gap: 2rem;
         &-text {
             text-align: right;
+            &-icon {
+                border-radius: 50%;
+                border: 3px;
+                height: 3em;
+                width: 3em;
+            }
             &-title {
 
             } 
             &-info {
                 color: $form-label-color;
             }
-        }
-        &-icon {
-            border-radius: 50%;
-            border: 3px;
-            height: 3em;
-            width: 3em;
         }
         &-icon--complete {
         }

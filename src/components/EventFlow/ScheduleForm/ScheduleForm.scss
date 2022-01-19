@@ -25,6 +25,11 @@
   align-items: flex-start;
   &-form {
     &__buttons {
+      display: flex;
+      flex-direction: column;
+      &-nav {
+        align-self: flex-end;
+      }
     }
   }
   &-list {

@@ -3,48 +3,50 @@
 @use "../../../assets/styles/layout/forms" as *;
 
 
-.event-info-form {
-  height: 45rem;
-  width: 52rem;
+.event-info-2{
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  column-gap: 2rem;
+  align-items: flex-start;
+  &-form {
+    &__buttons {
+      display: flex;
+      flex-direction: column;
+      &-nav {
+        align-self: flex-end;
+      }
+    }
   }
-
-  .form__input{
-      padding-left: 2rem;
+  &-list {
+    width: 15vw;
+    background-color: $form-background-color;
+    padding-right: 3.3vw;
+    padding-top: 4.2vh;
+    padding-left: 2.8vw;
+    padding-bottom: 4.12vh;
+    &__title {
+      font-weight: $form-title-weight;
+      color:$title-color;
+    }
+    &__cards {
+      &-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-title {
+          color: $text-color;
+        }
+        &-buttons {
+          display: flex;
+          gap: 1rem;
+          &-link {
+            &-icon:hover{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
   }
-
-.picture-section {
-  padding-top: 6rem;
-  height: 39rem;
-
-  &__remove{
-    text-decoration-line: underline;
-  }
-  &__button {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-
-}
-
-.form__borderbox-placeholder {
-width: 30rem;
-height: 10rem;
-border: solid 2px $form-input-border-color;
-border-radius: 15px;
-}
-
-button {
-  width: 7.5rem;
-  height: 3rem;
-  font-weight: 700;
-  font-size: 0.75rem;
-  border-radius: $universal-border-radius;
-  border: none;
-}
-.secondary, .tertiary {
-  background-color: $greyBtn-background-color;
-  color: $text-color;
 }
