@@ -29,10 +29,9 @@ const WelcomePage = (props) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log("WE SIGNED IN YAY!!");
-        // navigate.push("/")
-        navigate('/');
-      
+        alert("Signed in successfully!");
+        props.setUser(user);
+        navigate('/events');      
       })
       .catch((error) => {
         console.log("Uh oh! We didn't sign on");

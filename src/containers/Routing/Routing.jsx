@@ -1,18 +1,27 @@
-import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import EventsList from "../EventsList/EventsList.jsx";
 import CreateEvent from "../CreateEvent/CreateEvent";
 import ResetPassword from "../../components/ResetPassword/ResetPassword";
 import Login from "../Login/Login.jsx";
 
 const Routing = () => {
+
+   const [user, setUser] = useState(null)
+
  return <>
     <Routes>
-      <Route path="/create/event" element={<CreateEvent/>}/>
-      <Route path="/" element={<EventsList />} />
-      
-       {/* Temporary */}
-       <Route path="/login" element={<Login />} />
-       <Route path="/reset" element={<ResetPassword />} />
+       {
+          user ? (
+            <>
+               <Route path="/event/create" element={<CreateEvent/>}/>
+               <Route path="/events" element={<EventsList />} />
+            </>
+          ) : null
+       }
+
+      <Route path="/" element={<Login setUser={setUser} />} />
+      <Route path="/reset" element={<ResetPassword />} />
     </Routes>
  </>
 }
