@@ -12,7 +12,7 @@ const EventsList = (props) => {
   const [dataArr, setDataArr] = useState([]);
   
   const fetchEventData = () =>{  
-    const Url = "https://localhost:8080/events"
+    const Url = "http://localhost:8080/events"
     fetch(Url)
     .then((response) =>{
       return response.json();
