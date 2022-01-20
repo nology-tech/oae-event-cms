@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import EventsList from "../EventsList/EventsList.jsx";
 import CreateEvent from "../CreateEvent/CreateEvent";
 import ResetPassword from "../../components/ResetPassword/ResetPassword";
@@ -14,13 +14,12 @@ const Routing = () => {
        {
           user ? (
             <>
-               
+               <Route path="/event/create" element={<CreateEvent/>}/>
+               <Route path="/event/:id" element={<CreateEvent/>}/>
+               <Route path="/events" element={<EventsList />} />
             </>
           ) : null
-       }
-      <Route path="/event/create" element={<CreateEvent/>}/>
-      <Route path="/event/:id" element={<CreateEvent/>}/>
-      <Route path="/events" element={<EventsList />} />
+       }      
       <Route path="/" element={<Login setUser={setUser} />} />
       <Route path="/reset" element={<ResetPassword />} />
     </Routes>

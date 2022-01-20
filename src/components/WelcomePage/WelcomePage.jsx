@@ -2,24 +2,15 @@ import React from "react";
 import "./WelcomePage.scss";
 import Button from "../Button/Button";
 import { LoginTemplate } from "../LoginTemplate/LoginTemplate";
-import { useAuth } from "../../contexts/AuthContext";
-import { useRef, useState } from 'react';
-import { Link, Navigate, useNavigate} from 'react-router-dom';
-import {auth} from "../../firebase.js";
+
+import { Link, useNavigate} from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import Login from "../../firebase";
 
 
 const WelcomePage = (props) => {
   const auth = getAuth()
-  // const emailRef = useRef()
-  // const passwordRef = useRef()
-
-  // const [error, setError] = useState("")
-  const [loading, setLoading] = useState(false)
  
   const navigate = useNavigate();
-
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -36,8 +27,6 @@ const WelcomePage = (props) => {
       .catch((error) => {
         console.log("Uh oh! We didn't sign on");
         alert("Try again 😼")
-        const errorCode = error.code;
-        const errorMessage = error.message;
       });
   };
 
@@ -69,7 +58,7 @@ const WelcomePage = (props) => {
             required
           />
           <Link to="/forgot-password" className="welcome-form__link">Forgot Password?</Link>
-          <Button disbaled={loading} buttonText="Login" buttonType="primary"></Button>
+          <Button buttonText="Login" buttonType="primary"></Button>
         </div>
       </div>
       <LoginTemplate />

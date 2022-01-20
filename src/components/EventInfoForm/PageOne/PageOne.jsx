@@ -111,7 +111,7 @@ const PageOne = (props) => {
             <div className="form__borderbox">
               <div>
                 <div className="picture-section__dropbox-placeholder">
-                  <img src={imageSrc} />
+                  <img src={imageSrc} alt="Heading for this event"/>
                 </div>
               </div>
             </div>

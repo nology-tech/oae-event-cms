@@ -1,7 +1,5 @@
 import React from "react";
 import "./LoginTemplate.scss";
-
-import logo from "../../assets/images/oae-logo.svg";
 import background from "../../assets//images/welcome-background.svg";
 import greyRectangle from "../../assets//images/grey-rectangle.svg";
 import eventListPreview from "../../assets//images/eventlist-preview.svg";

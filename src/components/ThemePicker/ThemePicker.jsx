@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "../Button/Button";
 import "./ThemePicker.scss";
-import arrowDown from "../../assets/images/arrow-down.svg";
 
 const ThemePicker = (props) => {
   const { data } = props;

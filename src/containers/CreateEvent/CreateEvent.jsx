@@ -26,15 +26,12 @@ const CreateEvent = () => {
         setIsEdit(params.id != null);
         const id = params.id;
 
-        // use the API to GET the event with this id
         fetch("https://aoeo-338811.ey.r.appspot.com/events/" + id)
             .then(res => res.json())
             .then(res => {
                 setEvent(res);
             })
-        // pass it as props to our form
-
-    }, []);
+    }, [params.id]);
 
     const handleStepZero = (data) => {
         // Merge form data with event object
