@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./PageTwo.scss";
+import Tooltip from "../../Tooltip/Tooltip";
 import Button from "../../Button/Button";
 import TextareaAutosize from "react-textarea-autosize";
 import EditIconButton from "../../IconButton/EditIconButton/EditIconButton";

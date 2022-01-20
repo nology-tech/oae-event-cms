@@ -1,6 +1,7 @@
 import Button from "../../Button/Button";
 import "./PageOne.scss";
 
+
 const PageOne = (props) => {
   const data = props.data;
   const handleNext = props.handleSubmit;
@@ -29,7 +30,9 @@ const PageOne = (props) => {
             <h2 className="form__title-main">Event Information (1/2)</h2>
           </div>
           <div className="form__section">
-            <label className="form__label"> Title </label>
+              <div className="eventInfo__pageOne-form-tooltip">
+                <label className="form__label"> Title </label>
+              </div>
             <input
               defaultValue={data?.name}
               name="eventname"
@@ -50,6 +53,7 @@ const PageOne = (props) => {
           </div>
           <div className="form__section">
             <label className="form__label"> Date </label>
+
             <input
             
               name="date"

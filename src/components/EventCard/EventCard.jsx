@@ -15,8 +15,8 @@ const EventCard = (props) => {
          <p className="eventCard-location">{location}</p>
          <p className="eventCard-URL">{URL}</p>
          <div className="eventCard__icons">
-            <img className="eventCard-icon" src={editIcon} alt="edit button" />
-            <img className="eventCard-icon" src={binIcon} alt="bin button" />
+            <img className="eventCard-icon" src={editIcon} alt="edit button"  title="Click to edit this event"/>
+            <img className="eventCard-icon" src={binIcon} alt="bin button"  title="Click to delete this event"/>
          </div>
       </div>
    )
