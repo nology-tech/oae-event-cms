@@ -1,9 +1,9 @@
 import React from "react-dom";
-import "./Review.scss";
 import Accordian from "../Accordian/Accordian";
 import Button from "../Button/Button";
-import BinIconButton from "../../IconButton/BinIconButton/BinIconButton";
-import EditIconButton from "../../IconButton/EditIconButton/EditIconButton";
+
+import "./Review.scss";
+import EditIconButton from "../IconButton/EditIconButton/EditIconButton";
 
 const Review = (props) => {
   const { event, setReviewStep } = props;
@@ -18,8 +18,9 @@ const Review = (props) => {
     backgroundColor: event.theme.subtitleColor,
   };
 
-  const onSubmit = {
+  const onSubmit = () => {
     // This is where the API call would be.
+    props.handleSubmit();
   };
 
   const generateScheduleList = () => {
@@ -59,9 +60,7 @@ const Review = (props) => {
           <h2>Review</h2>
           <div className="review__section-title-edit">
             <h3>Event Information</h3>
-            <button onClick={() => setReviewStep(0)}>
-              <EditIcon />
-            </button>
+            <EditIconButton onClick={() => setReviewStep(0)}/>
           </div>
           <p className="review__section-header">Part 1</p>
           <p className="review__section-text">Name</p>
@@ -80,12 +79,10 @@ const Review = (props) => {
         <div className="review__section review__left-theme">
           <div class="review__section-title-edit">
             <h3>Theme Settings</h3>
-            <button onClick={() => setReviewStep(3)}>
-              <EditIcon />
-            </button>
+            <EditIconButton onClick={()=> setReviewStep(3)}/>
           </div>
           <p className="review__section-text">Font Type</p>
-          <p className="review__section-input">{event.theme.fontType}</p>
+          <p className="review__section-input">{event.theme.templateTheme}</p>
           <p className="review__section-text">Primary Colour</p>
           <div
             className="review__left-theme-box"
@@ -108,14 +105,12 @@ const Review = (props) => {
           <h4>
             Are you happy with all of the information provided for this event?
           </h4>
-          <Button buttonType="primary" buttonText="Submit" onClick={onSubmit} />
+          <Button buttonType="primary" buttonText="Submit" onClick={onSubmit}/>
         </div>
         <div className="review__section review__right-schedule">
           <div className="review__section-title-edit">
             <h3>Event Schedule</h3>
-            <button onClick={() => setReviewStep(2)}>
-              <EditIcon />
-            </button>
+            <EditIconButton onClick={()=> setReviewStep(2)}/>
           </div>
           {generateScheduleList()}
         </div>

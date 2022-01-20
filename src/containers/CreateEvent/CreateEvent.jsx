@@ -9,7 +9,9 @@ import Review from '../../components/Review/Review';
 
 const CreateEvent = () => {
     const [event, setEvent] = useState({
-        intro: []
+        intro: [],
+        // Note: How is this used?
+        featuredEvent: true
     });
 
     // let event = {
@@ -76,8 +78,8 @@ const CreateEvent = () => {
         setEvent({
             ...event,
             theme: {
-                fontType: data.fontType,
-                themeColor: data.themeColor,
+                templateTheme: data.templateTheme,
+                primaryColor: data.primaryColor,
                 accentColor: data.accentColor,
                 subtitleColor: data.subtitleColor
             }
@@ -96,6 +98,24 @@ const CreateEvent = () => {
 
     const setReviewStep = (step) => {
         setStep(step);
+    }
+
+    const handleFinalSubmit = () => {
+        // Note: Is this property needed?
+        event.featuredEvent = true;
+        const fetchOptions = {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(event)
+          }
+
+        fetch("http://localhost:8080/events/add", fetchOptions)
+            .then(res => res.json())
+            .then(res => {
+                alert("SUCCESSFUL CREATE");
+            })
     }
    
     useEffect(() => {
@@ -123,7 +143,7 @@ const CreateEvent = () => {
                 step === 3 ? <ThemePicker handleSubmit={handleStepThree} handleSubmitBack={step => decrementStep(step)} data={event}/> : null
             }
             {
-                step === 4 ? <Review event={event} setReviewStep={setReviewStep}/> : null
+                step === 4 ? <Review event={event} setReviewStep={setReviewStep} handleSubmit={handleFinalSubmit} /> : null
             }
         </div>
            )
