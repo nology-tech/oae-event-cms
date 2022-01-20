@@ -82,7 +82,7 @@ const PageOne = (props) => {
           <div className="picture-section__container">
             <label className="picture-section__label form__label"> Upload Image </label>
 
-            <div className="form__borderbox">
+            <div className="picture-section__borderbox">
               <div>
                 <div className="picture-section__dropbox-placeholder">
                   image drop placeholder box

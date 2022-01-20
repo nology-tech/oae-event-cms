@@ -2,12 +2,14 @@
 
 .icon {
     display: flex;
-    align-items: right;
     width: 2.0rem;
-    height: 1.5rem;
+    height: 2.0rem;
     border: none;
     background-color: $form-background-color;
+   
+
     &:hover {
+        cursor: pointer;
        filter: opacity(40%);
     }
 }

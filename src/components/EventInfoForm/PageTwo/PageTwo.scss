@@ -13,8 +13,13 @@
     &__buttons {
       display: flex;
       flex-direction: column;
+      padding-top: 1rem;
+      gap: 1.5rem;
       &-nav {
+        display: inline-flex;
         align-self: flex-end;
+        gap: 1rem;
+
       }
     }
   }
@@ -32,21 +37,32 @@
     &__cards {
       &-row {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
         &-title {
+          display: inline-flex;
+          justify-content: space-between;
+          align-items: center;
           color: $text-color;
+
         }
-        &-buttons {
+        &-icons {
           display: flex;
-          gap: 1rem;
-          &-link {
-            &-icon:hover{
-              cursor: pointer;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;  
+          margin-left: -0.5rem;
+              }
+          &-icon {
+            &-bin {
+             display: inline-flex;
             }
+            &-bin {
+              display: inline-flex;
+             }
+          }
+            
           }
         }
       }
     }
-  }
-}
+

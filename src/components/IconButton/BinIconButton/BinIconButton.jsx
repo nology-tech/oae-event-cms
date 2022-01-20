@@ -1,6 +1,5 @@
 import React from "react";
 import {ReactComponent as BinIcon} from '../../../assets/images/bin-icon.svg';
-import "./BinIconButton.scss";
 
 const BinIconButton = ({onClick}) => {
 

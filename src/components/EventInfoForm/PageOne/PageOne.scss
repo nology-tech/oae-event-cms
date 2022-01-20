@@ -10,11 +10,14 @@
     &__main
      {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: row;
+        ;
     }
    
     &__input{
         padding-left: 2rem;
+        flex-wrap: wrap;
        
     }
     .field {
@@ -24,20 +27,30 @@
     }
  }
 
-    .picture-section__container {
+    .picture-section {
+      &__container {
         margin-top: 5rem;
-
     }
-    .picture-section__dropbox-placeholder {
+    &__borderbox {
+      height: 20rem;
+      width: 26rem;
+      border: $form-input-border-color 2px solid;
+      border-radius: 15px;
+      margin-left: -1rem;
+      margin-right: 10rem;
+    
+    }
+    &__dropbox-placeholder {
       font-family: poppins;
       color: $text-color;
       line-height: 150%;
       font-size: calc($base-font * 0.75);
     }
-  
-
-    .picture-section__remove{
-      text-decoration-line: underline;
+    &__remove{
+      display: inline-flex;
+      border-bottom:  dotted;
+      border-spacing: 0.2rem;
+      border-width: 0.16rem;
       color: $primary-color;
     }
     .picture-section__button {
@@ -45,15 +58,4 @@
       justify-content: flex-end;
       align-items: flex-end;
   }
-  
-
-
-.form__borderbox {
-  height: 20rem;
-  width: 26rem;
-  border: $form-input-border-color 2px solid;
-  border-radius: 15px;
-  margin-left: -1rem;
-  margin-right: 10rem;
-
-}
+ }

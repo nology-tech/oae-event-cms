@@ -1,6 +1,7 @@
 @use "../../assets/styles/_variables" as *;
 
 .themepicker {
+  display: flex;
   height: 28rem;
   width: 29rem;
 
@@ -28,9 +29,15 @@
   }
 
   &__buttons {
+    margin-left: 8rem;
+    padding-top: 3rem;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 0.5rem;
     align-items: baseline;
+    &-back {
+      margin-right: -1rem;
+
+    }
   }
 
   &__section:not(:last-child) {

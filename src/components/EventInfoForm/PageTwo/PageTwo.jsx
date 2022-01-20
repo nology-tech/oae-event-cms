@@ -5,6 +5,7 @@ import TextareaAutosize from "react-textarea-autosize";
 import EditIconButton from "../../IconButton/EditIconButton/EditIconButton";
 import BinIconButton from "../../IconButton/BinIconButton/BinIconButton";
 
+
 const PageTwo = (props) => {
   const formData = props.formData;
   const handleBack = props.handleSubmitBack;
@@ -43,12 +44,15 @@ const PageTwo = (props) => {
     }
 
     const html = eventContentArr.map((eventContent, i) => (
-      <div key={i} className="event-content-list__cards-row">
-        <h5 className="event-content-list__cards-row-title">
-          {eventContent.heading}
-        </h5>
-        <BinIconButton buttonType="icon" className="schedule-list__cards-row-buttons-link" onClick={() => handleRemove(i)}/>
-        <EditIconButton buttonType="icon" className="schedule-list__cards-row-buttons-link"/>
+      <div key={i} className="event-info-2-list__cards-row">
+          <h5 className="event-info-2-list__cards-row-title">
+            {eventContent.heading}
+          </h5>
+        <div className="event-info-2-list__cards-row-icons">
+         
+          <EditIconButton buttonType="icon" className="event-info-2-list__cards-row-icon-edit"/>
+          <BinIconButton buttonType="icon" className="event-info-2-list__cards-row-icon-bin" onClick={() => handleRemove(i)}/>
+        </div>
       </div>
     ));
       setEventContentArrHtml(html)
@@ -68,6 +72,7 @@ const PageTwo = (props) => {
           <div className="form__section">
             <label className="form__label">Heading</label>
             <input
+        
               name="heading"
               className="form__input"
               type="text"
@@ -95,22 +100,21 @@ const PageTwo = (props) => {
                 buttonType="secondary"
                 onClick={handleBack}
                 buttonText="Back"
-                className="form__buttons-next"
+                className="event-info-2-form__buttons-nav-back"
               />
               <Button
                 type="button"
                 buttonType="primary"
                 onClick={handleSubmit}
                 buttonText="Next"
-                className="form__buttons-next"
-              />
+                className="event-info-2-form__buttons-nav-next"/>
             </div>
           </div>
         </form>
         {eventContentArrHtml.length !== 0 ? (
           <>
             <div className="event-info-2-list">
-              <h4 className="event-info-2-lis__title">Event Content</h4>
+              <h4 className="event-info-2-list__title">Event Content</h4>
               <div className="event-info-2-list__cards">{eventContentArrHtml}</div>
             </div>
           </>

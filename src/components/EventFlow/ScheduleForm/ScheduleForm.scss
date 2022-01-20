@@ -1,19 +1,5 @@
 @use "../../../assets/styles/variables" as *;
 
-.form {
-  &__buttons {
-    > .tertiary {
-      width: 5.4rem;
-      height: 2rem;
-      font-size: 0.625rem;
-    }
-
-    > .primary {
-      margin-top: 1rem;
-    }
-  }
-}
-
 #description, #alternate-description {
   padding-top: 0.3rem;
 }
@@ -27,8 +13,12 @@
     &__buttons {
       display: flex;
       flex-direction: column;
+      padding-top: 1rem;
+      gap: 1.5rem;
       &-nav {
+        display: inline-flex;
         align-self: flex-end;
+        gap: 1rem;
       }
     }
   }
@@ -46,13 +36,21 @@
     &__cards {
       &-row {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         &-title {
           color: $text-color;
         }
-        &-buttons {
+        &-nav {
           display: flex;
+          flex-direction: row;
+          ;
+        }
+        &-buttons {
+          display: inline-flex;
+          align-items: center;
+
           gap: 1rem;
           &-link {
             &-icon:hover{
