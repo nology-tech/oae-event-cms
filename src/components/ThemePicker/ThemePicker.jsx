@@ -12,7 +12,7 @@ const ThemePicker = (props) => {
       step: 3,
       templateTheme: event.target.templateTheme.value,
       primaryColor: event.target.primaryColor.value,
-      accentColor: event.target.accentColor.value,
+      textColor: event.target.textColor.value,
       subtitleColor: event.target.subtitleColor.value,
     };
     props.handleSubmit(formData);
@@ -71,16 +71,16 @@ const ThemePicker = (props) => {
 
         <div className="themepicker__section form__section">
           <label className="themepicker__accent form__label" for="accent">
-            Accent Color
+            Text Color
           </label>
           <div className="themepicker__section-color form__section-color">
             <input
               className="themepicker__input-color"
               htmlFor="accent"
               type="color"
-              name="accentColor"
+              name="textColor"
               data-testid="accent"
-              defaultValue={data.theme.accentColor}
+              defaultValue={data.theme.textColor}
             />
           </div>
         </div>

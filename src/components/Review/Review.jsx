@@ -11,8 +11,8 @@ const Review = (props) => {
   const primaryColorStyles = {
     backgroundColor: event.theme.primaryColor
   };
-  const accentColorStyles = {
-    backgroundColor: event.theme.accentColor,
+  const textColorStyles = {
+    backgroundColor: event.theme.textColor,
   };
   const subtitleColorStyles = {
     backgroundColor: event.theme.subtitleColor,
@@ -44,10 +44,10 @@ const Review = (props) => {
   };
 
   const generateIntroList = () => {
-    const introArr = event.intro;
+    const introArr = event.content;
     return introArr.map((intro, i) => (
       <div key={i} className="accordian review__left-info-2">
-        <Accordian heading={intro.heading} text={intro.content} />
+        <Accordian heading={intro.heading} text={intro.text} />
       </div>
     ));
   };
@@ -91,7 +91,7 @@ const Review = (props) => {
           <p className="review__section-text">Accent Colour</p>
           <div
             className="review__left-theme-box"
-            style={accentColorStyles}
+            style={textColorStyles}
           ></div>
           <p className="review__section-text">Subitle Colour</p>
           <div

@@ -10,7 +10,7 @@ const PageTwo = (props) => {
   const formData = props.formData;
   const handleBack = props.handleSubmitBack;
   const handleNext = props.handleSubmit;
-  const [eventContentArr, setEventContentArr] = useState(formData.intro);
+  const [eventContentArr, setEventContentArr] = useState(formData.content);
   const [eventContentArrHtml, setEventContentArrHtml] = useState([]);
 
   const handleSubmit = (event) => {
@@ -18,7 +18,7 @@ const PageTwo = (props) => {
     console.log(event);
     const formData = {
       step: 1,
-      intro: eventContentArr
+      content: eventContentArr
     };
     handleNext(formData);
   };
@@ -27,11 +27,11 @@ const PageTwo = (props) => {
     event.preventDefault();
     const formData = {
       heading: event.target.heading.value,
-      content: event.target.content.value,
+      text: event.target.text.value,
     };
 
     event.target.heading.value = "";
-    event.target.content.value = "";
+    event.target.text.value = "";
 
     setEventContentArr([...eventContentArr, formData]);
     console.log(eventContentArr);
@@ -63,8 +63,8 @@ const PageTwo = (props) => {
       <div className="event-info-2">
         <form className="event-info-2-form form" onSubmit={handleAdd}>
           <div className="form__title">
-            <h3 className="form__title-step">Step 02</h3>
-            <h2 className="form__title-main">Event Information (2/2)</h2>
+            <h3 className="form__title-step">Headings</h3>
+            <h2 className="form__title-main">Divide the event into headings</h2>
           </div>
           <div className="form__section">
             <label className="form__label">Heading</label>
@@ -78,9 +78,9 @@ const PageTwo = (props) => {
           <div className="form__section">
             <label className="form__label">Text</label>
             <TextareaAutosize
-              name="content"
+              name="text"
               className="form__input"
-              defaultValue={formData?.content}
+              defaultValue={formData?.text}
             />
           </div>
           <div className="event-info-2-form__buttons">

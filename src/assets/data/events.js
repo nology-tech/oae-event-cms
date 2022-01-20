@@ -38,7 +38,7 @@ export let events = [
       theme: {
          templateTheme: "Modern", // Modern or Classic. Modern uses a sans-serif font. (Poppins and PT Sans) Classic uses a serif (Playfair Display and Lato).
          primaryColor: "#899EE2", // Represents the banner color on the website. Usually takes the dominant color present in the image poster.
-         accentColor: "#3C3C3C", // Accent Colour is used to style the call-to-action buttons.
+         textColor: "#3C3C3C", // Accent Colour is used to style the call-to-action buttons.
       },
    },
    {
@@ -122,7 +122,7 @@ export let events = [
       theme: {
          templateTheme: "Modern", // Modern or Classic. Modern uses a sans-serif font. (Poppins and PT Sans) Classic uses a serif (Playfair Display and Lato).
          primaryColor: "#F2774C", // Represents the banner color on the website. Usually takes the dominant color present in the image poster.
-         accentColor: "#3C3C3C", // Accent Colour is used to style the call-to-action buttons.
+         textColor: "#3C3C3C", // Accent Colour is used to style the call-to-action buttons.
       },
    },
 ];

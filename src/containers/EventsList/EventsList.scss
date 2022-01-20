@@ -4,8 +4,9 @@
 
 .event-list {
    display: flex;
+   min-height: 100vh;
    flex-direction: column;
-   margin-left: 5.6rem;
+   //margin-left: 5.6rem;
    padding: 2.5rem 2.5rem 2.5rem 4rem;
    background-color: $back-color;
 

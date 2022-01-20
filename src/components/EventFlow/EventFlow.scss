@@ -13,6 +13,8 @@
     &__step {
         display: flex;
         flex-direction: row;
+        justify-content: end;
+        width: 100%;
         align-items: center;
         column-gap: 2rem;
         &-text {

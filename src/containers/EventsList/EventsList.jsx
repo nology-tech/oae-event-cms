@@ -12,7 +12,7 @@ const EventsList = (props) => {
   const [dataArr, setDataArr] = useState([]);
   
   const fetchEventData = () =>{  
-    const Url = "https://oae-mock-api.herokuapp.com/events/"
+    const Url = "http://localhost:8080/events/"
     fetch(Url)
     .then((response) =>{
       return response.json();
@@ -27,7 +27,7 @@ const EventsList = (props) => {
 
   useEffect(() => {
     fetchEventData()
-  }, [dataArr]);
+  }, []);
   
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -37,6 +37,23 @@ const EventsList = (props) => {
     event.preventDefault();
   };
 
+  const handleDelete = (id) => {
+    const fetchOptions = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }
+
+    fetch("http://localhost:8080/events/"+ id, fetchOptions)
+      .then(res => {
+        alert("Successfully deleted event");
+        fetchEventData();
+      }).catch(res => {
+        console.log("Sorry! Something went wrong deleting this event");
+      })
+  }
+
   const filterEvents = dataArr.filter((event) => {
     const lowerEvent = event.name.toLowerCase();
     return lowerEvent.includes(searchTerm);
@@ -44,12 +61,15 @@ const EventsList = (props) => {
 
   const eventsList = filterEvents.map((event, index) => (
     <EventCard key= {"event" + index}
+      eventId={event.id}
       eventName={event.name}
       series={event.series}
       date={event.date}
       time={event.time}
       location={event.location}
+      venue={event.venue}
       URL={event.uniqueURL}
+      onDelete={handleDelete}
     />
   ));
 
@@ -65,9 +85,7 @@ const EventsList = (props) => {
             alt="search icon"
           />
         </div>
-        <Link to="/event/create" alt="link to edit/create event page" title="Link to edit/create event page"><Button buttonText="Add +" buttonType="primary" alt="Button to take you to create event page"/></Link>
-        
-          
+        <Link to="/event/create" alt="link to edit/create event page" title="Link to edit/create event page"><Button buttonText="Add +" buttonType="primary" alt="Button to take you to create event page"/></Link> 
       </div>
       <div className="event-list__table">
         <div className="event-list__headings">

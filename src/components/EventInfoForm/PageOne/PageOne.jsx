@@ -16,9 +16,10 @@ const PageOne = (props) => {
       time: event.target.time.value,
       date: event.target.date.value,
       location: event.target.location.value,
+      venue: event.target.venue.value,
       imageSrc: "event.target.imgSrc.value"
     }
-   handleNext(formData);    
+    handleNext(formData);    
   }
 
   return (
@@ -27,7 +28,7 @@ const PageOne = (props) => {
         <section className="eventInfo__pageOne-form form" id="info-form">
           <div className="form__title">
             <h3 className="form__title-step">Step 01</h3>
-            <h2 className="form__title-main">Event Information (1/2)</h2>
+            <h2 className="form__title-main">Event Information</h2>
           </div>
           <div className="form__section">
               <div className="eventInfo__pageOne-form-tooltip">
@@ -72,13 +73,23 @@ const PageOne = (props) => {
             />
           </div>
           <div className="form__section">
+            <label className="form__label"> Venue </label>
+            <input
+              name="venue"
+              type="text"
+              className="eventInfo__pageOne-form__input form__input"
+              defaultValue={data?.venue}
+              placeholder="e.g. Kings Place"
+            />
+          </div>
+          <div className="form__section">
             <label className="form__label"> Location </label>
             <input
               name="location"
               type="text"
               className="eventInfo__pageOne-form__input form__input"
               defaultValue={data?.location}
-              placeholder="Kings Place, London"
+              placeholder="e.g. London"
             />
           </div>
         </section>

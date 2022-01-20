@@ -42,36 +42,36 @@ return (
         <h3 className="event-flow__title">Create Event</h3>
         <div className="event-flow__step">
             <div className="event-flow__step-text">
-                <h5 className="event-flow__step-text-title">Event Information 1</h5>
+                <h5 className="event-flow__step-text-title">Event Information</h5>
                 <p className="event-flow__step-text-info">Name, Date,  Time, Description etc</p>
             </div>
             <InfoIcon className="event-flow__step-text-icon"/>
         </div>
         <div className="event-flow__step">
             <div className="event-flow__step-text">
-                <h5 className="event-flow__step-text-title">Event Information 2</h5>
-                <p className="event-flow__step-text-info">Name, Date,  Time, Description etc</p>
+                <h5 className="event-flow__step-text-title">Headings</h5>
+                <p className="event-flow__step-text-info">Section headings</p>
             </div>
             <InfoIcon className="event-flow__step-text-icon"/>
         </div>
         <div className="event-flow__step">
             <div className="event-flow__step-text">
                 <h5 className="event-flow__step-text-title">Add Schedule</h5>
-                <p className="event-flow__step-text-info">Name, Date,  Time, Description etc</p>                
+                <p className="event-flow__step-text-info">When is this happening?</p>                
             </div>
             <ScheduleIcon className="event-flow__step-text-icon"/>
         </div>
         <div className="event-flow__step">
             <div className="event-flow__step-text">
                 <h5 className="event-flow__step-text-title">Choose Theme</h5>
-                <p className="event-flow__step-text-info">Name, Date,  Time, Description etc</p>                
+                <p className="event-flow__step-text-info">Customise the look and feel</p>                
             </div>
             <ThemeIcon className="event-flow__step-text-icon"/>
         </div>
         <div className="event-flow__step">
             <div className="event-flow__step-text">
                 <h5 className="event-flow__step-text-title">Review</h5>
-                <p className="event-flow__step-text-info">Name, Date,  Time, Description etc</p>               
+                <p className="event-flow__step-text-info">Final edits and checks</p>               
             </div>
             <TickIcon className="event-flow__step-text-icon"/>
         </div>

@@ -14,12 +14,13 @@ const Routing = () => {
        {
           user ? (
             <>
-               <Route path="/event/create" element={<CreateEvent/>}/>
-               <Route path="/events" element={<EventsList />} />
+               
             </>
           ) : null
        }
-
+      <Route path="/event/create" element={<CreateEvent/>}/>
+      <Route path="/event/:id" element={<CreateEvent/>}/>
+      <Route path="/events" element={<EventsList />} />
       <Route path="/" element={<Login setUser={setUser} />} />
       <Route path="/reset" element={<ResetPassword />} />
     </Routes>

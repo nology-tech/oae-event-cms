@@ -110,7 +110,6 @@ const ScheduleForm = (props) => {
               id="name"
               name="name"
               className="form__input"
-              defaultValue={data?.name}
               required
             ></input>
           </div>
@@ -123,7 +122,6 @@ const ScheduleForm = (props) => {
               id="title"
               name="title"
               className="form__input"
-              defaultValue={data?.title}
             ></input>
           </div>
           <div className="schedule-form__author form__section">
@@ -135,7 +133,6 @@ const ScheduleForm = (props) => {
               id="author"
               name="author"
               className="form__input"
-              defaultValue={data?.author}
             ></input>
           </div>
           <div className="schedule-form__description form__section">

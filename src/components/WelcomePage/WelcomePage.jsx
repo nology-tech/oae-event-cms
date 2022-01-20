@@ -39,24 +39,6 @@ const WelcomePage = (props) => {
         const errorCode = error.code;
         const errorMessage = error.message;
       });
-
-  
-
-    // try {
-    //   setError("")
-    //   setLoading(true)
-    //   await auth. login(emailRef.current.value, passwordRef.current.value)
-    //   history.push("/")
-    // } catch {
-    //   setError("Failed to log in");
-    // }
-    // setLoading(false)
-
-    // event.preventDefault();
-    // props.handleSubmit();
-
-
-
   };
 
   return (
@@ -81,16 +63,12 @@ const WelcomePage = (props) => {
           <label className="form__label welcome-form__label" htmlFor="password">Password</label>
           <input
             className="form__input welcome-form__input"
-            type="text"
+            type="password"
             id="password"
             placeholder="&bull; &bull; &bull; &bull; &bull; &bull; &bull; &bull;"
             required
           />
-          {/* 
-          <a className="welcome-form__link" onClick={handleNext}>
-            Forgot your password?
-          </a> */}
-          <Link to="/forgot-password">Forgot Password?</Link>
+          <Link to="/forgot-password" className="welcome-form__link">Forgot Password?</Link>
           <Button disbaled={loading} buttonText="Login" buttonType="primary"></Button>
         </div>
       </div>
