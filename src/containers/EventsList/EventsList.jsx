@@ -12,7 +12,7 @@ const EventsList = (props) => {
   const [dataArr, setDataArr] = useState([]);
   
   const fetchEventData = () =>{  
-    const Url = "http://localhost:8080/events/"
+    const Url = "https://aoeo-338811.ey.r.appspot.com/events/"
     fetch(Url)
     .then((response) =>{
       return response.json();
@@ -45,7 +45,7 @@ const EventsList = (props) => {
       }
     }
 
-    fetch("http://localhost:8080/events/"+ id, fetchOptions)
+    fetch("https://aoeo-338811.ey.r.appspot.com/events/"+ id, fetchOptions)
       .then(res => {
         alert("Successfully deleted event");
         fetchEventData();
@@ -85,7 +85,9 @@ const EventsList = (props) => {
             alt="search icon"
           />
         </div>
-        <Link to="/event/create" alt="link to edit/create event page" title="Link to edit/create event page"><Button buttonText="Add +" buttonType="primary" alt="Button to take you to create event page"/></Link> 
+        <Link to="/event/create" alt="link to edit/create event page" title="Link to edit/create event page">
+          <Button buttonText="Add +" buttonType="primary" alt="Button to take you to create event page" />
+        </Link> 
       </div>
       <div className="event-list__table">
         <div className="event-list__headings">

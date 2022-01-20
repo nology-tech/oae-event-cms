@@ -17,7 +17,6 @@ const Tooltip = (props) => {
 
             <div className="tip__flex">
                <h4 className='tip__title'>{tipTitle}</h4>
-               <img className="tip__icon-info" src={tooltipInfoIcon} alt="information icon" />
                <img onClick={toggleInfo} className="tip__icon-cross" src={blackCross} alt="close window icon" />
             </div>
 

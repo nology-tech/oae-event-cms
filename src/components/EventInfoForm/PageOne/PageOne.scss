@@ -33,6 +33,12 @@
       color: $text-color;
       line-height: 150%;
       font-size: calc($base-font * 0.75);
+
+      img {
+        width: 100%;
+        margin-left: 15px;
+        margin-top: 5px;
+      }
     }
   
 
@@ -51,7 +57,7 @@
 .form__borderbox {
   height: 20rem;
   width: 26rem;
-  border: $form-input-border-color 2px solid;
+  //border: $form-input-border-color 2px solid;
   border-radius: 15px;
   margin-left: -1rem;
   margin-right: 10rem;

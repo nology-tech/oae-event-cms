@@ -27,7 +27,7 @@ const CreateEvent = () => {
         const id = params.id;
 
         // use the API to GET the event with this id
-        fetch("http://localhost:8080/events/" + id)
+        fetch("https://aoeo-338811.ey.r.appspot.com/events/" + id)
             .then(res => res.json())
             .then(res => {
                 setEvent(res);
@@ -97,7 +97,7 @@ const CreateEvent = () => {
 
     const handleFinalSubmit = () => {
         // if isEdit add the id
-        let url = "http://localhost:8080";
+        let url = "https://aoeo-338811.ey.r.appspot.com";
         if (isEdit) {
             event.id = params.id;
             url += "/events/" + event.id;
@@ -127,7 +127,7 @@ const CreateEvent = () => {
         <div className="create-event">
             <EventFlow step={step}/>
             {
-                step === 0 ? <PageOne data={event} handleSubmit={handleStepZero} /> : null
+                step === 0 ? <PageOne data={event} handleSubmit={handleStepZero} imageSrc={event.imageSrc} /> : null
             }
             {
                 step === 1 ? <PageTwo formData={event} handleSubmit={handleStepOne}

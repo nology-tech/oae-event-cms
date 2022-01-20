@@ -81,7 +81,11 @@ const PageTwo = (props) => {
             />
           </div>
           <div className="form__section">
-            <label className="form__label">Text</label>
+            <label className="form__label">
+              Text &nbsp;
+              <Tooltip className="tooltip" tipTitle="Event Text" tipDesc="This will be the description used on the event homepage, e.g. 
+                    We like to think of the series as a community" />
+            </label>
             <TextareaAutosize
               name="text"
               className="form__input"

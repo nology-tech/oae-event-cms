@@ -1,10 +1,22 @@
 import Button from "../../Button/Button";
 import "./PageOne.scss";
-
+import { useState, useEffect } from "react"
 
 const PageOne = (props) => {
   const data = props.data;
   const handleNext = props.handleSubmit;
+
+  const [imageSrc, setImageSrc] = useState(props.imageSrc);
+
+  useEffect(() => {
+    setImageSrc(props.imageSrc);
+  }, [props])
+
+
+  const handleChange = (e) => {
+    const url = e.target.value;
+    setImageSrc(url);
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -17,7 +29,7 @@ const PageOne = (props) => {
       date: event.target.date.value,
       location: event.target.location.value,
       venue: event.target.venue.value,
-      imageSrc: "event.target.imgSrc.value"
+      imageSrc: event.target.imageSrc.value
     }
     handleNext(formData);    
   }
@@ -96,17 +108,24 @@ const PageOne = (props) => {
         <section className="picture-section form"          id="picture-form">
           <div className="picture-section__container">
             <label className="picture-section__label form__label"> Upload Image </label>
-
             <div className="form__borderbox">
               <div>
                 <div className="picture-section__dropbox-placeholder">
-                  image drop placeholder box
+                  <img src={imageSrc} />
                 </div>
               </div>
             </div>
-            <h4 className="picture-section__remove" id="remove">
-              Remove
-            </h4>
+            <div className="form__section">
+              <label className="form__label">Image Url </label>
+              <input
+                name="imageSrc"
+                type="text"
+                className="eventInfo__pageOne-form__input form__input"
+                defaultValue={data?.imageSrc}
+                placeholder="e.g. External Image Link"
+                onChange={handleChange}
+              />
+            </div>
             <div className="picture-section__button">
               <Button
                 type="submit"
