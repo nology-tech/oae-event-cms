@@ -67,7 +67,12 @@ const PageTwo = (props) => {
             <h2 className="form__title-main">Divide the event into headings</h2>
           </div>
           <div className="form__section">
-            <label className="form__label">Heading</label>
+            <label className="form__label">
+              Heading &nbsp;
+              <Tooltip className="tooltip" tipTitle="Event Heading" tipDesc="This will be the opening header element on the event homepage, e.g.
+                                        If this is your first Bach, the Universe & Everything (BAE), welcome!" />
+            </label>
+
             <input
               name="heading"
               className="form__input"

@@ -11,7 +11,7 @@ const Tooltip = (props) => {
    const toggleInfo = () => setShowInfo(!showInfo)
 
    return (
-      <div>
+      <span>
          {!showInfo && <img className="tip__icon-info" src={tooltipInfoIcon} alt="information icon" onClick={toggleInfo} />}
          {showInfo && (<div className={"tip"}>
 
@@ -23,7 +23,7 @@ const Tooltip = (props) => {
 
             <p className='tip__desc'>{tipDesc}</p>
          </div>)}
-      </div>
+      </span>
    )
 }
 
