@@ -15,5 +15,13 @@
   &__logo {
     width: 3rem;
   }
+
+  &__button-logout {
+    margin-left: auto;
+    min-height: 2.81rem;
+    min-width: 6.75rem;
+    margin-right: 4.06rem;
+    justify-self: flex-end;
+  }
 }
 
