@@ -1,3 +1,5 @@
 body {
     margin: 0px;
+    min-width: 1024px;
+    overflow-x: auto;
 }
