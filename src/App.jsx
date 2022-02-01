@@ -11,7 +11,7 @@ const App = () => {
         {/* <Nav /> */}
         <Routing />
       </Router>
-      </div>
+    </div>
   );
 };
 
